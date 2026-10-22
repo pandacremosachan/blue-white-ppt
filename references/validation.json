@@ -1,0 +1,20 @@
+{
+  "release": "1.0.0",
+  "validatedOn": "2026-10-22",
+  "environment": {"platform":"Windows", "generationNode":"24.15.0", "pi":"1.3.0"},
+  "checks": {
+    "skillCreatorQuickValidation": "pass",
+    "preservedComponentSourceFiles": 29,
+    "exactFinalReferenceBytes": true,
+    "registeredComponents": 39,
+    "registeredVariants": 244,
+    "allVariantNativePptx": {"slides":245,"status":"pass","attachedConnectors":279,"standaloneConnectorSamples":4,"nativeTables":1,"embeddedPictures":1},
+    "independentPptxImport": {"slides":245,"status":"pass"},
+    "visualInspection": {"status":"pass","scope":"Three composed example slides, the direct .mjs example, and selected component/arrow/flow/layout/table/image samples; not an exhaustive visual review of all 244 variants."},
+    "relocation": {"status":"pass","scope":"Folder with Unicode and spaces; working directory outside skill; Codex/module-path environment variables removed; JSON and .mjs generation passed."},
+    "piDiscovery": {"status":"pass","scope":"Offline RPC get_commands registered skill:blue-white-ppt; no model prompt, LLM execution or API request."},
+    "refuseExistingOutput": "pass",
+    "unknownCodeRejection": "pass"
+  },
+  "limits": ["Portable LibreOffice rendering was not exercised because LibreOffice is absent on this host; independent harness rendering was used for visual checks.","Linux and macOS were not exercised on this host.","Generated PPTX files reference the supplied font but do not embed it."]
+}

@@ -1,0 +1,133 @@
+{
+  "skillVersion": "1.0.0",
+  "libraryVersion": "0.14.0",
+  "reference": {
+    "file": "assets/reference/component-library-v0.14.pptx",
+    "sourceName": "蓝白图形组件库_v0.14-r2.pptx",
+    "pages": 53,
+    "sha256": "e0ef22e5c785d48dd8fe467d92d252697adc635984431cb39bd730ec60dcbf72"
+  },
+  "font": {
+    "file": "assets/fonts/NotoSansSC-VF.ttf",
+    "license": "assets/fonts/OFL.txt",
+    "sha256": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a"
+  },
+  "preservedComponentSources": [
+    {
+      "path": "scripts/components/array-structures.mjs",
+      "sha256": "a172cf99f7869a76d50475f3384a58bce6ed89c731570c5c0e2db246f20a170c"
+    },
+    {
+      "path": "scripts/components/array-variants.mjs",
+      "sha256": "d353622353648ffb40fb0d37bb4b84b6039602677b84a97435b8e8517c4b4edc"
+    },
+    {
+      "path": "scripts/components/arrow-fills.mjs",
+      "sha256": "8ad602f099bc1d09ed6f563f6ea658e916ecb4ed7607cfbd05994fc4902690b0"
+    },
+    {
+      "path": "scripts/components/arrow-shapes.mjs",
+      "sha256": "ac142f6a28b1ada361ee5cfb1c33ac2c6f427da72a37bf327398178d8098d512"
+    },
+    {
+      "path": "scripts/components/bypass-variants.mjs",
+      "sha256": "d262c5d760d01b5f60c4f5155e9f5f9d83f04db4d849cdfca5c1b9342aa9e9b7"
+    },
+    {
+      "path": "scripts/components/cell-variants.mjs",
+      "sha256": "4dcbd81ee5d115d71cf5e79663c78ae1583d1b2b05bd445ed3662f298af53143"
+    },
+    {
+      "path": "scripts/components/composition-layouts.mjs",
+      "sha256": "8440874075371fc94164508dc6c651250c21131435887eb23a477cc71e5e8589"
+    },
+    {
+      "path": "scripts/components/connection-routes.mjs",
+      "sha256": "efc53ac972154680fd11a6313de31fab4bb9fbed2e2725ef82be8431bf0f25ce"
+    },
+    {
+      "path": "scripts/components/connection-variants.mjs",
+      "sha256": "369f8012a20c57d0157e69b5c259e42ca9b99ee74a2f850fa1cfa7509c5d0c64"
+    },
+    {
+      "path": "scripts/components/control-flows.mjs",
+      "sha256": "22ff5fc62c3d8ea8de4668f86f2b3c062906895e03606849ec3deb9b87752dfc"
+    },
+    {
+      "path": "scripts/components/dot-variants.mjs",
+      "sha256": "37b9d96942c37feb0a5849ebcb89aa426739d66c8ab3147c64d06cb666cd56fc"
+    },
+    {
+      "path": "scripts/components/flow-core.mjs",
+      "sha256": "3fc7701e2c50b75d48d51669c3b38feb53d8825aafb07a4f05e0013ac6849a5e"
+    },
+    {
+      "path": "scripts/components/gallery-plan.mjs",
+      "sha256": "51c037fd9caac328acd6c52025b31527082c442ffedbeef85d4c3d37fca67aa6"
+    },
+    {
+      "path": "scripts/components/grouped-flows.mjs",
+      "sha256": "8e2e78ee33b4a1b9d7c45cededd6458636344ca59a1dc4c9a8046f055e689e3d"
+    },
+    {
+      "path": "scripts/components/icon-variants.mjs",
+      "sha256": "de6fb534a4c6648f4994a30a82b5a7eccd6b06d34970ee51729241a6474f790d"
+    },
+    {
+      "path": "scripts/components/index.mjs",
+      "sha256": "1d877129fb04762f343602f7e008a5d9c0348133bf07e878bae19224e82f0a2e"
+    },
+    {
+      "path": "scripts/components/layer-connections.mjs",
+      "sha256": "9f7fd922d191f75ac4c8147254e30f67205de739e8cbfddc58fd26bb40b78060"
+    },
+    {
+      "path": "scripts/components/layout-presets.mjs",
+      "sha256": "8c460f36bcb6045ef74f1dbde141d3feea27411ef82a9c6485543c065dd75f37"
+    },
+    {
+      "path": "scripts/components/library-navigation.mjs",
+      "sha256": "abfe9cc34c40c3b2649205b23c5aea03b2e391e7b3421f14baa33a7bfd7fa9d6"
+    },
+    {
+      "path": "scripts/components/node-variants.mjs",
+      "sha256": "a3f479e3dfd27fc46f9da9a8a63543af28ae669943047d86dac021ce424a1de7"
+    },
+    {
+      "path": "scripts/components/partition-layouts.mjs",
+      "sha256": "dc6b505b7687c172b050cb0aa9ea2862c3e1d0e814a1ff671234748f28080e90"
+    },
+    {
+      "path": "scripts/components/primitives.mjs",
+      "sha256": "cd1f9ae3aedfe7ebb8d932ca5fad46daa1fe595d7cfcaff77c63127c9ee1ab3a"
+    },
+    {
+      "path": "scripts/components/research-components.mjs",
+      "sha256": "8de44e3c48ac57e142da9efc17e6d576a0a48cf4ad8d914510f98e1a0b4f02a5"
+    },
+    {
+      "path": "scripts/components/stack-variants.mjs",
+      "sha256": "3c11efdfd8e6476fa70b4580407444a262c24661511ddb0980c80ee4c71e418f"
+    },
+    {
+      "path": "scripts/components/structures.mjs",
+      "sha256": "360bcbf5615b60196e326e8262e69b366824729ff2eb25cbe4c1fbc5c8d40ced"
+    },
+    {
+      "path": "scripts/components/style.json",
+      "sha256": "c0c057809ba3e7904c297cc9f628b33917ffad32c5bdedcaa59f89d2c9079fc9"
+    },
+    {
+      "path": "scripts/components/symbol-variants.mjs",
+      "sha256": "c71567f59722fb0ca6d3ad7c87eafcb7d0cc8930e133d7dd20aecc068917b343"
+    },
+    {
+      "path": "scripts/components/text-block-variants.mjs",
+      "sha256": "ca604e8648f44ca29b641c2c2df1ec501edcdf80469a9d8e9ceda3b99caa8f4d"
+    },
+    {
+      "path": "scripts/components/utility-icons.mjs",
+      "sha256": "fc6e1736efd380d7d7dfd4e2c9b331e35ed4b77f9b08db95d5bb3b0d1da2f12c"
+    }
+  ]
+}

@@ -1,0 +1,3816 @@
+{
+  "version": "0.14.0",
+  "style": "research-blue-v1",
+  "total": 39,
+  "variantCount": 244,
+  "arrowGeometryCount": 17,
+  "arrowGradientCount": 4,
+  "iconGeometryVariantCount": 30,
+  "utilityIconTypeCount": 10,
+  "labelGeometryVariantCount": 18,
+  "messageStructureVariantCount": 18,
+  "flowStructureVariantCount": 12,
+  "layoutPresetCount": 12,
+  "nodeGeometryVariantCount": 12,
+  "symbolCombinationVariantCount": 12,
+  "stackStructureVariantCount": 12,
+  "cellArrayVariantCount": 18,
+  "dotArrayVariantCount": 18,
+  "connectionVariantCount": 12,
+  "slideCount": 53,
+  "sectionCount": 8,
+  "contentPageCount": 51,
+  "contentsSlide": 2,
+  "componentIndexSlide": 3,
+  "sections": [
+    {
+      "number": "1",
+      "title": "视觉基础与页面结构",
+      "introSlide": 1,
+      "endSlide": 1,
+      "subsections": []
+    },
+    {
+      "number": "2",
+      "title": "箭头与关系连接",
+      "introSlide": 4,
+      "endSlide": 8,
+      "subsections": [
+        {
+          "number": "2.1",
+          "title": "直线与缺口箭头",
+          "slide": 5
+        },
+        {
+          "number": "2.2",
+          "title": "转弯与回转箭头",
+          "slide": 6
+        },
+        {
+          "number": "2.3",
+          "title": "多向与标注箭头",
+          "slide": 7
+        },
+        {
+          "number": "2.4",
+          "title": "左右渐变箭头",
+          "slide": 8
+        }
+      ]
+    },
+    {
+      "number": "3",
+      "title": "图标、标签与信息框",
+      "introSlide": 9,
+      "endSlide": 18,
+      "subsections": [
+        {
+          "number": "3.1",
+          "title": "图标造型变体",
+          "slide": 10
+        },
+        {
+          "number": "3.2",
+          "title": "标签轮廓与组合",
+          "slide": 11
+        },
+        {
+          "number": "3.3",
+          "title": "信息框结构变体",
+          "slide": 12
+        },
+        {
+          "number": "3.4",
+          "title": "搜索、筛选与状态图标",
+          "slide": 13
+        },
+        {
+          "number": "3.5",
+          "title": "时间、资源与数据图标",
+          "slide": 14
+        },
+        {
+          "number": "3.6",
+          "title": "标签轮廓补充",
+          "slide": 15
+        },
+        {
+          "number": "3.7",
+          "title": "标签组合补充",
+          "slide": 16
+        },
+        {
+          "number": "3.8",
+          "title": "信息框边界与标题",
+          "slide": 17
+        },
+        {
+          "number": "3.9",
+          "title": "信息框分区与组合",
+          "slide": 18
+        }
+      ]
+    },
+    {
+      "number": "4",
+      "title": "流程图组件",
+      "introSlide": 19,
+      "endSlide": 25,
+      "subsections": [
+        {
+          "number": "4.1",
+          "title": "条件判断与选择",
+          "slide": 20
+        },
+        {
+          "number": "4.2",
+          "title": "循环与反馈",
+          "slide": 21
+        },
+        {
+          "number": "4.3",
+          "title": "并行与同步",
+          "slide": 22
+        },
+        {
+          "number": "4.4",
+          "title": "阶段关口与子流程",
+          "slide": 23
+        },
+        {
+          "number": "4.5",
+          "title": "跨泳道交接",
+          "slide": 24
+        },
+        {
+          "number": "4.6",
+          "title": "异常补偿与退出",
+          "slide": 25
+        }
+      ]
+    },
+    {
+      "number": "5",
+      "title": "版式组件与内容分区",
+      "introSlide": 26,
+      "endSlide": 32,
+      "subsections": [
+        {
+          "number": "5.1",
+          "title": "主次与侧栏布局",
+          "slide": 27
+        },
+        {
+          "number": "5.2",
+          "title": "图文与说明分区",
+          "slide": 28
+        },
+        {
+          "number": "5.3",
+          "title": "矩阵与跨格组合",
+          "slide": 29
+        },
+        {
+          "number": "5.4",
+          "title": "通栏与段落组合",
+          "slide": 30
+        },
+        {
+          "number": "5.5",
+          "title": "嵌套与成组分区",
+          "slide": 31
+        },
+        {
+          "number": "5.6",
+          "title": "对照与总结分区",
+          "slide": 32
+        }
+      ]
+    },
+    {
+      "number": "6",
+      "title": "节点、符号与叠层平面",
+      "introSlide": 33,
+      "endSlide": 39,
+      "subsections": [
+        {
+          "number": "6.1",
+          "title": "节点轮廓造型",
+          "slide": 34
+        },
+        {
+          "number": "6.2",
+          "title": "节点分区与端口",
+          "slide": 35
+        },
+        {
+          "number": "6.3",
+          "title": "符号边框与内核",
+          "slide": 36
+        },
+        {
+          "number": "6.4",
+          "title": "符号组合结构",
+          "slide": 37
+        },
+        {
+          "number": "6.5",
+          "title": "叠层平面造型",
+          "slide": 38
+        },
+        {
+          "number": "6.6",
+          "title": "叠层排列与展开",
+          "slide": 39
+        }
+      ]
+    },
+    {
+      "number": "7",
+      "title": "单元格与圆点阵列",
+      "introSlide": 40,
+      "endSlide": 46,
+      "subsections": [
+        {
+          "number": "7.1",
+          "title": "单元格序列与组合",
+          "slide": 41
+        },
+        {
+          "number": "7.2",
+          "title": "单元格分组与嵌套",
+          "slide": 42
+        },
+        {
+          "number": "7.3",
+          "title": "圆点排列方式",
+          "slide": 43
+        },
+        {
+          "number": "7.4",
+          "title": "圆点分组与间距",
+          "slide": 44
+        },
+        {
+          "number": "7.5",
+          "title": "复合单元格阵列",
+          "slide": 45
+        },
+        {
+          "number": "7.6",
+          "title": "复合圆点阵列",
+          "slide": 46
+        }
+      ]
+    },
+    {
+      "number": "8",
+      "title": "连接补充与层间连接",
+      "introSlide": 47,
+      "endSlide": 53,
+      "subsections": [
+        {
+          "number": "8.1",
+          "title": "折线与端口连接",
+          "slide": 48
+        },
+        {
+          "number": "8.2",
+          "title": "分级分流与公共干线",
+          "slide": 49
+        },
+        {
+          "number": "8.3",
+          "title": "局部与双路跨接",
+          "slide": 50
+        },
+        {
+          "number": "8.4",
+          "title": "嵌套反馈与分支回接",
+          "slide": 51
+        },
+        {
+          "number": "8.5",
+          "title": "稀疏与分组层间连接",
+          "slide": 52
+        },
+        {
+          "number": "8.6",
+          "title": "跨层跳接与双向连接",
+          "slide": 53
+        }
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "slide": 1,
+      "number": "1",
+      "title": "视觉基础与页面结构",
+      "sectionTitle": "视觉基础与页面结构",
+      "kind": "intro"
+    },
+    {
+      "slide": 2,
+      "number": "目录",
+      "title": "章节目录",
+      "kind": "contents",
+      "sectionTitle": "章节目录"
+    },
+    {
+      "slide": 3,
+      "number": "索引",
+      "title": "组件索引",
+      "kind": "component-index",
+      "sectionTitle": "组件索引"
+    },
+    {
+      "slide": 4,
+      "number": "2",
+      "title": "箭头与关系连接",
+      "sectionTitle": "箭头与关系连接",
+      "kind": "intro"
+    },
+    {
+      "slide": 5,
+      "number": "2.1",
+      "title": "直线与缺口箭头",
+      "sectionTitle": "箭头与关系连接",
+      "kind": "subsection"
+    },
+    {
+      "slide": 6,
+      "number": "2.2",
+      "title": "转弯与回转箭头",
+      "sectionTitle": "箭头与关系连接",
+      "kind": "subsection"
+    },
+    {
+      "slide": 7,
+      "number": "2.3",
+      "title": "多向与标注箭头",
+      "sectionTitle": "箭头与关系连接",
+      "kind": "subsection"
+    },
+    {
+      "slide": 8,
+      "number": "2.4",
+      "title": "左右渐变箭头",
+      "sectionTitle": "箭头与关系连接",
+      "kind": "subsection"
+    },
+    {
+      "slide": 9,
+      "number": "3",
+      "title": "图标、标签与信息框",
+      "sectionTitle": "图标、标签与信息框",
+      "kind": "intro"
+    },
+    {
+      "slide": 10,
+      "number": "3.1",
+      "title": "图标造型变体",
+      "sectionTitle": "图标、标签与信息框",
+      "kind": "subsection"
+    },
+    {
+      "slide": 11,
+      "number": "3.2",
+      "title": "标签轮廓与组合",
+      "sectionTitle": "图标、标签与信息框",
+      "kind": "subsection"
+    },
+    {
+      "slide": 12,
+      "number": "3.3",
+      "title": "信息框结构变体",
+      "sectionTitle": "图标、标签与信息框",
+      "kind": "subsection"
+    },
+    {
+      "slide": 13,
+      "number": "3.4",
+      "title": "搜索、筛选与状态图标",
+      "sectionTitle": "图标、标签与信息框",
+      "kind": "subsection"
+    },
+    {
+      "slide": 14,
+      "number": "3.5",
+      "title": "时间、资源与数据图标",
+      "sectionTitle": "图标、标签与信息框",
+      "kind": "subsection"
+    },
+    {
+      "slide": 15,
+      "number": "3.6",
+      "title": "标签轮廓补充",
+      "sectionTitle": "图标、标签与信息框",
+      "kind": "subsection"
+    },
+    {
+      "slide": 16,
+      "number": "3.7",
+      "title": "标签组合补充",
+      "sectionTitle": "图标、标签与信息框",
+      "kind": "subsection"
+    },
+    {
+      "slide": 17,
+      "number": "3.8",
+      "title": "信息框边界与标题",
+      "sectionTitle": "图标、标签与信息框",
+      "kind": "subsection"
+    },
+    {
+      "slide": 18,
+      "number": "3.9",
+      "title": "信息框分区与组合",
+      "sectionTitle": "图标、标签与信息框",
+      "kind": "subsection"
+    },
+    {
+      "slide": 19,
+      "number": "4",
+      "title": "流程图组件",
+      "sectionTitle": "流程图组件",
+      "kind": "intro"
+    },
+    {
+      "slide": 20,
+      "number": "4.1",
+      "title": "条件判断与选择",
+      "sectionTitle": "流程图组件",
+      "kind": "subsection"
+    },
+    {
+      "slide": 21,
+      "number": "4.2",
+      "title": "循环与反馈",
+      "sectionTitle": "流程图组件",
+      "kind": "subsection"
+    },
+    {
+      "slide": 22,
+      "number": "4.3",
+      "title": "并行与同步",
+      "sectionTitle": "流程图组件",
+      "kind": "subsection"
+    },
+    {
+      "slide": 23,
+      "number": "4.4",
+      "title": "阶段关口与子流程",
+      "sectionTitle": "流程图组件",
+      "kind": "subsection"
+    },
+    {
+      "slide": 24,
+      "number": "4.5",
+      "title": "跨泳道交接",
+      "sectionTitle": "流程图组件",
+      "kind": "subsection"
+    },
+    {
+      "slide": 25,
+      "number": "4.6",
+      "title": "异常补偿与退出",
+      "sectionTitle": "流程图组件",
+      "kind": "subsection"
+    },
+    {
+      "slide": 26,
+      "number": "5",
+      "title": "版式组件与内容分区",
+      "sectionTitle": "版式组件与内容分区",
+      "kind": "intro"
+    },
+    {
+      "slide": 27,
+      "number": "5.1",
+      "title": "主次与侧栏布局",
+      "sectionTitle": "版式组件与内容分区",
+      "kind": "subsection"
+    },
+    {
+      "slide": 28,
+      "number": "5.2",
+      "title": "图文与说明分区",
+      "sectionTitle": "版式组件与内容分区",
+      "kind": "subsection"
+    },
+    {
+      "slide": 29,
+      "number": "5.3",
+      "title": "矩阵与跨格组合",
+      "sectionTitle": "版式组件与内容分区",
+      "kind": "subsection"
+    },
+    {
+      "slide": 30,
+      "number": "5.4",
+      "title": "通栏与段落组合",
+      "sectionTitle": "版式组件与内容分区",
+      "kind": "subsection"
+    },
+    {
+      "slide": 31,
+      "number": "5.5",
+      "title": "嵌套与成组分区",
+      "sectionTitle": "版式组件与内容分区",
+      "kind": "subsection"
+    },
+    {
+      "slide": 32,
+      "number": "5.6",
+      "title": "对照与总结分区",
+      "sectionTitle": "版式组件与内容分区",
+      "kind": "subsection"
+    },
+    {
+      "slide": 33,
+      "number": "6",
+      "title": "节点、符号与叠层平面",
+      "sectionTitle": "节点、符号与叠层平面",
+      "kind": "intro"
+    },
+    {
+      "slide": 34,
+      "number": "6.1",
+      "title": "节点轮廓造型",
+      "sectionTitle": "节点、符号与叠层平面",
+      "kind": "subsection"
+    },
+    {
+      "slide": 35,
+      "number": "6.2",
+      "title": "节点分区与端口",
+      "sectionTitle": "节点、符号与叠层平面",
+      "kind": "subsection"
+    },
+    {
+      "slide": 36,
+      "number": "6.3",
+      "title": "符号边框与内核",
+      "sectionTitle": "节点、符号与叠层平面",
+      "kind": "subsection"
+    },
+    {
+      "slide": 37,
+      "number": "6.4",
+      "title": "符号组合结构",
+      "sectionTitle": "节点、符号与叠层平面",
+      "kind": "subsection"
+    },
+    {
+      "slide": 38,
+      "number": "6.5",
+      "title": "叠层平面造型",
+      "sectionTitle": "节点、符号与叠层平面",
+      "kind": "subsection"
+    },
+    {
+      "slide": 39,
+      "number": "6.6",
+      "title": "叠层排列与展开",
+      "sectionTitle": "节点、符号与叠层平面",
+      "kind": "subsection"
+    },
+    {
+      "slide": 40,
+      "number": "7",
+      "title": "单元格与圆点阵列",
+      "sectionTitle": "单元格与圆点阵列",
+      "kind": "intro"
+    },
+    {
+      "slide": 41,
+      "number": "7.1",
+      "title": "单元格序列与组合",
+      "sectionTitle": "单元格与圆点阵列",
+      "kind": "subsection"
+    },
+    {
+      "slide": 42,
+      "number": "7.2",
+      "title": "单元格分组与嵌套",
+      "sectionTitle": "单元格与圆点阵列",
+      "kind": "subsection"
+    },
+    {
+      "slide": 43,
+      "number": "7.3",
+      "title": "圆点排列方式",
+      "sectionTitle": "单元格与圆点阵列",
+      "kind": "subsection"
+    },
+    {
+      "slide": 44,
+      "number": "7.4",
+      "title": "圆点分组与间距",
+      "sectionTitle": "单元格与圆点阵列",
+      "kind": "subsection"
+    },
+    {
+      "slide": 45,
+      "number": "7.5",
+      "title": "复合单元格阵列",
+      "sectionTitle": "单元格与圆点阵列",
+      "kind": "subsection"
+    },
+    {
+      "slide": 46,
+      "number": "7.6",
+      "title": "复合圆点阵列",
+      "sectionTitle": "单元格与圆点阵列",
+      "kind": "subsection"
+    },
+    {
+      "slide": 47,
+      "number": "8",
+      "title": "连接补充与层间连接",
+      "sectionTitle": "连接补充与层间连接",
+      "kind": "intro"
+    },
+    {
+      "slide": 48,
+      "number": "8.1",
+      "title": "折线与端口连接",
+      "sectionTitle": "连接补充与层间连接",
+      "kind": "subsection"
+    },
+    {
+      "slide": 49,
+      "number": "8.2",
+      "title": "分级分流与公共干线",
+      "sectionTitle": "连接补充与层间连接",
+      "kind": "subsection"
+    },
+    {
+      "slide": 50,
+      "number": "8.3",
+      "title": "局部与双路跨接",
+      "sectionTitle": "连接补充与层间连接",
+      "kind": "subsection"
+    },
+    {
+      "slide": 51,
+      "number": "8.4",
+      "title": "嵌套反馈与分支回接",
+      "sectionTitle": "连接补充与层间连接",
+      "kind": "subsection"
+    },
+    {
+      "slide": 52,
+      "number": "8.5",
+      "title": "稀疏与分组层间连接",
+      "sectionTitle": "连接补充与层间连接",
+      "kind": "subsection"
+    },
+    {
+      "slide": 53,
+      "number": "8.6",
+      "title": "跨层跳接与双向连接",
+      "sectionTitle": "连接补充与层间连接",
+      "kind": "subsection"
+    }
+  ],
+  "nativeGroups": true,
+  "baseReference": "assets/reference/component-library-v0.14.pptx",
+  "countingRule": "Eight approved pages remain sections 1–8. Subsections in sections 2–8 use separate pages. Existing component IDs remain stable; connection and layer variants enrich C07, C08, C09 and C22. Labels, colors, layer counts, directions and scenarios do not increase the component count.",
+  "items": [
+    {
+      "id": "page.header",
+      "code": "C01",
+      "family": "标题与文字块",
+      "name": "编号渐变标题栏",
+      "parameters": {
+        "number": "一级节为1–8，小节为2.1等",
+        "title": "标题文字"
+      },
+      "variants": [
+        {
+          "name": "编号标题",
+          "options": {
+            "number": "1",
+            "title": "页面标题"
+          }
+        }
+      ],
+      "renderer": "drawHeader",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        1,
+        4,
+        9,
+        19,
+        26
+      ],
+      "sampleSlides": [
+        1,
+        4,
+        9,
+        19,
+        26
+      ],
+      "firstSampleSlide": 1
+    },
+    {
+      "id": "block.message",
+      "code": "C02",
+      "family": "标题与文字块",
+      "name": "信息框",
+      "parameters": {
+        "variant": [
+          "lead",
+          "summary",
+          "banner",
+          "title-band",
+          "hanging-title",
+          "callout",
+          "folded-corner",
+          "corner-index",
+          "open-bracket",
+          "left-rail",
+          "side-heading",
+          "double-frame",
+          "stepped-header",
+          "top-notch",
+          "bottom-caption",
+          "side-callout",
+          "bracket-heading",
+          "ruled-note",
+          "split-body",
+          "number-disc",
+          "stacked-card"
+        ],
+        "title": "标题文字",
+        "label": "正文文字",
+        "secondaryLabel": "双区正文的第二段文字，可选",
+        "number": "角标编号",
+        "emphasis": "附加重点"
+      },
+      "variants": [
+        {
+          "name": "引导式",
+          "options": {
+            "variant": "lead",
+            "label": "说明文字"
+          }
+        },
+        {
+          "name": "结论式",
+          "options": {
+            "variant": "summary",
+            "label": "结论文字"
+          }
+        },
+        {
+          "name": "蓝底强调",
+          "options": {
+            "variant": "banner",
+            "label": "强调文字"
+          }
+        },
+        {
+          "name": "标题带信息框",
+          "options": {
+            "variant": "title-band"
+          },
+          "structure": true
+        },
+        {
+          "name": "悬签标题信息框",
+          "options": {
+            "variant": "hanging-title"
+          },
+          "structure": true
+        },
+        {
+          "name": "指向批注框",
+          "options": {
+            "variant": "callout"
+          },
+          "structure": true
+        },
+        {
+          "name": "折角注释框",
+          "options": {
+            "variant": "folded-corner"
+          },
+          "structure": true
+        },
+        {
+          "name": "编号角标信息框",
+          "options": {
+            "variant": "corner-index"
+          },
+          "structure": true
+        },
+        {
+          "name": "开放四角信息框",
+          "options": {
+            "variant": "open-bracket"
+          },
+          "structure": true
+        },
+        {
+          "name": "左侧色轨信息框",
+          "options": {
+            "variant": "left-rail"
+          },
+          "structure": true
+        },
+        {
+          "name": "左右分栏信息框",
+          "options": {
+            "variant": "side-heading"
+          },
+          "structure": true
+        },
+        {
+          "name": "内外双框信息框",
+          "options": {
+            "variant": "double-frame"
+          },
+          "structure": true
+        },
+        {
+          "name": "阶梯标题信息框",
+          "options": {
+            "variant": "stepped-header"
+          },
+          "structure": true
+        },
+        {
+          "name": "凹口标题信息框",
+          "options": {
+            "variant": "top-notch"
+          },
+          "structure": true
+        },
+        {
+          "name": "底部标题条信息框",
+          "options": {
+            "variant": "bottom-caption"
+          },
+          "structure": true
+        },
+        {
+          "name": "侧签批注信息框",
+          "options": {
+            "variant": "side-callout"
+          },
+          "structure": true
+        },
+        {
+          "name": "标题括线信息框",
+          "options": {
+            "variant": "bracket-heading"
+          },
+          "structure": true
+        },
+        {
+          "name": "横线笔记信息框",
+          "options": {
+            "variant": "ruled-note"
+          },
+          "structure": true
+        },
+        {
+          "name": "双正文分区信息框",
+          "options": {
+            "variant": "split-body"
+          },
+          "structure": true
+        },
+        {
+          "name": "圆章标题信息框",
+          "options": {
+            "variant": "number-disc"
+          },
+          "structure": true
+        },
+        {
+          "name": "背页层叠信息框",
+          "options": {
+            "variant": "stacked-card"
+          },
+          "structure": true
+        }
+      ],
+      "renderer": "drawMessage",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        1,
+        4,
+        9,
+        12,
+        17,
+        18,
+        19,
+        26
+      ],
+      "sampleSlides": [
+        1,
+        4,
+        9,
+        12,
+        17,
+        18,
+        19,
+        26
+      ],
+      "firstSampleSlide": 1
+    },
+    {
+      "id": "block.label",
+      "code": "C03",
+      "family": "标题与文字块",
+      "name": "分类标签",
+      "parameters": {
+        "variant": [
+          "capsule",
+          "clipped",
+          "tab",
+          "notched",
+          "ticket",
+          "indexed",
+          "slanted",
+          "hexagon",
+          "double-notch",
+          "flag-end",
+          "outline-inset",
+          "bottom-rule",
+          "circle-index",
+          "side-tab",
+          "stacked-label",
+          "bracket-label",
+          "split-caption",
+          "folded-ribbon"
+        ],
+        "label": "文字",
+        "secondaryLabel": "上下双段标签的补充文字，可选",
+        "number": "组合标签编号",
+        "vertical": "纵排",
+        "accent": "黄字",
+        "round": "圆角"
+      },
+      "variants": [
+        {
+          "name": "横向白字",
+          "options": {
+            "label": "分类标签"
+          }
+        },
+        {
+          "name": "纵向黄字",
+          "options": {
+            "label": "分类",
+            "vertical": true,
+            "accent": true,
+            "round": true
+          }
+        },
+        {
+          "name": "胶囊标签",
+          "options": {
+            "variant": "capsule"
+          },
+          "geometry": true
+        },
+        {
+          "name": "对角切角标签",
+          "options": {
+            "variant": "clipped"
+          },
+          "geometry": true
+        },
+        {
+          "name": "顶部页签标签",
+          "options": {
+            "variant": "tab"
+          },
+          "geometry": true
+        },
+        {
+          "name": "燕尾书签标签",
+          "options": {
+            "variant": "notched"
+          },
+          "geometry": true
+        },
+        {
+          "name": "两侧内凹票签",
+          "options": {
+            "variant": "ticket"
+          },
+          "geometry": true
+        },
+        {
+          "name": "双段编号标签",
+          "options": {
+            "variant": "indexed"
+          },
+          "geometry": true
+        },
+        {
+          "name": "平行四边形标签",
+          "options": {
+            "variant": "slanted"
+          },
+          "geometry": true
+        },
+        {
+          "name": "六边形标签",
+          "options": {
+            "variant": "hexagon"
+          },
+          "geometry": true
+        },
+        {
+          "name": "双燕尾标签",
+          "options": {
+            "variant": "double-notch"
+          },
+          "geometry": true
+        },
+        {
+          "name": "旗形尖尾标签",
+          "options": {
+            "variant": "flag-end"
+          },
+          "geometry": true
+        },
+        {
+          "name": "双层空心标签",
+          "options": {
+            "variant": "outline-inset"
+          },
+          "geometry": true
+        },
+        {
+          "name": "底线牌标签",
+          "options": {
+            "variant": "bottom-rule"
+          },
+          "geometry": true
+        },
+        {
+          "name": "圆章编号标签",
+          "options": {
+            "variant": "circle-index"
+          },
+          "geometry": true
+        },
+        {
+          "name": "侧凸耳标签",
+          "options": {
+            "variant": "side-tab"
+          },
+          "geometry": true
+        },
+        {
+          "name": "错位叠签",
+          "options": {
+            "variant": "stacked-label"
+          },
+          "geometry": true
+        },
+        {
+          "name": "两侧括签",
+          "options": {
+            "variant": "bracket-label"
+          },
+          "geometry": true
+        },
+        {
+          "name": "上下双段标签",
+          "options": {
+            "variant": "split-caption"
+          },
+          "geometry": true
+        },
+        {
+          "name": "折翼缎带标签",
+          "options": {
+            "variant": "folded-ribbon"
+          },
+          "geometry": true
+        }
+      ],
+      "renderer": "drawLabel",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        9,
+        11,
+        15,
+        16,
+        26
+      ],
+      "sampleSlides": [
+        9,
+        11,
+        15,
+        16,
+        26
+      ],
+      "firstSampleSlide": 9
+    },
+    {
+      "id": "arrow.lead",
+      "code": "C04",
+      "family": "实体箭头",
+      "name": "双折引导箭头",
+      "parameters": {
+        "box": "位置与尺寸"
+      },
+      "variants": [
+        {
+          "name": "双折造型",
+          "options": {}
+        }
+      ],
+      "renderer": "drawLead",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        1,
+        4,
+        9,
+        19,
+        26
+      ],
+      "sampleSlides": [
+        1,
+        4,
+        9,
+        19,
+        26
+      ],
+      "firstSampleSlide": 1
+    },
+    {
+      "id": "arrow.block",
+      "code": "C05",
+      "family": "实体箭头",
+      "name": "实体箭头",
+      "parameters": {
+        "shape": [
+          "rightArrow",
+          "notchedRightArrow",
+          "stripedRightArrow",
+          "homePlate",
+          "triangle",
+          "swooshArrow",
+          "bentArrow",
+          "uturnArrow",
+          "curvedRightArrow",
+          "circularArrow",
+          "leftRightCircularArrow",
+          "leftRightArrow",
+          "leftUpArrow",
+          "leftRightUpArrow",
+          "quadArrow",
+          "rightArrowCallout",
+          "leftRightArrowCallout"
+        ],
+        "direction": [
+          "right",
+          "left",
+          "up",
+          "down"
+        ],
+        "rotation": [
+          0,
+          90,
+          180,
+          270
+        ],
+        "gradient": [
+          "light-to-dark",
+          "dark-to-light",
+          "fade-in",
+          "fade-out"
+        ],
+        "gradientAngle": "渐变角度，默认0为从左到右",
+        "label": "标注区文字，可选",
+        "outline": "空心",
+        "faded": "兼容旧的左浅右深渐变",
+        "adjustmentList": "原生形状比例调节，可选"
+      },
+      "variants": [
+        {
+          "name": "实心直箭头",
+          "options": {}
+        },
+        {
+          "name": "左浅右深",
+          "options": {
+            "gradient": "light-to-dark"
+          }
+        },
+        {
+          "name": "空心向下",
+          "options": {
+            "direction": "down",
+            "outline": true
+          }
+        },
+        {
+          "name": "燕尾缺口箭头",
+          "options": {
+            "shape": "notchedRightArrow"
+          },
+          "geometry": true
+        },
+        {
+          "name": "条纹尾箭头",
+          "options": {
+            "shape": "stripedRightArrow"
+          },
+          "geometry": true
+        },
+        {
+          "name": "五边形旗帜箭头",
+          "options": {
+            "shape": "homePlate"
+          },
+          "geometry": true
+        },
+        {
+          "name": "三角箭头头部",
+          "options": {
+            "shape": "triangle"
+          },
+          "geometry": true
+        },
+        {
+          "name": "收尖流线箭头",
+          "options": {
+            "shape": "swooshArrow"
+          },
+          "geometry": true
+        },
+        {
+          "name": "直角转弯箭头",
+          "options": {
+            "shape": "bentArrow"
+          },
+          "geometry": true
+        },
+        {
+          "name": "U 形回转箭头",
+          "options": {
+            "shape": "uturnArrow"
+          },
+          "geometry": true
+        },
+        {
+          "name": "圆弧转弯箭头",
+          "options": {
+            "shape": "curvedRightArrow"
+          },
+          "geometry": true
+        },
+        {
+          "name": "开口环形箭头",
+          "options": {
+            "shape": "circularArrow"
+          },
+          "geometry": true
+        },
+        {
+          "name": "双端环形箭头",
+          "options": {
+            "shape": "leftRightCircularArrow"
+          },
+          "geometry": true
+        },
+        {
+          "name": "双向宽箭头",
+          "options": {
+            "shape": "leftRightArrow"
+          },
+          "geometry": true
+        },
+        {
+          "name": "L 形双端箭头",
+          "options": {
+            "shape": "leftUpArrow"
+          },
+          "geometry": true
+        },
+        {
+          "name": "T 形三向箭头",
+          "options": {
+            "shape": "leftRightUpArrow"
+          },
+          "geometry": true
+        },
+        {
+          "name": "十字四向箭头",
+          "options": {
+            "shape": "quadArrow"
+          },
+          "geometry": true
+        },
+        {
+          "name": "单端标注框箭头",
+          "options": {
+            "shape": "rightArrowCallout"
+          },
+          "geometry": true
+        },
+        {
+          "name": "双端标注框箭头",
+          "options": {
+            "shape": "leftRightArrowCallout"
+          },
+          "geometry": true
+        },
+        {
+          "name": "深蓝至浅蓝",
+          "options": {
+            "gradient": "dark-to-light"
+          },
+          "fill": true
+        },
+        {
+          "name": "透明至实蓝",
+          "options": {
+            "gradient": "fade-in"
+          },
+          "fill": true
+        },
+        {
+          "name": "实蓝至透明",
+          "options": {
+            "gradient": "fade-out"
+          },
+          "fill": true
+        }
+      ],
+      "renderer": "drawBlockArrow",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "sampleSlides": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "firstSampleSlide": 4
+    },
+    {
+      "id": "arrow.stages",
+      "code": "C06",
+      "family": "实体箭头",
+      "name": "阶段箭头链",
+      "parameters": {
+        "labels": "阶段文字数组",
+        "active": "突出阶段下标"
+      },
+      "variants": [
+        {
+          "name": "三阶段",
+          "options": {
+            "labels": [
+              "阶段 1",
+              "阶段 2",
+              "阶段 3"
+            ]
+          }
+        },
+        {
+          "name": "四阶段",
+          "options": {
+            "labels": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ],
+            "active": 1
+          }
+        }
+      ],
+      "renderer": "drawStages",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        4
+      ],
+      "sampleSlides": [
+        4
+      ],
+      "firstSampleSlide": 4
+    },
+    {
+      "id": "connector.link",
+      "code": "C07",
+      "family": "连线与分支",
+      "name": "关系连线",
+      "parameters": {
+        "variant": [
+          "link-offset-elbow",
+          "link-side-detour"
+        ],
+        "kind": [
+          "straight",
+          "elbow"
+        ],
+        "dashed": "虚线",
+        "both": "基础连线双箭头",
+        "arrow": "基础连线末端箭头",
+        "from": "源形状，可选",
+        "to": "目标形状，可选",
+        "fromSide": "源连接侧",
+        "toSide": "目标连接侧",
+        "labels": "变体节点文字对象"
+      },
+      "variants": [
+        {
+          "name": "实线",
+          "options": {}
+        },
+        {
+          "name": "虚线",
+          "options": {
+            "dashed": true
+          }
+        },
+        {
+          "name": "双向",
+          "options": {
+            "both": true
+          }
+        },
+        {
+          "name": "折线",
+          "options": {
+            "kind": "elbow"
+          }
+        },
+        {
+          "name": "错位端口折线",
+          "options": {
+            "variant": "link-offset-elbow"
+          },
+          "structure": true
+        },
+        {
+          "name": "同侧端口绕行",
+          "options": {
+            "variant": "link-side-detour"
+          },
+          "structure": true
+        }
+      ],
+      "renderer": "drawLink",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        4,
+        19,
+        47,
+        48
+      ],
+      "sampleSlides": [
+        4,
+        19,
+        47,
+        48
+      ],
+      "firstSampleSlide": 4
+    },
+    {
+      "id": "connector.junction",
+      "code": "C08",
+      "family": "连线与分支",
+      "name": "分流与汇流",
+      "parameters": {
+        "variant": [
+          "junction-tree",
+          "junction-tapped-trunk"
+        ],
+        "direction": [
+          "split",
+          "merge"
+        ],
+        "count": "基础分支数 2–4",
+        "labels": "基础文字数组或变体节点文字对象"
+      },
+      "variants": [
+        {
+          "name": "二路分流",
+          "options": {
+            "direction": "split",
+            "count": 2
+          }
+        },
+        {
+          "name": "三路汇流",
+          "options": {
+            "direction": "merge",
+            "count": 3
+          }
+        },
+        {
+          "name": "分级分流",
+          "options": {
+            "variant": "junction-tree"
+          },
+          "structure": true
+        },
+        {
+          "name": "连续接入干线",
+          "options": {
+            "variant": "junction-tapped-trunk"
+          },
+          "structure": true
+        }
+      ],
+      "renderer": "drawJunction",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        4,
+        9,
+        49
+      ],
+      "sampleSlides": [
+        4,
+        9,
+        49
+      ],
+      "firstSampleSlide": 4
+    },
+    {
+      "id": "connector.bypass",
+      "code": "C09",
+      "family": "连线与分支",
+      "name": "跨接与回路线",
+      "parameters": {
+        "variant": [
+          "bypass-partial-span",
+          "bypass-dual-span",
+          "bypass-nested-return",
+          "bypass-branch-return"
+        ],
+        "direction": [
+          "forward",
+          "return"
+        ],
+        "dashed": "基础回路线虚线",
+        "labels": "基础文字数组或变体节点文字对象"
+      },
+      "variants": [
+        {
+          "name": "前向跨接",
+          "options": {
+            "direction": "forward"
+          }
+        },
+        {
+          "name": "反向回路",
+          "options": {
+            "direction": "return",
+            "dashed": true
+          }
+        },
+        {
+          "name": "局部跨接",
+          "options": {
+            "variant": "bypass-partial-span"
+          },
+          "structure": true
+        },
+        {
+          "name": "双路跨接",
+          "options": {
+            "variant": "bypass-dual-span"
+          },
+          "structure": true
+        },
+        {
+          "name": "嵌套反馈",
+          "options": {
+            "variant": "bypass-nested-return"
+          },
+          "structure": true
+        },
+        {
+          "name": "分支回接",
+          "options": {
+            "variant": "bypass-branch-return"
+          },
+          "structure": true
+        }
+      ],
+      "renderer": "drawBypass",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        19,
+        47,
+        50,
+        51
+      ],
+      "sampleSlides": [
+        19,
+        47,
+        50,
+        51
+      ],
+      "firstSampleSlide": 19
+    },
+    {
+      "id": "icon.question",
+      "code": "C10",
+      "family": "图标",
+      "name": "问题气泡",
+      "parameters": {
+        "box": "位置与尺寸",
+        "variant": [
+          "double-bubble",
+          "circle-bubble"
+        ]
+      },
+      "variants": [
+        {
+          "name": "原始造型",
+          "options": {}
+        },
+        {
+          "name": "双气泡问号",
+          "options": {
+            "variant": "double-bubble"
+          },
+          "geometry": true
+        },
+        {
+          "name": "圆气泡问号",
+          "options": {
+            "variant": "circle-bubble"
+          },
+          "geometry": true
+        }
+      ],
+      "renderer": "drawQuestion",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        9,
+        10,
+        26
+      ],
+      "sampleSlides": [
+        9,
+        10,
+        26
+      ],
+      "firstSampleSlide": 9
+    },
+    {
+      "id": "icon.info",
+      "code": "C11",
+      "family": "图标",
+      "name": "说明标记",
+      "parameters": {
+        "box": "位置与尺寸",
+        "variant": [
+          "square-frame",
+          "folded-corner"
+        ]
+      },
+      "variants": [
+        {
+          "name": "原始造型",
+          "options": {}
+        },
+        {
+          "name": "方框信息",
+          "options": {
+            "variant": "square-frame"
+          },
+          "geometry": true
+        },
+        {
+          "name": "折角信息",
+          "options": {
+            "variant": "folded-corner"
+          },
+          "geometry": true
+        }
+      ],
+      "renderer": "drawInfo",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        9,
+        10
+      ],
+      "sampleSlides": [
+        9,
+        10
+      ],
+      "firstSampleSlide": 9
+    },
+    {
+      "id": "icon.document",
+      "code": "C12",
+      "family": "图标",
+      "name": "文档",
+      "parameters": {
+        "box": "位置与尺寸",
+        "variant": [
+          "folded-page",
+          "stacked-pages"
+        ]
+      },
+      "variants": [
+        {
+          "name": "原始造型",
+          "options": {}
+        },
+        {
+          "name": "折角单页",
+          "options": {
+            "variant": "folded-page"
+          },
+          "geometry": true
+        },
+        {
+          "name": "多页叠放",
+          "options": {
+            "variant": "stacked-pages"
+          },
+          "geometry": true
+        }
+      ],
+      "renderer": "drawDocument",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        9,
+        10
+      ],
+      "sampleSlides": [
+        9,
+        10
+      ],
+      "firstSampleSlide": 9
+    },
+    {
+      "id": "icon.database",
+      "code": "C13",
+      "family": "图标",
+      "name": "数据库",
+      "parameters": {
+        "box": "位置与尺寸",
+        "variant": [
+          "layered-cylinder",
+          "cylinder-group"
+        ]
+      },
+      "variants": [
+        {
+          "name": "原始造型",
+          "options": {}
+        },
+        {
+          "name": "分层圆柱",
+          "options": {
+            "variant": "layered-cylinder"
+          },
+          "geometry": true
+        },
+        {
+          "name": "圆柱组",
+          "options": {
+            "variant": "cylinder-group"
+          },
+          "geometry": true
+        }
+      ],
+      "renderer": "drawDatabase",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        9,
+        10
+      ],
+      "sampleSlides": [
+        9,
+        10
+      ],
+      "firstSampleSlide": 9
+    },
+    {
+      "id": "icon.target",
+      "code": "C14",
+      "family": "图标",
+      "name": "靶心",
+      "parameters": {
+        "box": "位置与尺寸",
+        "variant": [
+          "crosshair",
+          "arrow-hit"
+        ]
+      },
+      "variants": [
+        {
+          "name": "原始造型",
+          "options": {}
+        },
+        {
+          "name": "十字靶心",
+          "options": {
+            "variant": "crosshair"
+          },
+          "geometry": true
+        },
+        {
+          "name": "带箭命中",
+          "options": {
+            "variant": "arrow-hit"
+          },
+          "geometry": true
+        }
+      ],
+      "renderer": "drawTarget",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        9,
+        10
+      ],
+      "sampleSlides": [
+        9,
+        10
+      ],
+      "firstSampleSlide": 9
+    },
+    {
+      "id": "block.node",
+      "code": "C15",
+      "family": "节点与图形",
+      "name": "基础节点",
+      "parameters": {
+        "label": "文字",
+        "geometry": [
+          "rect",
+          "roundRect",
+          "ellipse",
+          "diamond"
+        ],
+        "variant": [
+          "node-hexagon",
+          "node-trapezoid",
+          "node-parallelogram",
+          "node-cylinder",
+          "node-document",
+          "node-capsule",
+          "node-double-frame",
+          "node-multiport",
+          "node-compartment",
+          "node-index-corner",
+          "node-nested",
+          "node-split"
+        ],
+        "fields": "复合节点的短字段数组",
+        "number": "编号标记",
+        "fill": "填充",
+        "stroke": "边框",
+        "color": "字色",
+        "dashed": "虚线边框"
+      },
+      "variants": [
+        {
+          "name": "矩形",
+          "options": {
+            "label": "节点 A"
+          }
+        },
+        {
+          "name": "圆角",
+          "options": {
+            "label": "节点 B",
+            "geometry": "roundRect"
+          }
+        },
+        {
+          "name": "菱形",
+          "options": {
+            "label": "条件",
+            "geometry": "diamond"
+          }
+        },
+        {
+          "name": "六边形节点",
+          "options": {
+            "variant": "node-hexagon"
+          },
+          "geometry": true
+        },
+        {
+          "name": "梯形节点",
+          "options": {
+            "variant": "node-trapezoid"
+          },
+          "geometry": true
+        },
+        {
+          "name": "平行四边形节点",
+          "options": {
+            "variant": "node-parallelogram"
+          },
+          "geometry": true
+        },
+        {
+          "name": "圆柱节点",
+          "options": {
+            "variant": "node-cylinder"
+          },
+          "geometry": true
+        },
+        {
+          "name": "文档节点",
+          "options": {
+            "variant": "node-document"
+          },
+          "geometry": true
+        },
+        {
+          "name": "胶囊节点",
+          "options": {
+            "variant": "node-capsule"
+          },
+          "geometry": true
+        },
+        {
+          "name": "双框节点",
+          "options": {
+            "variant": "node-double-frame"
+          },
+          "geometry": true
+        },
+        {
+          "name": "多端口节点",
+          "options": {
+            "variant": "node-multiport"
+          },
+          "geometry": true
+        },
+        {
+          "name": "分格节点",
+          "options": {
+            "variant": "node-compartment"
+          },
+          "geometry": true
+        },
+        {
+          "name": "编号角标节点",
+          "options": {
+            "variant": "node-index-corner"
+          },
+          "geometry": true
+        },
+        {
+          "name": "内嵌子节点",
+          "options": {
+            "variant": "node-nested"
+          },
+          "geometry": true
+        },
+        {
+          "name": "分段节点",
+          "options": {
+            "variant": "node-split"
+          },
+          "geometry": true
+        }
+      ],
+      "renderer": "drawNode",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        33,
+        34,
+        35
+      ],
+      "sampleSlides": [
+        33,
+        34,
+        35
+      ],
+      "firstSampleSlide": 33
+    },
+    {
+      "id": "mark.operator",
+      "code": "C16",
+      "family": "节点与图形",
+      "name": "运算符号",
+      "parameters": {
+        "symbol": "任意短符号",
+        "accent": "红色强调",
+        "variant": [
+          "square-add",
+          "diamond-multiply",
+          "hexagon-sum",
+          "double-ring-dot",
+          "open-bracket-equal",
+          "split-symbol",
+          "dual-input-sum",
+          "serial-pair",
+          "parallel-group",
+          "corner-index",
+          "nested-operator",
+          "contrast-pair"
+        ]
+      },
+      "variants": [
+        {
+          "name": "加号",
+          "options": {
+            "symbol": "+"
+          }
+        },
+        {
+          "name": "乘号",
+          "options": {
+            "symbol": "×"
+          }
+        },
+        {
+          "name": "组合符号",
+          "options": {
+            "symbol": "⊕",
+            "accent": true
+          }
+        },
+        {
+          "name": "方框加号",
+          "options": {
+            "variant": "square-add"
+          },
+          "structure": true
+        },
+        {
+          "name": "菱框乘号",
+          "options": {
+            "variant": "diamond-multiply"
+          },
+          "structure": true
+        },
+        {
+          "name": "六边框求和",
+          "options": {
+            "variant": "hexagon-sum"
+          },
+          "structure": true
+        },
+        {
+          "name": "双环点积",
+          "options": {
+            "variant": "double-ring-dot"
+          },
+          "structure": true
+        },
+        {
+          "name": "开放括线等号",
+          "options": {
+            "variant": "open-bracket-equal"
+          },
+          "structure": true
+        },
+        {
+          "name": "分隔双符号",
+          "options": {
+            "variant": "split-symbol"
+          },
+          "structure": true
+        },
+        {
+          "name": "双输入求和",
+          "options": {
+            "variant": "dual-input-sum"
+          },
+          "structure": true
+        },
+        {
+          "name": "串联算子",
+          "options": {
+            "variant": "serial-pair"
+          },
+          "structure": true
+        },
+        {
+          "name": "并列符号组",
+          "options": {
+            "variant": "parallel-group"
+          },
+          "structure": true
+        },
+        {
+          "name": "符号角标",
+          "options": {
+            "variant": "corner-index"
+          },
+          "structure": true
+        },
+        {
+          "name": "嵌套算子",
+          "options": {
+            "variant": "nested-operator"
+          },
+          "structure": true
+        },
+        {
+          "name": "对照算子",
+          "options": {
+            "variant": "contrast-pair"
+          },
+          "structure": true
+        }
+      ],
+      "renderer": "drawOperator",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        33,
+        36,
+        37
+      ],
+      "sampleSlides": [
+        33,
+        36,
+        37
+      ],
+      "firstSampleSlide": 33
+    },
+    {
+      "id": "graphic.stack",
+      "code": "C17",
+      "family": "节点与图形",
+      "name": "叠层平面",
+      "parameters": {
+        "depth": "层数，造型变体受各自depth元数据约束",
+        "offset": "层间偏移",
+        "geometry": [
+          "parallelogram",
+          "rect"
+        ],
+        "variant": [
+          "rounded-sheets",
+          "disc-stack",
+          "hex-stack",
+          "diamond-stack",
+          "frame-stack",
+          "grid-stack",
+          "exploded-stack",
+          "fan-stack",
+          "pyramid-stack",
+          "sandwich-stack",
+          "twin-stack",
+          "window-stack"
+        ]
+      },
+      "variants": [
+        {
+          "name": "三层平面",
+          "options": {
+            "depth": 3
+          }
+        },
+        {
+          "name": "五层平面",
+          "options": {
+            "depth": 5
+          }
+        },
+        {
+          "name": "矩形叠片",
+          "options": {
+            "depth": 3,
+            "geometry": "rect"
+          }
+        },
+        {
+          "name": "圆角叠片",
+          "options": {
+            "variant": "rounded-sheets"
+          },
+          "structure": true,
+          "depth": {
+            "mode": "adjustable",
+            "min": 2,
+            "max": 6,
+            "default": 4
+          }
+        },
+        {
+          "name": "圆盘叠层",
+          "options": {
+            "variant": "disc-stack"
+          },
+          "structure": true,
+          "depth": {
+            "mode": "adjustable",
+            "min": 2,
+            "max": 6,
+            "default": 4
+          }
+        },
+        {
+          "name": "六边叠片",
+          "options": {
+            "variant": "hex-stack"
+          },
+          "structure": true,
+          "depth": {
+            "mode": "adjustable",
+            "min": 2,
+            "max": 6,
+            "default": 3
+          }
+        },
+        {
+          "name": "菱形叠片",
+          "options": {
+            "variant": "diamond-stack"
+          },
+          "structure": true,
+          "depth": {
+            "mode": "adjustable",
+            "min": 2,
+            "max": 6,
+            "default": 3
+          }
+        },
+        {
+          "name": "开放框叠层",
+          "options": {
+            "variant": "frame-stack"
+          },
+          "structure": true,
+          "depth": {
+            "mode": "adjustable",
+            "min": 2,
+            "max": 6,
+            "default": 3
+          }
+        },
+        {
+          "name": "网格叠层",
+          "options": {
+            "variant": "grid-stack"
+          },
+          "structure": true,
+          "depth": {
+            "mode": "adjustable",
+            "min": 2,
+            "max": 6,
+            "default": 3
+          }
+        },
+        {
+          "name": "分离展开叠层",
+          "options": {
+            "variant": "exploded-stack"
+          },
+          "structure": true,
+          "depth": {
+            "mode": "adjustable",
+            "min": 2,
+            "max": 6,
+            "default": 3
+          }
+        },
+        {
+          "name": "扇形展开叠层",
+          "options": {
+            "variant": "fan-stack"
+          },
+          "structure": true,
+          "depth": {
+            "mode": "adjustable",
+            "min": 2,
+            "max": 6,
+            "default": 4
+          }
+        },
+        {
+          "name": "渐缩层叠",
+          "options": {
+            "variant": "pyramid-stack"
+          },
+          "structure": true,
+          "depth": {
+            "mode": "adjustable",
+            "min": 2,
+            "max": 6,
+            "default": 4
+          }
+        },
+        {
+          "name": "夹层叠层",
+          "options": {
+            "variant": "sandwich-stack"
+          },
+          "structure": true,
+          "depth": {
+            "mode": "fixed",
+            "layers": 3,
+            "groups": 1,
+            "layersPerGroup": 3
+          }
+        },
+        {
+          "name": "成组双叠层",
+          "options": {
+            "variant": "twin-stack"
+          },
+          "structure": true,
+          "depth": {
+            "mode": "fixed",
+            "layers": 6,
+            "groups": 2,
+            "layersPerGroup": 3
+          }
+        },
+        {
+          "name": "开窗叠层",
+          "options": {
+            "variant": "window-stack"
+          },
+          "structure": true,
+          "depth": {
+            "mode": "fixed",
+            "layers": 3,
+            "groups": 1,
+            "layersPerGroup": 3
+          }
+        }
+      ],
+      "renderer": "drawStack",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        33,
+        38,
+        39
+      ],
+      "sampleSlides": [
+        33,
+        38,
+        39
+      ],
+      "firstSampleSlide": 33
+    },
+    {
+      "id": "graphic.cells",
+      "code": "C18",
+      "family": "阵列与排列",
+      "name": "单元格阵列",
+      "parameters": {
+        "variant": [
+          "cells-segmented",
+          "cells-stepped",
+          "cells-paired",
+          "cells-alternating",
+          "cells-hex-chain",
+          "cells-chevron-chain",
+          "cells-block-groups",
+          "cells-center-surround",
+          "cells-nested-frame",
+          "cells-cross",
+          "cells-triangular",
+          "cells-bridge",
+          "cells-banded-matrix",
+          "cells-merged-matrix",
+          "cells-sparse-matrix",
+          "cells-diagonal-matrix",
+          "cells-bracketed-groups",
+          "cells-panel-array"
+        ],
+        "rows": "基础网格行数",
+        "cols": "基础网格列数",
+        "gap": "基础网格间距",
+        "labels": "逐格文字数组或按逻辑key索引的对象",
+        "colors": "逐格颜色",
+        "highlight": "突出下标或逻辑key数组",
+        "filled": "填充"
+      },
+      "variants": [
+        {
+          "name": "带字序列",
+          "options": {
+            "rows": 1,
+            "cols": 5,
+            "labels": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "highlight": [
+              0
+            ]
+          }
+        },
+        {
+          "name": "色条",
+          "options": {
+            "rows": 1,
+            "cols": 10,
+            "filled": true
+          }
+        },
+        {
+          "name": "网格",
+          "options": {
+            "rows": 4,
+            "cols": 4,
+            "highlight": [
+              0,
+              5,
+              10,
+              15
+            ],
+            "gap": 0
+          }
+        },
+        {
+          "name": "竖排",
+          "options": {
+            "rows": 5,
+            "cols": 1,
+            "filled": true
+          }
+        },
+        {
+          "name": "分段格条",
+          "options": {
+            "variant": "cells-segmented"
+          },
+          "structure": true
+        },
+        {
+          "name": "阶梯序列",
+          "options": {
+            "variant": "cells-stepped"
+          },
+          "structure": true
+        },
+        {
+          "name": "上下成对列",
+          "options": {
+            "variant": "cells-paired"
+          },
+          "structure": true
+        },
+        {
+          "name": "横竖交替拼块",
+          "options": {
+            "variant": "cells-alternating"
+          },
+          "structure": true
+        },
+        {
+          "name": "相接六边格链",
+          "options": {
+            "variant": "cells-hex-chain"
+          },
+          "structure": true
+        },
+        {
+          "name": "斜分格序列",
+          "options": {
+            "variant": "cells-chevron-chain"
+          },
+          "structure": true
+        },
+        {
+          "name": "小组阵列",
+          "options": {
+            "variant": "cells-block-groups"
+          },
+          "structure": true
+        },
+        {
+          "name": "中心围格",
+          "options": {
+            "variant": "cells-center-surround"
+          },
+          "structure": true
+        },
+        {
+          "name": "容器细格",
+          "options": {
+            "variant": "cells-nested-frame"
+          },
+          "structure": true
+        },
+        {
+          "name": "十字格群",
+          "options": {
+            "variant": "cells-cross"
+          },
+          "structure": true
+        },
+        {
+          "name": "三角格堆",
+          "options": {
+            "variant": "cells-triangular"
+          },
+          "structure": true
+        },
+        {
+          "name": "跨格桥接",
+          "options": {
+            "variant": "cells-bridge"
+          },
+          "structure": true
+        },
+        {
+          "name": "分带混合格阵",
+          "options": {
+            "variant": "cells-banded-matrix"
+          },
+          "structure": true
+        },
+        {
+          "name": "跨格主区矩阵",
+          "options": {
+            "variant": "cells-merged-matrix"
+          },
+          "structure": true
+        },
+        {
+          "name": "规则稀疏格阵",
+          "options": {
+            "variant": "cells-sparse-matrix"
+          },
+          "structure": true
+        },
+        {
+          "name": "阶梯斜带格阵",
+          "options": {
+            "variant": "cells-diagonal-matrix"
+          },
+          "structure": true
+        },
+        {
+          "name": "括线分组格阵",
+          "options": {
+            "variant": "cells-bracketed-groups"
+          },
+          "structure": true
+        },
+        {
+          "name": "三面板细格阵",
+          "options": {
+            "variant": "cells-panel-array"
+          },
+          "structure": true
+        }
+      ],
+      "renderer": "drawCells",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        40,
+        41,
+        42,
+        45
+      ],
+      "sampleSlides": [
+        40,
+        41,
+        42,
+        45
+      ],
+      "firstSampleSlide": 40
+    },
+    {
+      "id": "graphic.dots",
+      "code": "C19",
+      "family": "阵列与排列",
+      "name": "圆点阵列",
+      "parameters": {
+        "variant": [
+          "dots-staggered",
+          "dots-triangle",
+          "dots-ring",
+          "dots-arc",
+          "dots-radial",
+          "dots-cross",
+          "dots-clusters",
+          "dots-concentric",
+          "dots-bands",
+          "dots-wave",
+          "dots-tapered",
+          "dots-corners",
+          "dots-hollow-matrix",
+          "dots-diagonal-array",
+          "dots-hexagonal-array",
+          "dots-split-matrix",
+          "dots-mixed-scale",
+          "dots-cell-overlay"
+        ],
+        "rows": "基础点阵行数",
+        "cols": "基础点阵列数",
+        "d": "圆点直径，造型变体按设计坐标缩放",
+        "filled": "实心",
+        "colors": "逐点颜色",
+        "highlight": "突出下标或逻辑key数组"
+      },
+      "variants": [
+        {
+          "name": "横排",
+          "options": {
+            "rows": 1,
+            "cols": 5
+          }
+        },
+        {
+          "name": "竖排",
+          "options": {
+            "rows": 4,
+            "cols": 1
+          }
+        },
+        {
+          "name": "点阵",
+          "options": {
+            "rows": 3,
+            "cols": 4,
+            "filled": true
+          }
+        },
+        {
+          "name": "交错点阵",
+          "options": {
+            "variant": "dots-staggered"
+          },
+          "structure": true
+        },
+        {
+          "name": "三角点阵",
+          "options": {
+            "variant": "dots-triangle"
+          },
+          "structure": true
+        },
+        {
+          "name": "环形一圈",
+          "options": {
+            "variant": "dots-ring"
+          },
+          "structure": true
+        },
+        {
+          "name": "拱弧点列",
+          "options": {
+            "variant": "dots-arc"
+          },
+          "structure": true
+        },
+        {
+          "name": "放射点列",
+          "options": {
+            "variant": "dots-radial"
+          },
+          "structure": true
+        },
+        {
+          "name": "十字点列",
+          "options": {
+            "variant": "dots-cross"
+          },
+          "structure": true
+        },
+        {
+          "name": "分离点簇",
+          "options": {
+            "variant": "dots-clusters"
+          },
+          "structure": true
+        },
+        {
+          "name": "同心双环",
+          "options": {
+            "variant": "dots-concentric"
+          },
+          "structure": true
+        },
+        {
+          "name": "竖向点带",
+          "options": {
+            "variant": "dots-bands"
+          },
+          "structure": true
+        },
+        {
+          "name": "三行波形",
+          "options": {
+            "variant": "dots-wave"
+          },
+          "structure": true
+        },
+        {
+          "name": "疏密渐变",
+          "options": {
+            "variant": "dots-tapered"
+          },
+          "structure": true
+        },
+        {
+          "name": "四角点簇",
+          "options": {
+            "variant": "dots-corners"
+          },
+          "structure": true
+        },
+        {
+          "name": "空心边缘点阵",
+          "options": {
+            "variant": "dots-hollow-matrix"
+          },
+          "structure": true
+        },
+        {
+          "name": "斜向平行点带",
+          "options": {
+            "variant": "dots-diagonal-array"
+          },
+          "structure": true
+        },
+        {
+          "name": "六角簇点阵",
+          "options": {
+            "variant": "dots-hexagonal-array"
+          },
+          "structure": true
+        },
+        {
+          "name": "十字分缝点阵",
+          "options": {
+            "variant": "dots-split-matrix"
+          },
+          "structure": true
+        },
+        {
+          "name": "渐径对齐点阵",
+          "options": {
+            "variant": "dots-mixed-scale"
+          },
+          "structure": true
+        },
+        {
+          "name": "格内复合点阵",
+          "options": {
+            "variant": "dots-cell-overlay"
+          },
+          "structure": true
+        }
+      ],
+      "renderer": "drawDots",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        40,
+        43,
+        44,
+        46
+      ],
+      "sampleSlides": [
+        40,
+        43,
+        44,
+        46
+      ],
+      "firstSampleSlide": 40
+    },
+    {
+      "id": "structure.chain",
+      "code": "C20",
+      "family": "连接结构",
+      "name": "顺序链",
+      "parameters": {
+        "direction": [
+          "horizontal",
+          "vertical"
+        ],
+        "labels": "节点文字数组"
+      },
+      "variants": [
+        {
+          "name": "横向",
+          "options": {
+            "labels": [
+              "A",
+              "B",
+              "C"
+            ]
+          }
+        },
+        {
+          "name": "纵向",
+          "options": {
+            "direction": "vertical",
+            "labels": [
+              "A",
+              "B",
+              "C"
+            ]
+          }
+        }
+      ],
+      "renderer": "drawChain",
+      "editable": true,
+      "status": "implemented",
+      "level": "structure",
+      "slides": [
+        19
+      ],
+      "sampleSlides": [
+        19
+      ],
+      "firstSampleSlide": 19
+    },
+    {
+      "id": "structure.parallel",
+      "code": "C21",
+      "family": "连接结构",
+      "name": "并行汇合结构",
+      "parameters": {
+        "count": "分支数 2–3",
+        "steps": "每路节点数",
+        "labels": "可替换节点文字",
+        "merge": "添加公共汇合节点，默认 true",
+        "outputLabel": "汇合节点文字"
+      },
+      "variants": [
+        {
+          "name": "二路",
+          "options": {
+            "count": 2,
+            "steps": 2
+          }
+        },
+        {
+          "name": "三路",
+          "options": {
+            "count": 3,
+            "steps": 2
+          }
+        }
+      ],
+      "renderer": "drawParallel",
+      "editable": true,
+      "status": "implemented",
+      "level": "structure",
+      "slides": [
+        19
+      ],
+      "sampleSlides": [
+        19
+      ],
+      "firstSampleSlide": 19
+    },
+    {
+      "id": "structure.layers",
+      "code": "C22",
+      "family": "连接结构",
+      "name": "层间连接结构",
+      "parameters": {
+        "variant": [
+          "layers-sparse",
+          "layers-grouped",
+          "layers-skip",
+          "layers-feedback"
+        ],
+        "counts": "基础每列节点数数组",
+        "connection": [
+          "all",
+          "paired"
+        ],
+        "titles": "层标题数组",
+        "diameter": "节点直径，可选"
+      },
+      "variants": [
+        {
+          "name": "全连接",
+          "options": {
+            "counts": [
+              3,
+              4,
+              2
+            ],
+            "connection": "all"
+          }
+        },
+        {
+          "name": "对应连接",
+          "options": {
+            "counts": [
+              3,
+              3,
+              3
+            ],
+            "connection": "paired"
+          }
+        },
+        {
+          "name": "稀疏邻域连接",
+          "options": {
+            "variant": "layers-sparse"
+          },
+          "structure": true
+        },
+        {
+          "name": "分组层间连接",
+          "options": {
+            "variant": "layers-grouped"
+          },
+          "structure": true
+        },
+        {
+          "name": "跨层跳接",
+          "options": {
+            "variant": "layers-skip"
+          },
+          "structure": true
+        },
+        {
+          "name": "双向层间连接",
+          "options": {
+            "variant": "layers-feedback"
+          },
+          "structure": true
+        }
+      ],
+      "renderer": "drawLayers",
+      "editable": true,
+      "status": "implemented",
+      "level": "structure",
+      "slides": [
+        47,
+        52,
+        53
+      ],
+      "sampleSlides": [
+        47,
+        52,
+        53
+      ],
+      "firstSampleSlide": 47
+    },
+    {
+      "id": "layout.partitions",
+      "code": "C23",
+      "family": "空白分区",
+      "name": "分区容器",
+      "parameters": {
+        "rows": "行数",
+        "cols": "列数",
+        "sideLabel": "侧标签，可选",
+        "titles": "分区标题数组或按区域 key 索引的对象",
+        "preset": [
+          "main-with-support",
+          "rail-main-notes",
+          "figure-caption",
+          "annotated-figure",
+          "headline-columns",
+          "alternating-bands",
+          "span-matrix",
+          "shared-axis",
+          "grouped-panels",
+          "nested-main",
+          "paired-summary",
+          "aligned-contrast"
+        ],
+        "showLabels": "显示可编辑区域名称，默认true",
+        "fontSize": "预设区域字号，默认20"
+      },
+      "variants": [
+        {
+          "name": "三列",
+          "options": {
+            "cols": 3,
+            "rows": 1
+          }
+        },
+        {
+          "name": "上下分区",
+          "options": {
+            "cols": 1,
+            "rows": 2
+          }
+        },
+        {
+          "name": "矩阵分区",
+          "options": {
+            "cols": 2,
+            "rows": 2
+          }
+        },
+        {
+          "name": "侧标签分区",
+          "options": {
+            "cols": 1,
+            "rows": 2,
+            "sideLabel": "分类"
+          }
+        },
+        {
+          "name": "主辅与小结",
+          "options": {
+            "preset": "main-with-support"
+          },
+          "layout": true
+        },
+        {
+          "name": "主题轴主区注释",
+          "options": {
+            "preset": "rail-main-notes"
+          },
+          "layout": true
+        },
+        {
+          "name": "图表说明与图注",
+          "options": {
+            "preset": "figure-caption"
+          },
+          "layout": true
+        },
+        {
+          "name": "中心图与对应短注",
+          "options": {
+            "preset": "annotated-figure"
+          },
+          "layout": true
+        },
+        {
+          "name": "概要三列与结论",
+          "options": {
+            "preset": "headline-columns"
+          },
+          "layout": true
+        },
+        {
+          "name": "通栏拆列交错",
+          "options": {
+            "preset": "alternating-bands"
+          },
+          "layout": true
+        },
+        {
+          "name": "跨行主区与四格辅区",
+          "options": {
+            "preset": "span-matrix"
+          },
+          "layout": true
+        },
+        {
+          "name": "共享行列标签矩阵",
+          "options": {
+            "preset": "shared-axis"
+          },
+          "layout": true
+        },
+        {
+          "name": "并列内容组与共同小结",
+          "options": {
+            "preset": "grouped-panels"
+          },
+          "layout": true
+        },
+        {
+          "name": "主题内嵌主区与辅助组",
+          "options": {
+            "preset": "nested-main"
+          },
+          "layout": true
+        },
+        {
+          "name": "双侧对照与共用首尾",
+          "options": {
+            "preset": "paired-summary"
+          },
+          "layout": true
+        },
+        {
+          "name": "共性贯穿的逐行对照",
+          "options": {
+            "preset": "aligned-contrast"
+          },
+          "layout": true
+        }
+      ],
+      "renderer": "drawPartitions",
+      "editable": true,
+      "status": "implemented",
+      "level": "layout",
+      "slides": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "sampleSlides": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "firstSampleSlide": 26
+    },
+    {
+      "id": "icon.search",
+      "code": "C24",
+      "family": "图标",
+      "name": "搜索",
+      "parameters": {
+        "box": "位置与尺寸",
+        "variant": [
+          "search-lens",
+          "search-focus"
+        ]
+      },
+      "variants": [
+        {
+          "name": "放大镜",
+          "options": {
+            "variant": "search-lens"
+          },
+          "geometry": true
+        },
+        {
+          "name": "聚焦搜索",
+          "options": {
+            "variant": "search-focus"
+          },
+          "geometry": true
+        }
+      ],
+      "renderer": "renderer",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        13
+      ],
+      "sampleSlides": [
+        13
+      ],
+      "firstSampleSlide": 13
+    },
+    {
+      "id": "icon.filter",
+      "code": "C25",
+      "family": "图标",
+      "name": "筛选",
+      "parameters": {
+        "box": "位置与尺寸",
+        "variant": [
+          "filter-funnel",
+          "filter-layers"
+        ]
+      },
+      "variants": [
+        {
+          "name": "漏斗筛选",
+          "options": {
+            "variant": "filter-funnel"
+          },
+          "geometry": true
+        },
+        {
+          "name": "分层筛选",
+          "options": {
+            "variant": "filter-layers"
+          },
+          "geometry": true
+        }
+      ],
+      "renderer": "renderer",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        13
+      ],
+      "sampleSlides": [
+        13
+      ],
+      "firstSampleSlide": 13
+    },
+    {
+      "id": "icon.settings",
+      "code": "C26",
+      "family": "图标",
+      "name": "设置",
+      "parameters": {
+        "box": "位置与尺寸",
+        "variant": [
+          "settings-gear",
+          "settings-sliders"
+        ]
+      },
+      "variants": [
+        {
+          "name": "齿轮设置",
+          "options": {
+            "variant": "settings-gear"
+          },
+          "geometry": true
+        },
+        {
+          "name": "滑杆设置",
+          "options": {
+            "variant": "settings-sliders"
+          },
+          "geometry": true
+        }
+      ],
+      "renderer": "renderer",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        13
+      ],
+      "sampleSlides": [
+        13
+      ],
+      "firstSampleSlide": 13
+    },
+    {
+      "id": "icon.check",
+      "code": "C27",
+      "family": "图标",
+      "name": "确认",
+      "parameters": {
+        "box": "位置与尺寸",
+        "variant": [
+          "check-circle",
+          "check-shield"
+        ]
+      },
+      "variants": [
+        {
+          "name": "圆形勾选",
+          "options": {
+            "variant": "check-circle"
+          },
+          "geometry": true
+        },
+        {
+          "name": "盾形勾选",
+          "options": {
+            "variant": "check-shield"
+          },
+          "geometry": true
+        }
+      ],
+      "renderer": "renderer",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        13
+      ],
+      "sampleSlides": [
+        13
+      ],
+      "firstSampleSlide": 13
+    },
+    {
+      "id": "icon.lock",
+      "code": "C28",
+      "family": "图标",
+      "name": "锁定",
+      "parameters": {
+        "box": "位置与尺寸",
+        "variant": [
+          "lock-padlock",
+          "lock-shield"
+        ]
+      },
+      "variants": [
+        {
+          "name": "挂锁",
+          "options": {
+            "variant": "lock-padlock"
+          },
+          "geometry": true
+        },
+        {
+          "name": "盾牌锁",
+          "options": {
+            "variant": "lock-shield"
+          },
+          "geometry": true
+        }
+      ],
+      "renderer": "renderer",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        13
+      ],
+      "sampleSlides": [
+        13
+      ],
+      "firstSampleSlide": 13
+    },
+    {
+      "id": "icon.clock",
+      "code": "C29",
+      "family": "图标",
+      "name": "时间",
+      "parameters": {
+        "box": "位置与尺寸",
+        "variant": [
+          "clock-dial",
+          "clock-hourglass"
+        ]
+      },
+      "variants": [
+        {
+          "name": "时钟",
+          "options": {
+            "variant": "clock-dial"
+          },
+          "geometry": true
+        },
+        {
+          "name": "沙漏",
+          "options": {
+            "variant": "clock-hourglass"
+          },
+          "geometry": true
+        }
+      ],
+      "renderer": "renderer",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        14
+      ],
+      "sampleSlides": [
+        14
+      ],
+      "firstSampleSlide": 14
+    },
+    {
+      "id": "icon.cloud",
+      "code": "C30",
+      "family": "图标",
+      "name": "云端",
+      "parameters": {
+        "box": "位置与尺寸",
+        "variant": [
+          "cloud-basic",
+          "cloud-transfer"
+        ]
+      },
+      "variants": [
+        {
+          "name": "云朵",
+          "options": {
+            "variant": "cloud-basic"
+          },
+          "geometry": true
+        },
+        {
+          "name": "云端传输",
+          "options": {
+            "variant": "cloud-transfer"
+          },
+          "geometry": true
+        }
+      ],
+      "renderer": "renderer",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        14
+      ],
+      "sampleSlides": [
+        14
+      ],
+      "firstSampleSlide": 14
+    },
+    {
+      "id": "icon.folder",
+      "code": "C31",
+      "family": "图标",
+      "name": "文件夹",
+      "parameters": {
+        "box": "位置与尺寸",
+        "variant": [
+          "folder-tab",
+          "folder-layered"
+        ]
+      },
+      "variants": [
+        {
+          "name": "文件夹",
+          "options": {
+            "variant": "folder-tab"
+          },
+          "geometry": true
+        },
+        {
+          "name": "分层文件夹",
+          "options": {
+            "variant": "folder-layered"
+          },
+          "geometry": true
+        }
+      ],
+      "renderer": "renderer",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        14
+      ],
+      "sampleSlides": [
+        14
+      ],
+      "firstSampleSlide": 14
+    },
+    {
+      "id": "icon.chart",
+      "code": "C32",
+      "family": "图标",
+      "name": "统计",
+      "parameters": {
+        "box": "位置与尺寸",
+        "variant": [
+          "chart-bars",
+          "chart-line"
+        ]
+      },
+      "variants": [
+        {
+          "name": "柱形统计",
+          "options": {
+            "variant": "chart-bars"
+          },
+          "geometry": true
+        },
+        {
+          "name": "折线统计",
+          "options": {
+            "variant": "chart-line"
+          },
+          "geometry": true
+        }
+      ],
+      "renderer": "renderer",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        14
+      ],
+      "sampleSlides": [
+        14
+      ],
+      "firstSampleSlide": 14
+    },
+    {
+      "id": "icon.chip",
+      "code": "C33",
+      "family": "图标",
+      "name": "芯片",
+      "parameters": {
+        "box": "位置与尺寸",
+        "variant": [
+          "chip-core",
+          "chip-circuit"
+        ]
+      },
+      "variants": [
+        {
+          "name": "芯片",
+          "options": {
+            "variant": "chip-core"
+          },
+          "geometry": true
+        },
+        {
+          "name": "电路芯片",
+          "options": {
+            "variant": "chip-circuit"
+          },
+          "geometry": true
+        }
+      ],
+      "renderer": "renderer",
+      "editable": true,
+      "status": "implemented",
+      "level": "component",
+      "slides": [
+        14
+      ],
+      "sampleSlides": [
+        14
+      ],
+      "firstSampleSlide": 14
+    },
+    {
+      "id": "structure.decision",
+      "code": "C34",
+      "name": "条件分支",
+      "family": "流程结构",
+      "parameters": {
+        "variant": [
+          "decision-binary",
+          "decision-multi"
+        ],
+        "labels": "按节点 key 替换文字的对象",
+        "fontSize": "节点字号，默认20"
+      },
+      "variants": [
+        {
+          "name": "二分支判断",
+          "options": {
+            "variant": "decision-binary"
+          },
+          "structure": true
+        },
+        {
+          "name": "多分支选择",
+          "options": {
+            "variant": "decision-multi"
+          },
+          "structure": true
+        }
+      ],
+      "renderer": "renderer",
+      "editable": true,
+      "status": "implemented",
+      "level": "structure",
+      "slides": [
+        20
+      ],
+      "sampleSlides": [
+        20
+      ],
+      "firstSampleSlide": 20
+    },
+    {
+      "id": "structure.loop",
+      "code": "C35",
+      "name": "循环反馈",
+      "family": "流程结构",
+      "parameters": {
+        "variant": [
+          "loop-pre",
+          "loop-post"
+        ],
+        "labels": "按节点 key 替换文字的对象",
+        "fontSize": "节点字号，默认20"
+      },
+      "variants": [
+        {
+          "name": "前置判断循环",
+          "options": {
+            "variant": "loop-pre"
+          },
+          "structure": true
+        },
+        {
+          "name": "后置判断循环",
+          "options": {
+            "variant": "loop-post"
+          },
+          "structure": true
+        }
+      ],
+      "renderer": "renderer",
+      "editable": true,
+      "status": "implemented",
+      "level": "structure",
+      "slides": [
+        21
+      ],
+      "sampleSlides": [
+        21
+      ],
+      "firstSampleSlide": 21
+    },
+    {
+      "id": "structure.synchronize",
+      "code": "C36",
+      "name": "同步并行",
+      "family": "流程结构",
+      "parameters": {
+        "variant": [
+          "fork-join",
+          "staged-parallel"
+        ],
+        "labels": "按节点 key 替换文字的对象",
+        "fontSize": "节点字号，默认20"
+      },
+      "variants": [
+        {
+          "name": "分叉同步汇合",
+          "options": {
+            "variant": "fork-join"
+          },
+          "structure": true
+        },
+        {
+          "name": "分阶段并行",
+          "options": {
+            "variant": "staged-parallel"
+          },
+          "structure": true
+        }
+      ],
+      "renderer": "renderer",
+      "editable": true,
+      "status": "implemented",
+      "level": "structure",
+      "slides": [
+        22
+      ],
+      "sampleSlides": [
+        22
+      ],
+      "firstSampleSlide": 22
+    },
+    {
+      "id": "structure.staged",
+      "code": "C37",
+      "name": "阶段与子流程",
+      "family": "流程结构",
+      "parameters": {
+        "variant": [
+          "stage-gates",
+          "subprocess"
+        ],
+        "labels": "按节点 key 替换文字的对象",
+        "fontSize": "节点字号，默认20"
+      },
+      "variants": [
+        {
+          "name": "阶段关口流程",
+          "options": {
+            "variant": "stage-gates"
+          },
+          "structure": true
+        },
+        {
+          "name": "展开子流程",
+          "options": {
+            "variant": "subprocess"
+          },
+          "structure": true
+        }
+      ],
+      "renderer": "renderer",
+      "editable": true,
+      "status": "implemented",
+      "level": "structure",
+      "slides": [
+        23
+      ],
+      "sampleSlides": [
+        23
+      ],
+      "firstSampleSlide": 23
+    },
+    {
+      "id": "structure.swimlane",
+      "code": "C38",
+      "name": "跨泳道流程",
+      "family": "流程结构",
+      "parameters": {
+        "variant": [
+          "lane-handoff",
+          "lane-feedback"
+        ],
+        "labels": "按节点 key 替换文字的对象",
+        "fontSize": "节点字号，默认20"
+      },
+      "variants": [
+        {
+          "name": "跨泳道交接",
+          "options": {
+            "variant": "lane-handoff"
+          },
+          "structure": true
+        },
+        {
+          "name": "跨泳道反馈",
+          "options": {
+            "variant": "lane-feedback"
+          },
+          "structure": true
+        }
+      ],
+      "renderer": "renderer",
+      "editable": true,
+      "status": "implemented",
+      "level": "structure",
+      "slides": [
+        24
+      ],
+      "sampleSlides": [
+        24
+      ],
+      "firstSampleSlide": 24
+    },
+    {
+      "id": "structure.exception",
+      "code": "C39",
+      "name": "异常与退出",
+      "family": "流程结构",
+      "parameters": {
+        "variant": [
+          "exception-retry",
+          "early-exit"
+        ],
+        "labels": "按节点 key 替换文字的对象",
+        "fontSize": "节点字号，默认20"
+      },
+      "variants": [
+        {
+          "name": "异常补偿与重试",
+          "options": {
+            "variant": "exception-retry"
+          },
+          "structure": true
+        },
+        {
+          "name": "提前退出流程",
+          "options": {
+            "variant": "early-exit"
+          },
+          "structure": true
+        }
+      ],
+      "renderer": "renderer",
+      "editable": true,
+      "status": "implemented",
+      "level": "structure",
+      "slides": [
+        25
+      ],
+      "sampleSlides": [
+        25
+      ],
+      "firstSampleSlide": 25
+    }
+  ]
+}
