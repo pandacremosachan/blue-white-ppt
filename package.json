@@ -1,0 +1,15 @@
+{
+  "name": "blue-white-ppt",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Portable native PowerPoint authoring with C01–C39 blue-and-white components",
+  "engines": {"node": ">=20"},
+  "pi": {"skills": ["."]},
+  "scripts": {
+    "doctor": "node scripts/doctor.mjs",
+    "components": "node scripts/inspect-component.mjs --list",
+    "self-test": "node scripts/self-test.mjs",
+    "pack-skill": "node scripts/pack-skill.mjs"
+  }
+}
