@@ -1,0 +1,51 @@
+{
+  "id": "research-blue-v1",
+  "name": "蓝白科研汇报",
+  "version": "0.1.0",
+  "referenceDirectory": "ref-ppt",
+  "referenceCount": 8,
+  "distinctLayoutCount": 5,
+  "canvas": {"width": 1280, "height": 720},
+  "font": {"family": "Noto Sans SC", "basis": "design", "note": "采用已安装的中文无衬线字体近似参考风格，截图不足以确认原始字体"},
+  "colors": {
+    "blue": "#0759BE",
+    "blueDark": "#074A9B",
+    "blueText": "#357596",
+    "bluePale": "#F2F7FB",
+    "blueFade": "#ECF2FA",
+    "red": "#AF3438",
+    "yellow": "#F5E86A",
+    "ink": "#1D242B",
+    "muted": "#5B6C7A",
+    "border": "#A6B4C0",
+    "white": "#FFFFFF"
+  },
+  "geometry": {
+    "pageInset": 48,
+    "titleBar": {"left": 144, "top": 10, "width": 1124, "height": 64},
+    "leadBox": {"left": 48, "top": 94, "width": 1184, "height": 78},
+    "contentTop": 190,
+    "bottom": 692,
+    "borderWidth": 1.4,
+    "labelRadius": 10
+  },
+  "typography": {"title": 36, "section": 26, "body": 23, "diagram": 22, "annotation": 18},
+  "rules": [
+    "蓝色渐变标题栏搭配独立章节编号",
+    "白底与浅蓝灰细边框承载高密度图文",
+    "红色用于关键术语，黄色用于蓝底上的重点",
+    "蓝色模块标签、细线关系与宽箭头分别承担不同语义",
+    "通栏概述在上，分区论证在中，结论或补充说明在下",
+    "基础组件保持原生可编辑，复杂论文图作为独立素材管理"
+  ],
+  "referenceMapping": {
+    "2026-10-21_065152.png": "三列问题分析，与065346为同类页面",
+    "2026-10-21_065226.png": "横向阶段与两行内容分区，与065327为同类页面",
+    "2026-10-21_065238.png": "左右图文和训练测试框架，与065259为同类页面",
+    "2026-10-21_065259.png": "左右图文和训练测试框架",
+    "2026-10-21_065308.png": "多层方法流程和蓝色强调横条",
+    "2026-10-21_065327.png": "阶段箭头、侧边标签和内容矩阵",
+    "2026-10-21_065335.png": "问题论证双栏和模型关系图",
+    "2026-10-21_065346.png": "数据、算法、硬件三列问题分析"
+  }
+}
