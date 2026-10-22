@@ -1,0 +1,31 @@
+{
+  "title": "蓝白组件绘制示例",
+  "slides": [
+    {
+      "number": "1", "title": "问题、方法与证据", "summary": "用通栏概述说明问题，用清楚的主次分区组织正文与图形。",
+      "elements": [
+        {"code":"C23","key":"layout","box":[48,190,1184,480],"options":{"preset":"main-with-support","showLabels":false}},
+        {"type":"text","text":"方法概述","box":[82,225,600,44],"style":{"fontSize":28,"bold":true,"color":"#357596"}},
+        {"type":"text","text":"先说明要解决的问题，再用图形展示结构或过程。\n图旁文字解释依据与适用条件。","box":[82,295,640,130]},
+        {"code":"C12","box":[875,240,80,84],"options":{"variant":"folded-page"}},
+        {"code":"C03","box":[990,250,210,62],"options":{"variant":"capsule","label":"证据材料"}},
+        {"type":"text","text":"补充说明\n列明证据来源与适用条件。","box":[875,410,320,115],"style":{"fontSize":22}},
+        {"type":"text","text":"主区解释原理，辅助区呈现证据，小结承接结论。","box":[78,600,1120,50],"style":{"fontSize":24,"bold":true,"color":"#FFFFFF"}}
+      ]
+    },
+    {
+      "number":"2","title":"跨接与反馈","summary":"主线、跨接和回线使用不同通道，连接线端点保持附着。",
+      "elements":[
+        {"code":"C09","key":"loop","box":[90,220,1060,410],"options":{"variant":"bypass-nested-return","labels":{"a":"A","b":"B","c":"C","d":"D"}}}
+      ]
+    },
+    {
+      "number":"3","title":"节点与层间连接","summary":"文字和层标题可以替换，结构变化由组件变体决定。",
+      "elements":[
+        {"code":"C22","key":"layers","box":[48,220,740,410],"options":{"variant":"layers-skip","titles":["输入层","中间层","目标层","输出层"]}},
+        {"code":"C15","key":"node","box":[850,285,340,126],"options":{"variant":"node-multiport","label":"可复用节点"}},
+        {"code":"C05","box":[900,480,230,80],"options":{"shape":"notchedRightArrow","gradient":"light-to-dark"}}
+      ]
+    }
+  ]
+}
