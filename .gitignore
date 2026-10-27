@@ -1,0 +1,11 @@
+node_modules/
+blue-white-ppt-self-test/
+checks/
+coverage/
+*.log
+.DS_Store
+Thumbs.db
+
+*.zip
+
+*.sha256
