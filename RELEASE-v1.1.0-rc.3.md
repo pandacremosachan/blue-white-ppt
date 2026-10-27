@@ -11,7 +11,7 @@ Complete skill package with native editable blue-and-white PowerPoint authoring,
 
 ## Download and install
 
-Download `blue-white-ppt-skill-v1.1.0-rc.3.zip` and its `.sha256` file from this repository. Verify the checksum, extract the complete `blue-white-ppt/` folder, and read its `SKILL.md` and `README.md`. The ZIP contains the complete matching source for this candidate.
+Download `blue-white-ppt-skill-v1.1.0-rc.3.zip` from this repository. Extract the complete `blue-white-ppt/` folder and read its `SKILL.md` and `README.md`. The ZIP contains the complete matching source for this candidate.
 
 Generation uses Node.js 20+ and built-in modules. No npm dependencies, Python, Codex API or network access are needed for generation. Font files are included under their OFL license and should be installed on the viewing machine.
 
