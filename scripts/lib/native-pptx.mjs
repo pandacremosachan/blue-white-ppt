@@ -44,6 +44,7 @@ function geometry(s){
   return `<a:prstGeom prst="${esc(preset)}"><a:avLst>${guides.map(g=>`<a:gd name="${esc(g.name)}" fmla="${esc(g.formula??`val ${g.value}`)}"/>`).join('')}</a:avLst></a:prstGeom>`;
 }
 class NativeText{constructor(){this.value='';this.style={};}toString(){return typeof this.value==='string'?this.value:JSON.stringify(this.value);}}
+const cloneText=source=>Object.assign(new NativeText(),structuredClone({value:source.value,style:source.style}));
 function paragraphs(value){
   if(typeof value==='string'||typeof value==='number')return String(value).split('\n').map(run=>[{run}]);
   if(Array.isArray(value))return value.map(p=>Array.isArray(p)?p:typeof p==='string'?[{run:p}]:[p]);
@@ -67,25 +68,58 @@ function connectionSite(shape,side){
 class NativeShape{
   constructor(slide,options){this.slide=slide;this.id=slide.nextId++;Object.assign(this,options);this.position={left:0,top:0,width:1,height:1,...options.position};this._text=new NativeText();}
   get text(){return this._text;}set text(value){this._text.value=value;}
-  bringToFront(){const items=this.slide.shapes.items,i=items.indexOf(this);if(i>=0)items.splice(i,1);items.push(this);return this;}
-  sendToBack(){const items=this.slide.shapes.items,i=items.indexOf(this);if(i>=0)items.splice(i,1);items.unshift(this);return this;}
+  bringToFront(){moveLayer(this,true);return this;}
+  sendToBack(){moveLayer(this,false);return this;}
+}
+function moveLayer(object,front){
+  const slide=object.slide,group=slide.groups.find(g=>g.objects?.includes(object)),members=new Set(group?.objects??[object]);
+  for(const items of [slide.objects,slide.shapes.items,slide.tables.items]){
+    const moving=items.filter(item=>members.has(item));if(!moving.length)continue;
+    const remaining=items.filter(item=>!members.has(item));items.splice(0,items.length,...(front?[...remaining,...moving]:[...moving,...remaining]));
+  }
 }
 class NativeTable{
   constructor(slide,o){this.slide=slide;this.id=slide.nextId++;Object.assign(this,o);this.name=o.name??`table.${this.id}`;this.position={left:o.left,top:o.top,width:o.width,height:o.height};this._cells=Array.from({length:o.rows},(_,r)=>Array.from({length:o.columns},(_,c)=>({text:Object.assign(new NativeText(),{value:o.values?.[r]?.[c]??''}),fill:'#FFFFFF',margins:{left:8,right:8,top:2,bottom:2}})));this.rows=Array.from({length:o.rows},()=>({height:o.height/o.rows}));this.columnWidths=o.columnWidths??Array(o.columns).fill(o.width/o.columns);this.borders={assign:v=>{this.border=v;}};this.cells={set:(r,c,value)=>{this._cells[r][c].text.value=value;},block:({row,column,rowCount,columnCount})=>({assign:settings=>{for(let r=row;r<row+rowCount;r++)for(let c=column;c<column+columnCount;c++)Object.assign(this._cells[r][c],settings);}})};}
   getCell(r,c){return this._cells[r][c];}
+  bringToFront(){moveLayer(this,true);return this;}
+  sendToBack(){moveLayer(this,false);return this;}
 }
 class NativeSlide{
-  constructor(){this.nextId=2;this.background={fill:'#FFFFFF'};this.speakerNotes={text:''};this.groups=[];this.images=[];
-    this.shapes={items:[],add:o=>{const s=new NativeShape(this,o);this.shapes.items.push(s);return s;},connect:(from,to,o={})=>{
+  constructor(){this.nextId=2;this.background={fill:'#FFFFFF'};this.speakerNotes={text:''};this.groups=[];this.images=[];this.objects=[];
+    this.shapes={items:[],add:o=>{const s=new NativeShape(this,o);this.shapes.items.push(s);this.objects.push(s);return s;},connect:(from,to,o={})=>{
       if(from.slide!==this||to.slide!==this)throw new Error('Connector endpoints must be on the same slide');
       const a=port(from,o.fromSide??'right'),b=port(to,o.toSide??'left');
       return this.shapes.add({...o,geometry:'connector',position:{left:Math.min(a.x,b.x),top:Math.min(a.y,b.y),width:Math.abs(b.x-a.x),height:Math.abs(b.y-a.y),horizontalFlip:b.x<a.x,verticalFlip:b.y<a.y},from,to});
-    }};this.tables={items:[],add:o=>{const t=new NativeTable(this,o);this.tables.items.push(t);return t;}};
+    }};this.tables={items:[],add:o=>{const t=new NativeTable(this,o);this.tables.items.push(t);this.objects.push(t);return t;}};
   }
 }
 export class Presentation{
   static create(options={}){return new Presentation(options);}
   constructor({slideSize={width:1280,height:720}}={}){this.slideSize=slideSize;this.title='Blue White Presentation';this.slides={items:[],add:()=>{const s=new NativeSlide();this.slides.items.push(s);return s;}};}
+}
+// A fresh model keeps export-derived footers, relationship IDs and group IDs out of the authoring model.
+export function clonePresentation(source){
+  const copy=Presentation.create({slideSize:{...source.slideSize}});copy.title=source.title;copy.brand=source.brand;
+  for(const original of source.slides.items){
+    const slide=copy.slides.add(),mapping=new Map();
+    slide.background={...original.background};slide.speakerNotes={...original.speakerNotes};slide._footerLabel=original._footerLabel;
+    if(original._componentInstanceIds)slide._componentInstanceIds=new Set(original._componentInstanceIds);
+    for(const shape of original.shapes.items){
+      const {slide:owner,id,_text,...options}=shape,cloned=slide.shapes.add(options);cloned.id=id;
+      cloned._text=cloneText(_text);mapping.set(shape,cloned);
+    }
+    for(const table of original.tables.items){
+      const p=table.position,cloned=slide.tables.add({rows:table._cells.length,columns:table._cells[0].length,left:p.left,top:p.top,width:p.width,height:p.height});
+      for(const [key,value] of Object.entries(table))if(!['slide','_cells','rows','borders','cells'].includes(key))cloned[key]=value;
+      cloned.position={...table.position};cloned.columnWidths=[...table.columnWidths];cloned.rows=table.rows.map(row=>({...row}));cloned.border=table.border?{...table.border}:undefined;
+      cloned._cells=table._cells.map(row=>row.map(cell=>({...cell,margins:{...cell.margins},text:cloneText(cell.text)})));mapping.set(table,cloned);
+    }
+    for(const shape of original.shapes.items){const cloned=mapping.get(shape);if(shape.from)cloned.from=mapping.get(shape.from);if(shape.to)cloned.to=mapping.get(shape.to);}
+    slide.objects=orderedObjects(original).map(object=>mapping.get(object));
+    slide.groups=original.groups.map(group=>({...group,objects:group.objects?.map(object=>mapping.get(object)).filter(Boolean)}));
+    slide.images=original.images.map(image=>mapping.get(image)??image);slide.nextId=original.nextId;
+  }
+  return copy;
 }
 function shapeXml(s){
   if(s.geometry==='picture')return `<p:pic><p:nvPicPr><p:cNvPr id="${s.id}" name="${esc(s.name)}"/><p:cNvPicPr><a:picLocks noChangeAspect="1"/></p:cNvPicPr><p:nvPr/></p:nvPicPr><p:blipFill><a:blip r:embed="${s.imageRel}"/><a:stretch><a:fillRect/></a:stretch></p:blipFill><p:spPr>${transform(s.position)}<a:prstGeom prst="rect"><a:avLst/></a:prstGeom></p:spPr></p:pic>`;
@@ -103,16 +137,26 @@ function tableXml(t){
   const p=t.position;
   return `<p:graphicFrame><p:nvGraphicFramePr><p:cNvPr id="${t.id}" name="${esc(t.name)}"/><p:cNvGraphicFramePr/><p:nvPr/></p:nvGraphicFramePr><p:xfrm><a:off x="${emu(p.left)}" y="${emu(p.top)}"/><a:ext cx="${emu(p.width)}" cy="${emu(p.height)}"/></p:xfrm><a:graphic><a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/table"><a:tbl><a:tblPr/><a:tblGrid>${t.columnWidths.map(w=>`<a:gridCol w="${emu(w)}"/>`).join('')}</a:tblGrid>${rows}</a:tbl></a:graphicData></a:graphic></p:graphicFrame>`;
 }
-function groupXml(slide,objects,group){
-  const boxes=objects.map(s=>s.position),left=Math.min(...boxes.map(p=>p.left)),top=Math.min(...boxes.map(p=>p.top)),width=Math.max(1,Math.max(...boxes.map(p=>p.left+p.width))-left),height=Math.max(1,Math.max(...boxes.map(p=>p.top+p.height))-top),id=slide.nextId++;
-  return `<p:grpSp><p:nvGrpSpPr><p:cNvPr id="${id}" name="${esc(group.name)}"/><p:cNvGrpSpPr/><p:nvPr/></p:nvGrpSpPr><p:grpSpPr><a:xfrm><a:off x="${emu(left)}" y="${emu(top)}"/><a:ext cx="${emu(width)}" cy="${emu(height)}"/><a:chOff x="${emu(left)}" y="${emu(top)}"/><a:chExt cx="${emu(width)}" cy="${emu(height)}"/></a:xfrm></p:grpSpPr>${objects.map(shapeXml).join('')}</p:grpSp>`;
+function groupXml(objects,group,id,serialize){
+  const boxes=objects.map(s=>s.position),left=Math.min(...boxes.map(p=>p.left)),top=Math.min(...boxes.map(p=>p.top)),width=Math.max(1,Math.max(...boxes.map(p=>p.left+p.width))-left),height=Math.max(1,Math.max(...boxes.map(p=>p.top+p.height))-top);
+  return `<p:grpSp><p:nvGrpSpPr><p:cNvPr id="${id}" name="${esc(group.name)}"/><p:cNvGrpSpPr/><p:nvPr/></p:nvGrpSpPr><p:grpSpPr><a:xfrm><a:off x="${emu(left)}" y="${emu(top)}"/><a:ext cx="${emu(width)}" cy="${emu(height)}"/><a:chOff x="${emu(left)}" y="${emu(top)}"/><a:chExt cx="${emu(width)}" cy="${emu(height)}"/></a:xfrm></p:grpSpPr>${objects.map(serialize).join('')}</p:grpSp>`;
 }
 const rootTree='<p:nvGrpSpPr><p:cNvPr id="1" name=""/><p:cNvGrpSpPr/><p:nvPr/></p:nvGrpSpPr><p:grpSpPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="0" cy="0"/><a:chOff x="0" y="0"/><a:chExt cx="0" cy="0"/></a:xfrm></p:grpSpPr>';
+function orderedObjects(slide){
+  const active=new Set([...slide.shapes.items,...slide.tables.items]),ordered=(slide.objects??[]).filter(object=>active.has(object)),seen=new Set(ordered);
+  return [...ordered,...[...active].filter(object=>!seen.has(object)).sort((a,b)=>a.id-b.id)];
+}
 function slideXml(slide){
-  const consumed=new Set(),groupFor=new Map();
-  for(const g of slide.groups){const members=slide.shapes.items.filter(s=>s.name?.startsWith(g.prefix));if(members.length>1){const xml=groupXml(slide,members,g);groupFor.set(members[0],xml);members.forEach(s=>consumed.add(s));}}
-  const shapes=slide.shapes.items.map(s=>groupFor.get(s)??(consumed.has(s)?'':shapeXml(s))).join('');
-  return XML+`<p:sld xmlns:a="${A}" xmlns:r="${R}" xmlns:p="${P}"><p:cSld><p:bg><p:bgPr>${fill(slide.background.fill)}<a:effectLst/></p:bgPr></p:bg><p:spTree>${rootTree}${shapes}${slide.tables.items.map(tableXml).join('')}</p:spTree></p:cSld><p:clrMapOvr><a:masterClrMapping/></p:clrMapOvr></p:sld>`;
+  const ordered=orderedObjects(slide),tables=new Set(slide.tables.items),serialize=object=>tables.has(object)?tableXml(object):shapeXml(object),consumed=new Set(),groupFor=new Map();
+  let nextGroupId=Math.max(1,...ordered.map(object=>object.id))+1;
+  for(const group of slide.groups){
+    const wanted=new Set(group.objects??[]),members=ordered.filter(object=>wanted.has(object));
+    if(members.length<2)continue;
+    if(members.some(object=>consumed.has(object)))throw new Error('An object cannot belong to more than one component group');
+    groupFor.set(members[0],groupXml(members,group,nextGroupId++,serialize));members.forEach(object=>consumed.add(object));
+  }
+  const content=ordered.map(object=>groupFor.get(object)??(consumed.has(object)?'':serialize(object))).join('');
+  return XML+`<p:sld xmlns:a="${A}" xmlns:r="${R}" xmlns:p="${P}"><p:cSld><p:bg><p:bgPr>${fill(slide.background.fill)}<a:effectLst/></p:bgPr></p:bg><p:spTree>${rootTree}${content}</p:spTree></p:cSld><p:clrMapOvr><a:masterClrMapping/></p:clrMapOvr></p:sld>`;
 }
 const relationships=items=>XML+`<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">${items.map(([id,type,target])=>`<Relationship Id="${id}" Type="${R}/${type}" Target="${esc(target)}"/>`).join('')}</Relationships>`;
 export async function exportPptx(presentation){
