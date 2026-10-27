@@ -4,18 +4,23 @@ import {readZip} from './lib/zip.mjs';
 import {parseXml,all} from './lib/xml.mjs';
 import {argumentsOf,run} from './lib/cli.mjs';
 export async function validatePptx(filename){
-  const parts=readZip(await fs.readFile(filename)),errors=[],warnings=[],counts={slides:0,shapes:0,connectors:0,attachedConnectors:0,independentConnectors:0,groups:0,tables:0,pictures:0};
+  const errors=[],warnings=[],counts={slides:0,shapes:0,connectors:0,attachedConnectors:0,independentConnectors:0,groups:0,tables:0,pictures:0};
+  let parts;
+  try{parts=readZip(await fs.readFile(filename));}catch(error){return {file:path.resolve(filename),status:'fail',canvas:null,counts,errors:[error.message],warnings};}
   for(const required of ['[Content_Types].xml','_rels/.rels','ppt/presentation.xml'])if(!parts.has(required))errors.push(`Missing ${required}`);
-  const trees=new Map();for(const [name,data] of parts)if(name.endsWith('.xml')||name.endsWith('.rels')){try{trees.set(name,parseXml(data.toString()));}catch(e){errors.push(`${name}: ${e.message}`);}}
+  const trees=new Map();for(const [name,data] of parts)if(name.endsWith('.xml')||name.endsWith('.rels')){try{trees.set(name,parseXml(new TextDecoder('utf-8',{fatal:true}).decode(data)));}catch(e){errors.push(`${name}: ${e.message}`);}}
   const overrides=all(trees.get('[Content_Types].xml'),'Override').map(n=>n.attrs.PartName);if(new Set(overrides).size!==overrides.length)errors.push('Duplicate content-type part overrides');
   for(const [name,tree] of trees)if(name.endsWith('.rels')){
     const owner=name==='_rels/.rels'?'':name.replace('/_rels/','/').replace(/\.rels$/,'');
     for(const rel of all(tree,'Relationship'))if(rel.attrs.TargetMode!=='External'){
+      if(!rel.attrs.Target){errors.push(`Missing relationship target in ${name}`);continue;}
       const target=rel.attrs.Target.startsWith('/')?path.posix.normalize(rel.attrs.Target.slice(1)):path.posix.normalize(path.posix.join(path.posix.dirname(owner),rel.attrs.Target));
       if(!parts.has(target))errors.push(`Broken package relationship ${name} -> ${target}`);
     }
   }
   const size=all(trees.get('ppt/presentation.xml'),'sldSz')[0]?.attrs,canvas={w:Number(size?.cx)/9525,h:Number(size?.cy)/9525};
+  const validCanvas=Number.isFinite(canvas.w)&&canvas.w>0&&Number.isFinite(canvas.h)&&canvas.h>0;
+  if(!validCanvas)errors.push('Missing or invalid presentation slide size');
   for(const [name,root] of trees)if(/^ppt\/slides\/[^/]+\.xml$/.test(name)){
     counts.slides++;const ids=all(root,'cNvPr').map(n=>n.attrs.id),idSet=new Set(ids);if(ids.length!==idSet.size)errors.push(`Duplicate native IDs in ${name}`);
     counts.groups+=all(root,'grpSp').length;counts.tables+=all(root,'tbl').length;counts.pictures+=all(root,'pic').length;
@@ -25,9 +30,12 @@ export async function validatePptx(filename){
       const sp=s.children.find(n=>n.local==='spPr')??s,x=sp.children.find(n=>n.local==='xfrm');if(!x)continue;
       const off=x.children.find(n=>n.local==='off')?.attrs,ext=x.children.find(n=>n.local==='ext')?.attrs;if(!off||!ext){errors.push(`Missing transform ${name}/${objectName}`);continue;}
       let left=Number(off.x)/9525,top=Number(off.y)/9525,width=Number(ext.cx)/9525,height=Number(ext.cy)/9525;
-      if([left,top,width,height].some(n=>!Number.isFinite(n))||width<0||height<0)errors.push(`Invalid geometry ${name}/${objectName}`);
-      const rotation=((Number(x.attrs.rot??0)/60000)%360+360)%360;if(rotation===90||rotation===270){left+=(width-height)/2;top+=(height-width)/2;[width,height]=[height,width];}
-      if(left<-.5||top<-.5||left+width>canvas.w+.5||top+height>canvas.h+.5)errors.push(`Outside slide bounds ${name}/${objectName}`);
+      const rotation=Number(x.attrs.rot??0)/60000;
+      if([left,top,width,height,rotation].some(n=>!Number.isFinite(n))||width<0||height<0){errors.push(`Invalid geometry ${name}/${objectName}`);continue;}
+      const radians=rotation*Math.PI/180,cos=Math.abs(Math.cos(radians)),sin=Math.abs(Math.sin(radians));
+      const rotatedWidth=width*cos+height*sin,rotatedHeight=width*sin+height*cos;
+      left+=(width-rotatedWidth)/2;top+=(height-rotatedHeight)/2;width=rotatedWidth;height=rotatedHeight;
+      if(validCanvas&&(left<-.5||top<-.5||left+width>canvas.w+.5||top+height>canvas.h+.5))errors.push(`Outside slide bounds ${name}/${objectName}`);
     }
   }
   if(!counts.slides)errors.push('Presentation contains no slides');

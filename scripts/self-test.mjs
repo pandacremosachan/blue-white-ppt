@@ -23,5 +23,7 @@ await run(async()=>{
   const filename=path.join(output,'all-variants.pptx');await savePresentation(p,filename,{overwrite:Boolean(a.overwrite),footers:false});
   const validation=await validatePptx(filename);assert.deepEqual(validation.errors,[]);
   assert.equal(ids.size,39);assert.equal(variants,244);assert.equal(validation.counts.tables,1);assert.equal(validation.counts.pictures,1);
+  assert.equal(validation.counts.attachedConnectors,279,'Workflow connectors must remain attached');
+  assert.equal(validation.counts.independentConnectors,4,'Only four intentional connector samples may be detached');
   const report={components:ids.size,variants,slides:p.slides.items.length,validation};await fs.writeFile(path.join(output,'self-test.json'),JSON.stringify(report,null,2));console.log(JSON.stringify({components:ids.size,variants,slides:p.slides.items.length,status:'pass',output},null,2));
 });

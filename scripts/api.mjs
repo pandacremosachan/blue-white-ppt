@@ -1,17 +1,20 @@
 import fs from 'node:fs/promises';
 import {COMPONENTS,renderComponent,STYLE,C,FONT} from './components/index.mjs';
 import {header,lead,text,box,line} from './components/research-components.mjs';
-import {Presentation,savePptx} from './lib/native-pptx.mjs';
+import {Presentation,savePptx,clonePresentation} from './lib/native-pptx.mjs';
 export {COMPONENTS,STYLE,C,FONT,Presentation};
 const byCode=new Map(COMPONENTS.map(item=>[item.code,item]));
 const byId=new Map(COMPONENTS.map(item=>[item.id,item]));
 export function getComponent(code){const item=byCode.get(String(code).toUpperCase())??byId.get(code);if(!item)throw new Error(`Unknown component ${code}; use C01–C39 or a canonical ID`);return item;}
 export function renderByCode(slide,code,bounds,options={},instanceId){
   const item=getComponent(code),id=instanceId??`component.${item.code}.${slide.shapes.items.length+1}`;
-  if(slide.shapes.items.some(shape=>shape.name?.startsWith(id+'.')))throw new Error(`Duplicate component instance name ${id}`);
+  if(typeof id!=='string'||!id)throw new TypeError('A component instance name must be a nonempty string');
+  const instanceIds=slide._componentInstanceIds??=new Set();
+  if(instanceIds.has(id))throw new Error(`Duplicate component instance name ${id}`);
   const rect=Array.isArray(bounds)?{x:bounds[0],y:bounds[1],w:bounds[2],h:bounds[3]}:bounds;
   const result=renderComponent(slide,item.id,rect,options,id);
-  if(slide.groups&&result.objects.length>1)slide.groups.push({prefix:id+'.',name:`${item.code} ${item.name} / ${id}`});
+  instanceIds.add(id);
+  if(slide.groups&&result.objects.length>1)slide.groups.push({objects:[...result.objects],name:`${item.code} ${item.name} / ${id}`});
   return {...result,code:item.code};
 }
 export function createPresentation({title='演示文稿',brand=''}={}){const p=Presentation.create({slideSize:STYLE.canvas});p.title=title;p.brand=brand;return p;}
@@ -38,14 +41,22 @@ export async function addImage(slide,filename,bounds,{name=`image.${slide.shapes
   const bytes=await fs.readFile(filename),info=imageDimensions(bytes),b=Array.isArray(bounds)?{x:bounds[0],y:bounds[1],w:bounds[2],h:bounds[3]}:bounds,scale=Math.min(b.w/info.width,b.h/info.height),w=info.width*scale,h=info.height*scale;
   return slide.shapes.add({geometry:'picture',name,imageBytes:bytes,imageExtension:info.extension,position:{left:b.x+(b.w-w)/2,top:b.y+(b.h-h)/2,width:w,height:h}});
 }
+function removeFooter(slide){
+  const footerShapes=new Set(slide.shapes.items.filter(s=>s.name?.startsWith('footer.')));
+  slide.shapes.items=slide.shapes.items.filter(s=>!footerShapes.has(s));
+  if(slide.objects)slide.objects=slide.objects.filter(s=>!footerShapes.has(s));
+}
 export function addFooter(slide,number,total,label=slide._footerLabel??''){
-  if(slide.shapes.items.some(s=>s.name?.startsWith('footer.')))return;
+  removeFooter(slide);
   line(slide,'footer.rule',48,698,1184,0,C.border,.55);text(slide,'footer.label',label,48,700,950,19,12,C.muted);text(slide,'footer.page',`${number} / ${total}`,1030,700,202,19,12,C.blueText,false,'right');
 }
 export async function savePresentation(p,filename,{overwrite=false,footers=true}={}){
   if(!p.slides.items.length)throw new Error('Cannot export an empty presentation');
-  if(footers)p.slides.items.forEach((slide,i)=>addFooter(slide,i+1,p.slides.items.length));
-  return savePptx(p,filename,{overwrite});
+  const output=clonePresentation(p);
+  output.slides.items.forEach((slide,i)=>{
+    if(footers)addFooter(slide,i+1,output.slides.items.length);else removeFooter(slide);
+  });
+  return savePptx(output,filename,{overwrite});
 }
 function nativeEndpoint(record){const r=record.result;return r?.body??(r?.position?r:null)??r?.nodes?.[0]??record.objects[0];}
 function resolveReference(value,instances){
