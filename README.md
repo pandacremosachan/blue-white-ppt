@@ -1,12 +1,21 @@
 # Blue White PPT Skill
 
+## Current skill package — 1.1.0-rc.3
+
+Download the complete [1.1.0-rc.3 skill package](https://github.com/pandacremosachan/blue-white-ppt/raw/refs/heads/main/blue-white-ppt-skill-v1.1.0-rc.3.zip) and its [SHA-256 checksum](blue-white-ppt-skill-v1.1.0-rc.3.sha256). The archive includes the matching source, instructions, examples, references, fonts and regression tests.
+
+This candidate adds three compact editable references: 32 trapezoid compositions in 13 pages, ten Morph effect families in 14 pages, and a six-page content/playback reference. All 33 pages follow the original summary-bar, complete-frame and chapter-number conventions. The 39 component codes, 244 variants and approved 53-page reference are retained.
+
+Both the source checkout and a clean archive extraction passed 32 tests. All 33 showcase slides were rendered and reviewed in Microsoft PowerPoint, with sampled native transitions. See [release notes](RELEASE-v1.1.0-rc.3.md) for scope and installation details.
+
+
 A portable Agent Skill for editable blue-and-white PowerPoint presentations. It preserves **39 stable component codes (C01–C39)**, **244 variants**, the original **.mjs renderers**, and the final **53-page visual reference**.
 
 Start with [SKILL.md](SKILL.md). Full command documentation is in [references/script-reference.md](references/script-reference.md), and the [component guide](references/component-guide.md) maps codes to options and reference pages.
 
 ## Download
 
-Download [blue-white-ppt-skill-v1.0.0.zip](blue-white-ppt-skill-v1.0.0.zip), then extract the entire `blue-white-ppt` folder. The archive contains the skill instructions, drawing API, component source, reference deck and previews, bundled font/license, examples, installation and validation scripts.
+Download [blue-white-ppt-skill-v1.1.0-rc.3.zip](blue-white-ppt-skill-v1.1.0-rc.3.zip), then extract the entire `blue-white-ppt` folder. The archive contains the skill instructions, drawing API, component source, reference deck and previews, bundled font/license, examples, installation and validation scripts.
 
 ## Use
 
