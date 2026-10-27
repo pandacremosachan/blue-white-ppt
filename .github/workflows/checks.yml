@@ -1,0 +1,57 @@
+name: Checks
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node: [20, 24]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm test
+      - run: node scripts/doctor.mjs
+      - run: node scripts/self-test.mjs --output checks/all-variants
+      - run: node scripts/pack-skill.mjs --output "${{ runner.temp }}/blue-white-ppt-candidate.zip"
+      - run: node scripts/verify-release.mjs "${{ runner.temp }}/blue-white-ppt-candidate.zip"
+      - run: node assets/examples/trapezoid/build-deck.mjs --output "${{ runner.temp }}/trapezoid-checks/trapezoid.pptx" --manifest "${{ runner.temp }}/trapezoid-checks/trapezoid.json"
+      - run: node scripts/validate-pptx.mjs "${{ runner.temp }}/trapezoid-checks/trapezoid.pptx"
+
+  previews:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Install preview tools and bundled font
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libreoffice-impress poppler-utils
+          mkdir -p ~/.local/share/fonts
+          cp assets/fonts/NotoSansSC-VF.ttf ~/.local/share/fonts/
+          fc-cache -f
+      - name: Generate and render composed examples
+        run: |
+          node scripts/init-deck.mjs --output checks/example
+          node scripts/create-deck.mjs --input checks/example/plan.json --output checks/example/deck.pptx
+          node scripts/validate-pptx.mjs checks/example/deck.pptx
+          node scripts/render.mjs checks/example/deck.pptx --output checks/example/preview
+          node checks/example/draw.mjs --output checks/example/direct.pptx
+          node scripts/validate-pptx.mjs checks/example/direct.pptx
+          node scripts/render.mjs checks/example/direct.pptx --output checks/example/direct-preview
+          node assets/examples/trapezoid/build-deck.mjs --output "${{ runner.temp }}/trapezoid.pptx"
+          node scripts/render.mjs "${{ runner.temp }}/trapezoid.pptx" --output checks/example/trapezoid-preview
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: composed-previews
+          path: checks/example
