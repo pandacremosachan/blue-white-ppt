@@ -89,9 +89,14 @@ export function drawCells(sl,id,bounds,options={}) {
 }
 export function drawDots(sl,id,bounds,options={}) {
   if(options.variant)return drawDotArrayVariant(sl,id,bounds,options);
-  const {x,y,w,h}=bounds,{rows=1,cols=5,d=24,filled=false}=options;
+  const {x,y,w,h}=bounds,{rows=1,cols=5,d=24,filled=false,colors=[]}=options;
+  if(!Number.isSafeInteger(rows)||rows<=0||!Number.isSafeInteger(cols)||cols<=0)throw new RangeError('Dot rows and cols must be positive safe integers');
+  if(!Number.isFinite(d)||d<=0)throw new RangeError('Dot diameter must be a positive finite number');
+  const highlight=new Set(Array.isArray(options.highlight)?options.highlight:options.highlight==null?[]:[options.highlight]);
   return Array.from({length:rows*cols},(_,i)=>{
-    const r=Math.floor(i/cols),c=i%cols;
-    return shape(sl,`${id}.r${r}c${c}`,'ellipse',x+(cols===1?(w-d)/2:c*(w-d)/(cols-1)),y+(rows===1?(h-d)/2:r*(h-d)/(rows-1)),d,d,filled?C.blue:C.bluePale,C.blue,1.5);
+    const r=Math.floor(i/cols),c=i%cols,key=`r${r}c${c}`;
+    const accent=highlight.has(i)||highlight.has(key)||highlight.has(`r${r}.c${c}`);
+    const fill=colors[key]??colors[`r${r}.c${c}`]??colors[i]??(accent||filled?C.blue:C.bluePale);
+    return shape(sl,`${id}.${key}`,'ellipse',x+(cols===1?(w-d)/2:c*(w-d)/(cols-1)),y+(rows===1?(h-d)/2:r*(h-d)/(rows-1)),d,d,fill,C.blue,1.5);
   });
 }
