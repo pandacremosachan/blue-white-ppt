@@ -32,7 +32,7 @@ On Windows use `await import(pathToFileURL(path.resolve(skillRoot,'scripts/api.m
 | `addText(slide,text,box,style)` | Native text; style includes `fontSize,color,bold,align,typeface,verticalAlignment,insets,wrap`. |
 | `addTable(slide,{values,bounds,columnWidths,fontSize,headerRow})` | Native editable table. Values are a rectangular matrix. |
 | `await addImage(slide,path,box,{name})` | Embed PNG/JPEG at original aspect ratio, centered inside the box. |
-| `await savePresentation(p,path,{overwrite,footers})` | Export with page footers by default; existing file rejected unless overwrite is true. |
+| `await savePresentation(p,path,{overwrite,footers})` | Export an independent snapshot with freshly computed page footers by default; the authoring model is unchanged. Existing file rejected unless overwrite is true. |
 | `await buildFromPlan(plan,{baseDirectory})` | Returns `{presentation,manifest}`. Image paths resolve against baseDirectory. |
 
 Also exports `C`, `FONT`, `STYLE`, `COMPONENTS` and `Presentation`. Obtain per-component options from the inspector. `result` varies: simple C15 returns a shape, complex components may return nodes, edges or regions. Inspect the renderer before accessing advanced values. `objects` always contains created shapes. Give each instance a unique ID within its slide. Components are grouped for selection; connectors reference native shape IDs and retain attachment when nodes move.
@@ -56,7 +56,9 @@ Also exports `C`, `FONT`, `STYLE`, `COMPONENTS` and `Presentation`. Obtain per-c
 }
 ```
 
-Elements draw in array order, back to front. Create endpoint nodes before connectors. Keys are unique per component instance within a slide. Simple `from`/`to` strings choose the primary body or first node. Internal paths such as `{"ref":"diagram.result.nodesByKey.a"}` work only if that component returns the named structure. Numeric array indexes also work. Missing references throw rather than silently creating detached edges.
+Elements draw in array order, back to front, including tables, images and shapes. Create endpoint nodes before connectors. Keys are unique per component instance within a slide; dotted keys such as `a` and `a.b` are separate instances and can coexist. Simple `from`/`to` strings choose the primary body or first node. Internal paths such as `{"ref":"diagram.result.nodesByKey.a"}` work only if that component returns the named structure. Numeric array indexes also work. Missing references throw rather than silently creating detached edges.
+
+Repeated saves recalculate all page totals, so adding or removing slides between saves is supported. `footers:false` omits the reserved `footer.*` objects from that export only. XML 1.0 forbidden characters in labels or notes are rejected with a Unicode code-point error before a PPTX is written; clean external text explicitly rather than relying on silent character replacement.
 
 Additional elements:
 

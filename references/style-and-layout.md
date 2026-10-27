@@ -14,13 +14,35 @@ Coordinates use design pixels on a **1280 × 720** canvas. The exporter converts
 |---|---|
 | Page inset | 48 px on both sides |
 | Header | Separate number; gradient bar x=144, y=10, w=1124, h=64 |
-| Lead statement | x=48, y=94, w=1184, h=78 |
-| Main content | Usually y=190 through y=670; reserve the footer area |
+| Lead statement | Fixed C02 frame x=48, y=94, w=1184, h=78; native C04 double chevron; 23 design px bold text |
+| Main content | Begin at y ≥ 190 and normally end by y=686; reserve the footer area |
 | Footer | Rule y=698; label and page count below |
 | Body / diagram / annotation | Usually 23 / 22 / 18 design px |
 | Page title / section text | 36 / 26 design px |
 
 Use shared alignment lines and spacing around connectors. Scale a diagram before shrinking its labels. Put long explanations beside it or on another slide. Components do not automatically fit a full argument into arbitrary geometry.
+
+Reference pages retain the original lead structure: a white C02 panel with a complete gray-blue outline, two native C04 chevrons at the left, and bold summary text beginning at x=101. `addSlide({number:chapterNumber, summary:...})` draws this standard lead at its fixed position. Keep the lead's geometry and type size consistent across all three showcase decks.
+
+Use complete thin frames to organize comparison items. Each frame contains the item's title, diagram and caption, so the viewer can associate the explanation with the correct case. Place all three within the same region; a border around the diagram alone does not organize the entire comparison item. Start every main-content object at y ≥ 190, including state labels and region headings.
+
+## Chapter numbers and physical pages
+
+The number beside the gradient header identifies the logical chapter, while the footer counts physical pages. Pass the chapter string through `addSlide({number:chapterNumber,...})`; use the actual page index and total in `addFooter()`. An animation pair shares one chapter number because its two pages are states of the same example. Formula examples and their derivation belong to the same formula chapter.
+
+| Showcase | Physical pages | Header chapter number |
+|---|---|---|
+| Trapezoid | 1 | 1 |
+| Trapezoid | 2–9 | 2.1–2.8 respectively |
+| Trapezoid | 10–11 | 3 on both states |
+| Trapezoid | 12–13 | 4.1, 4.2 |
+| Morph | 1 | 1 |
+| Morph | 2–3, 4–5, 6–7, 8–9 | 2.1, 2.2, 2.3, 2.4 respectively; both states share the number |
+| Morph | 10–11, 12–13 | 3.1, 3.2 respectively; both states share the number |
+| Morph | 14 | 4 |
+| Content and playback | 1–6 | 1, 2.1, 2.2, 3, 4, 5 |
+
+Keep these chapter labels in the generated manifests as `chapterNumber`. Hyperlink destinations and notes relationships continue to use physical slide IDs; changing a visible chapter number must not change navigation targets.
 
 ## Palette
 
@@ -45,6 +67,14 @@ Use C23 for natural regions: comparison, a main argument with support, or a figu
 A sequential process calls for C20 or C37, simultaneous paths C21 or C36, a cyclic dependency C35 or a suitable C09 return variant, and layers C22. C05 emphasizes a directional transformation; C07 carries an attached relation. Select structures by meaning.
 
 Use editable nodes and native tables for compact comparisons. Images can show measurements, photographs or supplied paper figures, with editable captions. A title, main figure and explanatory region often communicate more clearly than a grid of every available component.
+
+## Density for galleries and reference cases
+
+When the purpose is to compare designs, group related cases on the same page, normally **2–4 examples per page**. Share the page title and alignment grid so that the viewer can compare the cases directly. Give each case its name and the difference that matters; move detailed mechanisms, extended commentary and source descriptions to speaker notes. Page count should follow the number of meaningful comparison groups, rather than the number of case records.
+
+Keep separate animation states when the transition itself is the subject. For Morph references, related object effects can share the same A/B pair, while word and character matching retain their own pairs because their settings differ. Sources can use a compact closing register in addition to the notes. Check that labels remain readable after reducing a diagram to its comparison region; merging pages without redrawing their content does not establish a useful density.
+
+This is the default for galleries and reference material. A formal talk should use its argument, audience and speaking pace to decide whether a page needs one example or several; it does not inherit a four-example requirement.
 
 ## Typography and review
 

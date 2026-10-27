@@ -1,0 +1,272 @@
+{
+  "schemaVersion": 1,
+  "release": "1.1.0-rc.3",
+  "componentCount": 39,
+  "variantCount": 244,
+  "core": {
+    "status": "supported",
+    "entrypoints": [
+      {
+        "path": "scripts/create-deck.mjs",
+        "interface": "cli-json-plan"
+      },
+      {
+        "path": "scripts/api.mjs",
+        "interface": "javascript"
+      }
+    ],
+    "runtime": {
+      "node": ">=20",
+      "npmDependencies": false,
+      "pythonRequiredForGeneration": false,
+      "networkRequiredForGeneration": false
+    },
+    "canvas": {
+      "width": 1280,
+      "height": 720,
+      "units": "design-pixels"
+    },
+    "features": {
+      "components": {
+        "status": "supported",
+        "stableCodes": "C01-C39",
+        "count": 39,
+        "variants": 244,
+        "nativeEditable": true
+      },
+      "content": {
+        "status": "supported",
+        "types": [
+          "component",
+          "text",
+          "table",
+          "image"
+        ],
+        "nativeText": true,
+        "nativeTables": true,
+        "imageFormats": [
+          "png",
+          "jpeg"
+        ],
+        "preserveImageAspectRatio": true
+      },
+      "geometry": {
+        "status": "supported",
+        "officePresets": true,
+        "customBezierPaths": true,
+        "gradientFills": true,
+        "explicitBounds": true,
+        "automaticTextFlow": false
+      },
+      "relationships": {
+        "status": "supported",
+        "nativeAttachedConnectors": true,
+        "exactInstanceKeys": true,
+        "explicitComponentGroups": true
+      },
+      "ordering": {
+        "status": "supported",
+        "unifiedShapeImageTableOrder": true,
+        "crossTypeBringToFront": true,
+        "crossTypeSendToBack": true
+      },
+      "export": {
+        "status": "supported",
+        "editablePptx": true,
+        "snapshotSave": true,
+        "refreshPageTotals": true,
+        "omitFootersPerExport": true,
+        "rejectExistingOutputByDefault": true
+      },
+      "dotArray": {
+        "status": "supported",
+        "component": "C19",
+        "indexedColors": true,
+        "keyedColors": true,
+        "indexedHighlights": true,
+        "keyedHighlights": true
+      },
+      "validation": {
+        "status": "supported",
+        "packageRelationships": true,
+        "nativeIdUniqueness": true,
+        "connectorAttachment": true,
+        "rotatedBounds": true,
+        "strictXml10": true,
+        "automatedReadabilityVerdict": false
+      },
+      "distribution": {
+        "status": "supported",
+        "portableNodeGeneration": true,
+        "releaseManifest": true,
+        "skillInstallation": true
+      }
+    },
+    "unsupportedAtCore": [
+      "equation-content",
+      "native-chart-content",
+      "click-step-plan",
+      "transition-morph-plan",
+      "media-embedding",
+      "semantic-code-highlighting",
+      "scientific-plot-compilation",
+      "native-3d-model"
+    ],
+    "limits": [
+      "JSON计划和JavaScript API采用显式页面边界与对象位置，不包含通用自动排版或中文文本自适应引擎。",
+      "结构校验不证明文字可读性、遮挡、内容准确性或放映行为，仍须渲染与人工检查。",
+      "便携生成不依赖渲染器。可选PNG/PDF渲染另需LibreOffice与Poppler或外部PowerPoint环境。",
+      "PPTX引用Noto Sans SC但不嵌入字体；字体替换可能改变度量。",
+      "后端面向本组件库与新页面生成，不是任意PowerPoint文件的保真导入和改写工具。"
+    ]
+  },
+  "examples": {
+    "trapezoidCreativity": {
+      "status": "editable-example",
+      "catalogId": "trapezoid-creativity",
+      "entrypoint": {
+        "path": "assets/examples/trapezoid/build-deck.mjs",
+        "args": [
+          "--output",
+          "<new-file.pptx>"
+        ]
+      },
+      "creativeCases": 32,
+      "slides": 13,
+      "coreApiExtension": false,
+      "experimentalMorphSerializerIncluded": true,
+      "nativeAttachedConnectors": 5,
+      "independentConnectors": 0,
+      "referenceGeneratedByIncludedEntrypoint": true,
+      "comparisonPages": 8,
+      "casesPerComparisonPage": 4,
+      "chapterNumbers": [
+        "1",
+        "2.1",
+        "2.2",
+        "2.3",
+        "2.4",
+        "2.5",
+        "2.6",
+        "2.7",
+        "2.8",
+        "3",
+        "3",
+        "4.1",
+        "4.2"
+      ]
+    },
+    "contentAndPlayback": {
+      "status": "isolated-prototype",
+      "catalogId": "content-and-playback",
+      "generationSourceIncluded": false,
+      "coreApiSupport": false,
+      "slides": 6,
+      "chapterNumbers": [
+        "1",
+        "2.1",
+        "2.2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    "morphEffects": {
+      "status": "editable-example",
+      "catalogId": "morph-effects",
+      "generationSourceIncluded": true,
+      "coreApiSupport": false,
+      "demonstratedEffectFamilies": 10,
+      "slides": 14,
+      "nativeMorphTransitions": 6,
+      "matchedSemanticObjects": 114,
+      "entrypoint": {
+        "path": "assets/examples/morph/build-compact.mjs",
+        "args": [
+          "--output",
+          "<new-file.pptx>"
+        ]
+      },
+      "chapterNumbers": [
+        "1",
+        "2.1",
+        "2.1",
+        "2.2",
+        "2.2",
+        "2.3",
+        "2.3",
+        "2.4",
+        "2.4",
+        "3.1",
+        "3.1",
+        "3.2",
+        "3.2",
+        "4"
+      ]
+    }
+  },
+  "experimental": {
+    "status": "not-integrated-with-core",
+    "nativeEquations": {
+      "status": "isolated-prototype",
+      "integratedWithCore": false,
+      "explicitMathTree": "prototype-only",
+      "latexParsing": "not-implemented",
+      "generalFormulaLayout": "proposed"
+    },
+    "nativeCharts": {
+      "status": "isolated-prototype",
+      "integratedWithCore": false,
+      "demonstratedCharts": 1,
+      "embeddedWorkbook": true,
+      "datasetToChartCompiler": "proposed"
+    },
+    "stepPlayback": {
+      "status": "isolated-prototype",
+      "integratedWithCore": false,
+      "appearSequences": "prototype-only",
+      "fadeWipeEmphasisPlanCompiler": "proposed",
+      "staticHandoutCompiler": "proposed",
+      "reducedMotionCompiler": "proposed"
+    },
+    "morphRecipes": {
+      "status": "isolated-prototype",
+      "integratedWithCore": false,
+      "proposedRecipeFamilies": 15,
+      "demonstratedEffectFamilies": 10,
+      "proposedMatchingModes": [
+        "objects",
+        "words",
+        "characters"
+      ],
+      "continuityKeyPlanCompiler": "not-integrated",
+      "exampleSourceIncluded": true
+    },
+    "mediaAndNative3d": {
+      "status": "proposed",
+      "integratedWithCore": false,
+      "mediaEmbedding": false,
+      "native3dModelAuthoring": false
+    },
+    "limits": [
+      "参考文件中存在原生对象，只证明该隔离示范包含该结构，不能推断核心生成入口已经支持相同功能。",
+      "实验设计的完整生成源与语义检查器未作为正式核心接口随包公开。"
+    ]
+  },
+  "referenceShowcaseStyle": {
+    "reference": "assets/reference/component-library-v0.14.pptx",
+    "fixedSummaryBounds": [
+      48,
+      94,
+      1184,
+      78
+    ],
+    "summaryFontDesignPx": 23,
+    "summaryBold": true,
+    "summaryDoubleChevron": true,
+    "bodyStartDesignPx": 190,
+    "completeContentFrames": true,
+    "chapterNumbersSeparateFromPageNumbers": true,
+    "scope": "Curated reference showcases; the general authoring API still permits content-driven layouts."
+  }
+}

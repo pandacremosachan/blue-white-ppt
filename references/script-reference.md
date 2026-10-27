@@ -4,6 +4,7 @@ Invoke from the skill root, or substitute an absolute script path. Every command
 
 | Script | Purpose / example |
 |---|---|
+| `run-tests.mjs` | Run the regression suite without creating files in the skill directory. `npm test` or `node scripts/run-tests.mjs` |
 | `doctor.mjs` | Report Node, bundled assets, reference SHA and optional render tools. `node scripts/doctor.mjs` |
 | `inspect-component.mjs` | Inspect codes, exact variants/options and reference pages. `node scripts/inspect-component.mjs C05` |
 | `reference-page.mjs` | Return an existing preview path, or copy it. `node scripts/reference-page.mjs --page 8 --output arrow-reference.png` |
@@ -13,7 +14,10 @@ Invoke from the skill root, or substitute an absolute script path. Every command
 | `render.mjs` | Optional PDF/PNG/HTML previews. `node scripts/render.mjs my-deck/deck.pptx --output my-deck/preview` |
 | `self-test.mjs` | Draw all 244 variants and a table/image/rotation check on 245 pages. `node scripts/self-test.mjs --output checks/all-variants` |
 | `install.mjs` | Copy full skill into a new discovery folder. `node scripts/install.mjs --harness pi` |
-| `pack-skill.mjs` | ZIP full folder and hash manifest. `node scripts/pack-skill.mjs --output ../blue-white-ppt-skill-v1.0.0.zip` |
+| `pack-skill.mjs` | ZIP selected runtime, examples and references with a hash manifest. `node scripts/pack-skill.mjs --output ../blue-white-ppt-skill-v1.1.0-rc.3.zip` |
+| `verify-release.mjs` | Verify archive membership, hashes, versions, showcases and portable entrypoints. `node scripts/verify-release.mjs ../blue-white-ppt-skill-v1.1.0-rc.3.zip --report ../candidate-check.json` |
+| `assets/examples/trapezoid/build-deck.mjs` | Generate the 13-page, 32-composition compact example. `node assets/examples/trapezoid/build-deck.mjs --output ../trapezoid.pptx --manifest ../trapezoid.json` |
+| `assets/examples/morph/build-compact.mjs` | Generate the 14-page, ten-effect compact Morph example. `node assets/examples/morph/build-compact.mjs --output ../morph.pptx --manifest ../morph.json` |
 | `update-guide.mjs` | Refresh the component guide and portable catalog reference path after intentional library changes. `node scripts/update-guide.mjs` |
 
 ## Component discovery
@@ -36,11 +40,13 @@ node my-deck/draw.mjs --skill /new/location/blue-white-ppt --output my-deck/dire
 
 Edit the `.mjs` source to change content, codes, geometry, options and relationships. `skill-location.json` records the skill's location at scaffold time; after moving it, pass `--skill`, set `BLUE_WHITE_PPT_SKILL`, or update that small configuration file.
 
+Use `addSlide({number:chapterNumber,summary:...})` to preserve the reference header and fixed C02/C04 summary treatment. The showcase manifests record `chapterNumber` separately from `slide`, which is the physical page index. State pairs share the same chapter label; footer pagination and internal links continue to follow physical pages. The exact mappings are in [style and layout](style-and-layout.md).
+
 ## Validation and rendering
 
 Generation refuses an existing PPTX unless `--overwrite` is passed. Scaffolding, reference copying, installation and packing also refuse existing targets. Manifests/reports are generated metadata and may be refreshed.
 
-`validate-pptx.mjs` exits nonzero on structural errors. It checks ZIP integrity, XML syntax, relationships, duplicate IDs, attachment endpoints, object transforms and slide bounds. Independent connector samples produce warnings; actual workflow edges should be attached. It does not check text overflow or visual quality.
+`validate-pptx.mjs` exits nonzero on structural errors. It checks ZIP integrity, UTF-8/XML syntax (including forbidden characters, entities, attributes and namespace bindings), relationships, duplicate IDs, attachment endpoints, object transforms and slide bounds after arbitrary-angle rotation. DTDs and external entities are unsupported. Independent connector samples produce warnings; actual workflow edges should be attached. It does not perform OOXML schema validation, text overflow detection or visual quality assessment.
 
 ```sh
 node scripts/render.mjs my-deck/deck.pptx --output my-deck/preview \

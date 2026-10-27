@@ -1,20 +1,639 @@
 {
-  "release": "1.0.0",
-  "validatedOn": "2026-10-22",
-  "environment": {"platform":"Windows", "generationNode":"24.15.0", "pi":"1.3.0"},
+  "release": "1.1.0-rc.3",
+  "updatedOn": "2026-10-26",
+  "status": "local-candidate-preparation-complete",
   "checks": {
-    "skillCreatorQuickValidation": "pass",
-    "preservedComponentSourceFiles": 29,
-    "exactFinalReferenceBytes": true,
-    "registeredComponents": 39,
-    "registeredVariants": 244,
-    "allVariantNativePptx": {"slides":245,"status":"pass","attachedConnectors":279,"standaloneConnectorSamples":4,"nativeTables":1,"embeddedPictures":1},
-    "independentPptxImport": {"slides":245,"status":"pass"},
-    "visualInspection": {"status":"pass","scope":"Three composed example slides, the direct .mjs example, and selected component/arrow/flow/layout/table/image samples; not an exhaustive visual review of all 244 variants."},
-    "relocation": {"status":"pass","scope":"Folder with Unicode and spaces; working directory outside skill; Codex/module-path environment variables removed; JSON and .mjs generation passed."},
-    "piDiscovery": {"status":"pass","scope":"Offline RPC get_commands registered skill:blue-white-ppt; no model prompt, LLM execution or API request."},
-    "refuseExistingOutput": "pass",
-    "unknownCodeRejection": "pass"
+    "regressions": {
+      "status": "pass",
+      "tests": 32,
+      "passed": 32,
+      "failed": 0,
+      "command": "npm test",
+      "includes": "Final XML template checks, native content, state identities, navigation, portable generation and distribution"
+    },
+    "styleUnifiedShowcases": {
+      "status": "pass",
+      "slidesBefore": 33,
+      "slidesAfter": 33,
+      "standardSummarySlides": 33,
+      "completeBodyFrames": 83,
+      "referenceSummaryBounds": [
+        48,
+        94,
+        1184,
+        78
+      ],
+      "summaryFontDesignPx": 23,
+      "summaryBold": true,
+      "doubleChevron": true,
+      "bodyStartDesignPx": 190,
+      "logicalChaptersSeparateFromPageNumbers": true,
+      "renderer": "Microsoft PowerPoint 16.0",
+      "staticSlidesRenderedAndReviewed": 33,
+      "targets": {
+        "trapezoid-creativity": {
+          "status": "pass",
+          "slides": 13,
+          "standardSummarySlides": 13,
+          "completeBodyFrames": 42,
+          "chapterNumbers": [
+            "1",
+            "2.1",
+            "2.2",
+            "2.3",
+            "2.4",
+            "2.5",
+            "2.6",
+            "2.7",
+            "2.8",
+            "3",
+            "3",
+            "4.1",
+            "4.2"
+          ],
+          "sha256": "e189dcd3a78f4988378d67b45ec30f7dc9014464cc5043ef309613b3b827a7ec",
+          "validation": {
+            "slides": 13,
+            "shapes": 713,
+            "connectors": 5,
+            "attachedConnectors": 5,
+            "independentConnectors": 0,
+            "groups": 0,
+            "tables": 0,
+            "pictures": 0
+          },
+          "pages": [
+            {
+              "page": 1,
+              "chapterNumber": "1",
+              "completeFrames": 2
+            },
+            {
+              "page": 2,
+              "chapterNumber": "2.1",
+              "completeFrames": 4
+            },
+            {
+              "page": 3,
+              "chapterNumber": "2.2",
+              "completeFrames": 4
+            },
+            {
+              "page": 4,
+              "chapterNumber": "2.3",
+              "completeFrames": 4
+            },
+            {
+              "page": 5,
+              "chapterNumber": "2.4",
+              "completeFrames": 4
+            },
+            {
+              "page": 6,
+              "chapterNumber": "2.5",
+              "completeFrames": 4
+            },
+            {
+              "page": 7,
+              "chapterNumber": "2.6",
+              "completeFrames": 4
+            },
+            {
+              "page": 8,
+              "chapterNumber": "2.7",
+              "completeFrames": 4
+            },
+            {
+              "page": 9,
+              "chapterNumber": "2.8",
+              "completeFrames": 4
+            },
+            {
+              "page": 10,
+              "chapterNumber": "3",
+              "completeFrames": 2
+            },
+            {
+              "page": 11,
+              "chapterNumber": "3",
+              "completeFrames": 2
+            },
+            {
+              "page": 12,
+              "chapterNumber": "4.1",
+              "completeFrames": 2
+            },
+            {
+              "page": 13,
+              "chapterNumber": "4.2",
+              "completeFrames": 2
+            }
+          ]
+        },
+        "morph-effects": {
+          "status": "pass",
+          "slides": 14,
+          "standardSummarySlides": 14,
+          "completeBodyFrames": 25,
+          "chapterNumbers": [
+            "1",
+            "2.1",
+            "2.1",
+            "2.2",
+            "2.2",
+            "2.3",
+            "2.3",
+            "2.4",
+            "2.4",
+            "3.1",
+            "3.1",
+            "3.2",
+            "3.2",
+            "4"
+          ],
+          "sha256": "c246e7a6e2bd78037009e8327a8663b1632d2df816617c2db94cc6488df343d5",
+          "validation": {
+            "slides": 14,
+            "shapes": 504,
+            "connectors": 0,
+            "attachedConnectors": 0,
+            "independentConnectors": 0,
+            "groups": 0,
+            "tables": 0,
+            "pictures": 0
+          },
+          "pages": [
+            {
+              "page": 1,
+              "chapterNumber": "1",
+              "completeFrames": 1
+            },
+            {
+              "page": 2,
+              "chapterNumber": "2.1",
+              "completeFrames": 2
+            },
+            {
+              "page": 3,
+              "chapterNumber": "2.1",
+              "completeFrames": 2
+            },
+            {
+              "page": 4,
+              "chapterNumber": "2.2",
+              "completeFrames": 2
+            },
+            {
+              "page": 5,
+              "chapterNumber": "2.2",
+              "completeFrames": 2
+            },
+            {
+              "page": 6,
+              "chapterNumber": "2.3",
+              "completeFrames": 2
+            },
+            {
+              "page": 7,
+              "chapterNumber": "2.3",
+              "completeFrames": 2
+            },
+            {
+              "page": 8,
+              "chapterNumber": "2.4",
+              "completeFrames": 2
+            },
+            {
+              "page": 9,
+              "chapterNumber": "2.4",
+              "completeFrames": 2
+            },
+            {
+              "page": 10,
+              "chapterNumber": "3.1",
+              "completeFrames": 1
+            },
+            {
+              "page": 11,
+              "chapterNumber": "3.1",
+              "completeFrames": 1
+            },
+            {
+              "page": 12,
+              "chapterNumber": "3.2",
+              "completeFrames": 1
+            },
+            {
+              "page": 13,
+              "chapterNumber": "3.2",
+              "completeFrames": 1
+            },
+            {
+              "page": 14,
+              "chapterNumber": "4",
+              "completeFrames": 4
+            }
+          ]
+        },
+        "content-and-playback": {
+          "status": "pass",
+          "slides": 6,
+          "standardSummarySlides": 6,
+          "completeBodyFrames": 16,
+          "chapterNumbers": [
+            "1",
+            "2.1",
+            "2.2",
+            "3",
+            "4",
+            "5"
+          ],
+          "sha256": "c1c81d6bee9d1633a0412dcf152f76d21aab29e90d45fc2c85d9f9e8075f4648",
+          "validation": {
+            "slides": 6,
+            "shapes": 219,
+            "connectors": 3,
+            "attachedConnectors": 3,
+            "independentConnectors": 0,
+            "groups": 0,
+            "tables": 0,
+            "pictures": 0
+          },
+          "pages": [
+            {
+              "page": 1,
+              "chapterNumber": "1",
+              "completeFrames": 6
+            },
+            {
+              "page": 2,
+              "chapterNumber": "2.1",
+              "completeFrames": 2
+            },
+            {
+              "page": 3,
+              "chapterNumber": "2.2",
+              "completeFrames": 2
+            },
+            {
+              "page": 4,
+              "chapterNumber": "3",
+              "completeFrames": 2
+            },
+            {
+              "page": 5,
+              "chapterNumber": "4",
+              "completeFrames": 2
+            },
+            {
+              "page": 6,
+              "chapterNumber": "5",
+              "completeFrames": 2
+            }
+          ]
+        }
+      },
+      "assets": [
+        {
+          "path": "assets/showcases/content-and-playback.pptx",
+          "role": "presentation",
+          "bytes": 49154,
+          "sha256": "c1c81d6bee9d1633a0412dcf152f76d21aab29e90d45fc2c85d9f9e8075f4648"
+        },
+        {
+          "path": "assets/showcases/morph-effects.pptx",
+          "role": "presentation",
+          "bytes": 78724,
+          "sha256": "c246e7a6e2bd78037009e8327a8663b1632d2df816617c2db94cc6488df343d5"
+        },
+        {
+          "path": "assets/showcases/morph-effects.mp4",
+          "role": "video",
+          "bytes": 3524405,
+          "sha256": "a654b796aedee7d066cc479f7d0d1514b18e7164ded043a8842e04425b17dc3d"
+        },
+        {
+          "path": "assets/showcases/trapezoid-creativity.pptx",
+          "role": "presentation",
+          "bytes": 105090,
+          "sha256": "e189dcd3a78f4988378d67b45ec30f7dc9014464cc5043ef309613b3b827a7ec"
+        },
+        {
+          "path": "assets/showcases/trapezoid-preview.png",
+          "role": "preview",
+          "bytes": 766877,
+          "sha256": "038ce73e53cc853b6f7fd3ffffc4fc2fb5614a9abb7b0adacc8bc27dcf982ca1"
+        }
+      ],
+      "scope": "Native XML checks and all endpoint renders. Theme, reference and core are preserved; equation trees and chart/workbook bytes remain unchanged."
+    },
+    "referenceAndFont": {
+      "status": "pass",
+      "approvedReferenceSlides": 53,
+      "referenceBytesMatchBaseline": true,
+      "fontBytesMatchBaseline": true,
+      "unchangedCoreReferenceAndFontFiles": 114,
+      "comparedWith": "1.1.0-rc.2"
+    },
+    "archiveAcceptance": {
+      "status": "pass",
+      "version": "1.1.0-rc.3",
+      "preflightFiles": 162,
+      "preflightManifestFiles": 161,
+      "cleanExtractionTests": {
+        "tests": 32,
+        "passed": 32,
+        "failed": 0
+      },
+      "sourcePayloadUnchangedByTests": true,
+      "scope": "The preflight package was verified and tested from clean extraction. The final archive receives a separate manifest verification and source-byte comparison after this metadata-only evidence update."
+    },
+    "nativePlayback": {
+      "status": "sampled",
+      "renderer": "Microsoft PowerPoint 16.0",
+      "morph": {
+        "slides": 14,
+        "nativeTransitions": 6,
+        "effectFamilies": 10,
+        "videoDurationSeconds": 38.6763,
+        "intermediateFramesReviewed": 6
+      },
+      "trapezoid": {
+        "slides": 13,
+        "nativeTransitions": 1,
+        "intermediateFramesReviewed": 1
+      },
+      "content": {
+        "slides": 6,
+        "nativeMathObjects": 7,
+        "nativeCharts": 1,
+        "embeddedWorkbooks": 1,
+        "nativeAnimationEffects": 17,
+        "clickBatches": 5,
+        "validAnimationReferences": 34,
+        "internalLinks": 8
+      },
+      "scope": "Native video exports and sampled transitions were reviewed. Full live-click playback and formula/chart interaction are not asserted."
+    }
   },
-  "limits": ["Portable LibreOffice rendering was not exercised because LibreOffice is absent on this host; independent harness rendering was used for visual checks.","Linux and macOS were not exercised on this host.","Generated PPTX files reference the supplied font but do not embed it."]
+  "historicalAcceptance": {
+    "release": "1.1.0-rc.2",
+    "updatedOn": "2026-10-26",
+    "status": "local-candidate-preparation-complete",
+    "checks": {
+      "regressions": {
+        "status": "pass",
+        "tests": 31,
+        "passed": 31,
+        "failed": 0,
+        "command": "npm test"
+      },
+      "compactShowcases": {
+        "status": "pass",
+        "renderer": "Microsoft PowerPoint 16.0",
+        "totalSlidesBefore": 72,
+        "totalSlidesAfter": 33,
+        "renderedAndReviewedSlides": 33,
+        "targets": {
+          "trapezoid": {
+            "status": "pass",
+            "slides": 13,
+            "compositions": 32,
+            "comparisonPages": 8,
+            "casesPerComparisonPage": 4,
+            "attachedConnectors": 5,
+            "nativeMorphTransitions": 1,
+            "reviewedSlides": 13,
+            "reviewedIntermediateStates": 1,
+            "sourceReferences": 16,
+            "sourceLinks": 43
+          },
+          "contentAndPlayback": {
+            "status": "pass",
+            "slides": 6,
+            "nativeEquations": 7,
+            "nativeCharts": 1,
+            "embeddedWorkbooks": 1,
+            "animatedSlides": 2,
+            "nativeAnimationEffects": 17,
+            "clickBatches": 5,
+            "internalLinks": 8,
+            "reviewedSlides": 6,
+            "animationReferencesChecked": 34
+          },
+          "morph": {
+            "status": "pass",
+            "slides": 14,
+            "effectFamilies": 10,
+            "nativeMorphTransitions": 6,
+            "transitionModes": {
+              "object": 4,
+              "word": 1,
+              "character": 1
+            },
+            "matchedSemanticObjects": 114,
+            "reviewedSlides": 14,
+            "reviewedIntermediateStates": 6,
+            "videoDurationSeconds": 38.6763
+          }
+        },
+        "assets": [
+          {
+            "path": "assets/showcases/content-and-playback.pptx",
+            "role": "presentation",
+            "bytes": 48827,
+            "sha256": "5f7d5b4b95dc56ca11858a0f53ceee920c92ad1f5569aae7a5d57f7f3abaf2e7"
+          },
+          {
+            "path": "assets/showcases/morph-effects.pptx",
+            "role": "presentation",
+            "bytes": 78193,
+            "sha256": "108718bcc72479c4f03942bfba31a45fea205f16bfe2b0ec4884e2dda7a9cd24"
+          },
+          {
+            "path": "assets/showcases/morph-effects.mp4",
+            "role": "video",
+            "bytes": 3681724,
+            "sha256": "4e4e490c29a8f242c6d01d105ced5832ac5ecf37a72b4fd9d32009eb0d378378"
+          },
+          {
+            "path": "assets/showcases/trapezoid-creativity.pptx",
+            "role": "presentation",
+            "bytes": 102999,
+            "sha256": "ae5a3cfbbe9eb50b2e08dc399e22d8f7fe4b3b560a3b5aa80bf321c67b63d0db"
+          },
+          {
+            "path": "assets/showcases/trapezoid-preview.png",
+            "role": "preview",
+            "bytes": 778767,
+            "sha256": "878cf2e90be90c7984766ba56b7ef46488b1b532683d83c6b2ea8c84e36c12a4"
+          }
+        ],
+        "scope": "Native editable structures, every endpoint render and sampled native-video transitions were checked. This is not full live-click, formula-editing or chart-editing acceptance."
+      },
+      "referenceAndFont": {
+        "status": "pass",
+        "referenceBytesMatchBaseline": true,
+        "fontBytesMatchBaseline": true,
+        "unchangedFromPreviousCandidateFiles": 114,
+        "scope": "All core scripts, the approved 53-page reference and its previews, and bundled fonts match rc.1 byte for byte."
+      },
+      "archiveAcceptance": {
+        "status": "pass",
+        "version": "1.1.0-rc.2",
+        "preflightFiles": 160,
+        "preflightManifestFiles": 159,
+        "cleanExtractionTests": {
+          "tests": 31,
+          "passed": 31,
+          "failed": 0
+        },
+        "portableExamples": {
+          "trapezoidSlides": 13,
+          "trapezoidCases": 32,
+          "morphSlides": 14,
+          "morphEffectFamilies": 10
+        },
+        "scope": "Preflight ZIP verified and tested from clean extraction. The final source-record update is metadata only; the final archive receives its own verification receipt beside the ZIP."
+      },
+      "semanticPreservation": {
+        "status": "pass",
+        "comparedWith": "1.1.0-rc.1",
+        "unchangedCoreReferenceAndFontFiles": 114,
+        "unchangedEquationTrees": 7,
+        "chartAndWorkbookBytesUnchanged": true,
+        "animationShapeReferencesValid": 34,
+        "sourceTests": {
+          "tests": 31,
+          "pass": 31,
+          "fail": 0
+        },
+        "cleanExtractionTests": {
+          "tests": 31,
+          "pass": 31,
+          "fail": 0
+        }
+      }
+    },
+    "historicalAcceptance": {
+      "release": "1.1.0-rc.1",
+      "validatedOn": "2026-10-26",
+      "scope": "Preserved evidence for the preceding candidate. These results do not validate the rearranged compact showcases or the current candidate archive.",
+      "environment": {
+        "platform": "win32",
+        "node": "v24.15.0"
+      },
+      "checks": {
+        "skillFrontmatter": {
+          "status": "pass",
+          "validator": "skill-creator quick_validate.py",
+          "developmentOnlyDependency": "PyYAML 6.0.3 in external validation environment"
+        },
+        "regressions": {
+          "status": "pass",
+          "tests": 30,
+          "failed": 0,
+          "command": "npm test"
+        },
+        "allVariantNativePptx": {
+          "status": "pass",
+          "components": 39,
+          "variants": 244,
+          "slides": 245,
+          "attachedConnectors": 279,
+          "independentConnectorSamples": 4
+        },
+        "referenceAndFont": {
+          "status": "pass",
+          "referenceBytesMatchBaseline": true,
+          "fontBytesMatchBaseline": true
+        },
+        "baselineComponentSources": {
+          "unchangedSha256": 28,
+          "total": 29,
+          "intentionalChange": "scripts/components/primitives.mjs: C19 indexed/keyed colors and highlights",
+          "textLineEndings": "LF"
+        },
+        "curatedShowcases": {
+          "status": "pass",
+          "groups": 3,
+          "files": 5,
+          "assets": [
+            {
+              "path": "assets/showcases/content-and-playback.pptx",
+              "sha256": "cfc76c631b3438e59e447ff044b842ebc40ee67e6230706c6108c4a33799cc03"
+            },
+            {
+              "path": "assets/showcases/morph-effects.pptx",
+              "sha256": "04dafbf6dce244ca55c0870b341ca88c443e605e4d8f6dcb35db6ccd67fbe71c"
+            },
+            {
+              "path": "assets/showcases/morph-effects.mp4",
+              "sha256": "e76795623659575124c2fe11d3048c04fe2ec3483d018422b5628e2a917958cc"
+            },
+            {
+              "path": "assets/showcases/trapezoid-creativity.pptx",
+              "sha256": "fbef917deade29a968a1efffb3295aeae54a0d6a3480043c250eccca331a8a1b"
+            },
+            {
+              "path": "assets/showcases/trapezoid-preview.png",
+              "sha256": "bcd027d345030098f3a4e34cd1fe69e548630bde520f2d384476bc868de68421"
+            }
+          ]
+        },
+        "portableTrapezoid": {
+          "status": "pass",
+          "slides": 40,
+          "compositions": 32,
+          "sourceReferences": 16,
+          "externalLinks": 43,
+          "speakerNotes": 40,
+          "attachedConnectors": 5,
+          "independentConnectors": 0,
+          "nativeMorphTransitions": 1,
+          "relocation": "Unicode/space path, alternate working directory, no design folder",
+          "sourceWrites": false,
+          "nativePowerPointRenders": 40,
+          "pixelComparison": {
+            "unchangedSlides": 39,
+            "changedSlide": 6,
+            "review": "Native connector region changed; full-size slide rechecked"
+          }
+        },
+        "documentLinks": {
+          "status": "pass",
+          "filesChecked": 6
+        }
+      }
+    },
+    "archiveAcceptance": "Archive hashes and final verification receipts are kept beside the candidate ZIP, avoiding a self-referential hash in this source record.",
+    "limits": [
+      "Cross-platform CI is configured but has not been executed for this local candidate.",
+      "Native equation/chart/click-step compilers and the general Morph recipe API remain experimental; their reference decks do not establish public API support.",
+      "Manual formula editing, chart data editing and complete live-click interaction remain unverified for the reference prototypes.",
+      "Structural checks and native endpoint rendering do not prove all playback paths in all viewers.",
+      "Fonts are supplied under OFL but are not embedded in generated PPTX files.",
+      "The existing active skill and remote repository are not changed by preparing this candidate."
+    ],
+    "environment": {
+      "platform": "win32",
+      "node": "v24.15.0",
+      "renderer": "Microsoft PowerPoint 16.0"
+    },
+    "scope": "Preserved rc.2 acceptance. Its results do not validate the rc.3 reference-frame changes or the current archive."
+  },
+  "archiveAcceptance": "Final archive hashes and verification receipts are stored beside the candidate ZIP to avoid a self-referential archive hash in this record.",
+  "limits": [
+    "Cross-platform CI is configured but has not been executed for this local candidate.",
+    "Native equation/chart/click-step compilers and the general Morph recipe API remain experimental; their reference decks do not establish public API support.",
+    "Manual formula editing, chart data editing and complete live-click interaction remain unverified for the reference prototypes.",
+    "Structural checks and native endpoint rendering do not prove all playback paths in all viewers.",
+    "Fonts are supplied under OFL but are not embedded in generated PPTX files.",
+    "The existing active skill and remote repository are not changed by preparing this candidate."
+  ],
+  "environment": {
+    "platform": "win32",
+    "node": "v24.15.0",
+    "renderer": "Microsoft PowerPoint 16.0"
+  }
 }

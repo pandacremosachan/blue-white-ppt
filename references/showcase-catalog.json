@@ -1,0 +1,366 @@
+{
+  "schemaVersion": 1,
+  "showcases": [
+    {
+      "id": "content-and-playback",
+      "title": "内容与放映设计：六页紧凑参考",
+      "kind": "reference",
+      "status": "isolated-prototype",
+      "files": [
+        {
+          "path": "assets/showcases/content-and-playback.pptx",
+          "role": "presentation",
+          "bytes": 49154,
+          "sha256": "c1c81d6bee9d1633a0412dcf152f76d21aab29e90d45fc2c85d9f9e8075f4648"
+        }
+      ],
+      "metrics": {
+        "slideCount": 6,
+        "previousSlideCount": 10,
+        "nativeMathObjects": 7,
+        "nativeCharts": 1,
+        "embeddedWorkbooks": 1,
+        "animatedSlides": 2,
+        "clickBatches": 5,
+        "nativeAnimationEffects": 17,
+        "internalLinks": 8,
+        "renderedSlides": 6,
+        "renderer": "Microsoft PowerPoint",
+        "editableShapes": 219
+      },
+      "sources": [
+        {
+          "title": "Microsoft 365 LaTeX and Office Math",
+          "url": "https://learn.microsoft.com/en-us/office/math/latex"
+        },
+        {
+          "title": "Animate text or objects",
+          "url": "https://support.microsoft.com/en-us/powerpoint/training/animate-text-or-objects"
+        },
+        {
+          "title": "Change the data in an existing chart",
+          "url": "https://support.microsoft.com/en-us/powerpoint/change-the-data-in-an-existing-chart"
+        }
+      ],
+      "limits": [
+        "六页紧凑参考保留七个原生Office Math对象、原生图表及嵌入工作簿、两页点击动画与八个内部跳转。推导和代码并排，图像放大与媒体示意合并。",
+        "未随包提供完整内容编译生成源，不代表scripts/api.mjs或JSON计划已经支持这些内容类型；公式由显式数学树构建，未实现LaTeX解析。",
+        "六页已在PowerPoint中打开并逐页渲染检查，动画对象引用与构建列表已核对；未完成人工逐次点击放映、公式交互编辑或图表交互编辑验收。",
+        "媒体区仍为布局示意，未嵌入视频。图表和计算示例使用演示数据。",
+        "样式统一：所有页面使用首稿固定摘要条、双箭头与灰蓝完整分区；页眉为章节编号，页脚单独显示实际页码。"
+      ],
+      "style": {
+        "reference": "assets/reference/component-library-v0.14.pptx",
+        "standardSummarySlides": 6,
+        "summaryBounds": [
+          48,
+          94,
+          1184,
+          78
+        ],
+        "summaryFontDesignPx": 23,
+        "summaryBold": true,
+        "bodyStartDesignPx": 190,
+        "completeContentFrames": 16,
+        "chapterNumbers": [
+          "1",
+          "2.1",
+          "2.2",
+          "3",
+          "4",
+          "5"
+        ],
+        "physicalPageNumbersInFooter": true,
+        "verified": true
+      }
+    },
+    {
+      "id": "morph-effects",
+      "title": "平滑效果：十类效果的十四页紧凑对照",
+      "kind": "reference",
+      "status": "editable-example",
+      "files": [
+        {
+          "path": "assets/showcases/morph-effects.pptx",
+          "role": "presentation",
+          "bytes": 78724,
+          "sha256": "c246e7a6e2bd78037009e8327a8663b1632d2df816617c2db94cc6488df343d5"
+        },
+        {
+          "path": "assets/showcases/morph-effects.mp4",
+          "role": "video",
+          "bytes": 3524405,
+          "sha256": "a654b796aedee7d066cc479f7d0d1514b18e7164ded043a8842e04425b17dc3d"
+        }
+      ],
+      "metrics": {
+        "slideCount": 14,
+        "previousSlideCount": 22,
+        "effectFamilies": 10,
+        "nativeMorphTransitions": 6,
+        "modeCounts": {
+          "object": 4,
+          "word": 1,
+          "character": 1
+        },
+        "effectModeCounts": {
+          "object": 8,
+          "word": 1,
+          "character": 1
+        },
+        "pairedObjectComparisonGroups": 4,
+        "matchedSemanticObjects": 114,
+        "videoDurationSeconds": 38.6763,
+        "videoRenderer": "Microsoft PowerPoint",
+        "endpointSlidesReviewed": 14,
+        "middleFramesSampled": 6,
+        "intentionalOutsideCanvasObjects": 0,
+        "referenceGenerator": "portable-compact-example-entrypoint",
+        "editableShapes": 504
+      },
+      "limits": [
+        "十类效果保留为四组双栏对象模式前后状态，以及独立的词语、字符两组状态。实际共有六次原生Morph转场，不能将效果种类数当作转场次数。",
+        "随包提供便携构建脚本与从原始对象提取的稳定JSON语义基线；示例独立于核心API，JSON计划尚未接入Morph配方编译。",
+        "词语与字符匹配为整页选项，因此分别保留起止页。运动中可能交叠，停靠状态应完整可读。",
+        "公式移项由独立文本框演示，数据标记由形状演示，不等于Office Math推导或原生图表插值。",
+        "十四页终点已逐页渲染检查；PowerPoint导出约38.7秒视频，并抽查六个转场中间状态。未人工逐帧检查完整视频，也未完成交互放映或原生三维模型验收。",
+        "Morph效果取决于查看器支持，兼容回退可能显示淡化。",
+        "样式统一：所有页面使用首稿固定摘要条、双箭头与灰蓝完整分区；页眉为章节编号，页脚单独显示实际页码。"
+      ],
+      "entrypoint": {
+        "path": "assets/examples/morph/build-compact.mjs",
+        "args": [
+          "--output",
+          "<new-file.pptx>"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Microsoft: Use the Morph transition in PowerPoint",
+          "url": "https://support.microsoft.com/en-us/powerpoint/use-the-morph-transition-in-powerpoint"
+        },
+        {
+          "title": "Microsoft: Morph transition tips and tricks",
+          "url": "https://support.microsoft.com/en-us/powerpoint/morph-transition-tips-and-tricks"
+        }
+      ],
+      "style": {
+        "reference": "assets/reference/component-library-v0.14.pptx",
+        "standardSummarySlides": 14,
+        "summaryBounds": [
+          48,
+          94,
+          1184,
+          78
+        ],
+        "summaryFontDesignPx": 23,
+        "summaryBold": true,
+        "bodyStartDesignPx": 190,
+        "completeContentFrames": 25,
+        "chapterNumbers": [
+          "1",
+          "2.1",
+          "2.1",
+          "2.2",
+          "2.2",
+          "2.3",
+          "2.3",
+          "2.4",
+          "2.4",
+          "3.1",
+          "3.1",
+          "3.2",
+          "3.2",
+          "4"
+        ],
+        "physicalPageNumbersInFooter": true,
+        "verified": true
+      }
+    },
+    {
+      "id": "trapezoid-creativity",
+      "title": "梯形创意图鉴：十三页三十二种可编辑构图",
+      "kind": "reference",
+      "status": "editable-example",
+      "files": [
+        {
+          "path": "assets/showcases/trapezoid-creativity.pptx",
+          "role": "presentation",
+          "bytes": 105090,
+          "sha256": "e189dcd3a78f4988378d67b45ec30f7dc9014464cc5043ef309613b3b827a7ec"
+        },
+        {
+          "path": "assets/showcases/trapezoid-preview.png",
+          "role": "preview",
+          "bytes": 766877,
+          "sha256": "038ce73e53cc853b6f7fd3ffffc4fc2fb5614a9abb7b0adacc8bc27dcf982ca1"
+        }
+      ],
+      "metrics": {
+        "slideCount": 13,
+        "previousSlideCount": 40,
+        "creativeCases": 32,
+        "categories": 8,
+        "comparisonPages": 8,
+        "casesPerComparisonPage": 4,
+        "designSources": 14,
+        "officialSources": 2,
+        "hyperlinks": 43,
+        "speakerNotes": 13,
+        "customNativeShapes": 127,
+        "nativeMorphTransitions": 1,
+        "renderer": "Microsoft PowerPoint",
+        "slidesIndividuallyReviewed": 13,
+        "nativeAttachedConnectors": 5,
+        "independentConnectors": 0,
+        "referenceGenerator": "portable-example-entrypoint",
+        "editableShapes": 713
+      },
+      "entrypoint": {
+        "path": "assets/examples/trapezoid/build-deck.mjs",
+        "args": [
+          "--output",
+          "<new-file.pptx>"
+        ]
+      },
+      "sources": [
+        {
+          "id": "S01",
+          "title": "Spotlight in PowerPoint",
+          "publisher": "Presentation Process",
+          "url": "https://www.presentation-process.com/spotlight-in-powerpoint-2.html"
+        },
+        {
+          "id": "S02",
+          "title": "PowerPoint Info Graph Tutorial: with Shopping Bag icon",
+          "publisher": "Presentation Process",
+          "url": "https://www.presentation-process.com/info-graph.html"
+        },
+        {
+          "id": "S03",
+          "title": "Folded Paper Graphic in PowerPoint",
+          "publisher": "Presentation Process",
+          "url": "https://www.presentation-process.com/folded-paper-graphic.html"
+        },
+        {
+          "id": "S04",
+          "title": "PowerPoint Shapes: Propeller Diagram Tutorial",
+          "publisher": "Presentation Process",
+          "url": "https://www.presentation-process.com/powerpoint-shapes-tutorial.html"
+        },
+        {
+          "id": "S05",
+          "title": "Draw PowerPoint Roadmap Easily",
+          "publisher": "Presentation Process",
+          "url": "https://www.presentation-process.com/powerpoint-roadmap.html"
+        },
+        {
+          "id": "S06",
+          "title": "Create Beautiful 3D backgrounds for PowerPoint",
+          "publisher": "Presentation Process",
+          "url": "https://www.presentation-process.com/3d-backgrounds-for-powerpoint.html"
+        },
+        {
+          "id": "S07",
+          "title": "Perspective Text Boxes for PowerPoint and Google Slides",
+          "publisher": "PresentationGO",
+          "url": "https://www.presentationgo.com/presentation/perspective-text-boxes-powerpoint-google-slides/"
+        },
+        {
+          "id": "S08",
+          "title": "Circular Diagram with Trapezoids for PowerPoint",
+          "publisher": "PresentationGO",
+          "url": "https://www.presentationgo.com/presentation/circular-diagram-trapezoids-powerpoint/"
+        },
+        {
+          "id": "S09",
+          "title": "Segmented Paper Fold",
+          "publisher": "PresentationGO",
+          "url": "https://www.presentationgo.com/presentation/segmented-paper-fold-powerpoint-google-slides/"
+        },
+        {
+          "id": "S10",
+          "title": "Perspective Platforms Shape for PowerPoint",
+          "publisher": "SlideModel",
+          "url": "https://slidemodel.com/templates/perspective-platforms-shape-powerpoint/"
+        },
+        {
+          "id": "S11",
+          "title": "Free Bridge Diagram for PowerPoint",
+          "publisher": "SlideModel",
+          "url": "https://slidemodel.com/free-powerpoint-templates/free-bridge-diagram-for-powerpoint/"
+        },
+        {
+          "id": "S12",
+          "title": "An Open Book in PowerPoint",
+          "publisher": "Indezine / Julie Terberg",
+          "url": "https://www.indezine.com/products/powerpoint/cool/openbook.html"
+        },
+        {
+          "id": "S13",
+          "title": "Slanted tabs with CSS 3D transforms",
+          "publisher": "Lea Verou",
+          "url": "https://lea.verou.me/blog/2013/10/slanted-tabs-with-css-3d-transforms/"
+        },
+        {
+          "id": "S14",
+          "title": "How to Create a Funnel Chart in PowerPoint",
+          "publisher": "ShapeChef / Andreas",
+          "url": "https://www.shapechef.com/blog/powerpoint-funnel-chart"
+        },
+        {
+          "id": "S15",
+          "title": "Draw a picture by combining and merging shapes",
+          "publisher": "Microsoft Support",
+          "url": "https://support.microsoft.com/en-us/powerpoint/draw-a-picture-by-combining-and-merging-shapes"
+        },
+        {
+          "id": "S16",
+          "title": "Morph transition: Tips and tricks",
+          "publisher": "Microsoft Support",
+          "url": "https://support.microsoft.com/en-us/powerpoint/morph-transition-tips-and-tricks"
+        }
+      ],
+      "limits": [
+        "十三页紧凑版按八组同类构图比较，每组四例；三十二例的完整机制、用途、变体与借鉴范围保留在备注中。源码包含完整旧页到新页映射。",
+        "三十二种构图属于可运行示例，没有新增Cxx组件编号，也没有把案例专用绘图函数注册为核心组件接口。",
+        "所有图解和文字为原生可编辑对象，五条网络关系保持原生附着。图形宽度、面积、透视距离及颜色默认表达结构，不自动承担真实数量编码。",
+        "第10至11页保留一组实验性原生Morph转场；示例自带隔离序列化，不代表核心API支持transition或Morph配方。",
+        "查看时需要Noto Sans SC保持设计度量，字体随技能包分发但没有嵌入PPTX。",
+        "十三页PowerPoint渲染与转场中间状态已检查，未承诺其他查看器渲染完全一致。",
+        "样式统一：所有页面使用首稿固定摘要条、双箭头与灰蓝完整分区；页眉为章节编号，页脚单独显示实际页码。"
+      ],
+      "style": {
+        "reference": "assets/reference/component-library-v0.14.pptx",
+        "standardSummarySlides": 13,
+        "summaryBounds": [
+          48,
+          94,
+          1184,
+          78
+        ],
+        "summaryFontDesignPx": 23,
+        "summaryBold": true,
+        "bodyStartDesignPx": 190,
+        "completeContentFrames": 42,
+        "chapterNumbers": [
+          "1",
+          "2.1",
+          "2.2",
+          "2.3",
+          "2.4",
+          "2.5",
+          "2.6",
+          "2.7",
+          "2.8",
+          "3",
+          "3",
+          "4.1",
+          "4.2"
+        ],
+        "physicalPageNumbersInFooter": true,
+        "verified": true
+      }
+    }
+  ]
+}
