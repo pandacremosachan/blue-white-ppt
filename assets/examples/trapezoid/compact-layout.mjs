@@ -1,4 +1,4 @@
-import {C} from '../../../scripts/api.mjs';
+import {C} from '../../../skills/blue-white-ppt/scripts/api.mjs';
 import {scene,BLUES} from './draw-helpers.mjs';
 import {compactScene,compactDiagrams} from './compact-diagrams.mjs';
 import {setMorphIdentity} from './morph.mjs';

@@ -7,11 +7,11 @@
     "status": "supported",
     "entrypoints": [
       {
-        "path": "scripts/create-deck.mjs",
+        "path": "skills/blue-white-ppt/scripts/create-deck.mjs",
         "interface": "cli-json-plan"
       },
       {
-        "path": "scripts/api.mjs",
+        "path": "skills/blue-white-ppt/scripts/api.mjs",
         "interface": "javascript"
       }
     ],
@@ -98,7 +98,7 @@
       "distribution": {
         "status": "supported",
         "portableNodeGeneration": true,
-        "releaseManifest": true,
+        "releaseManifest": false,
         "skillInstallation": true
       }
     },
@@ -254,7 +254,7 @@
     ]
   },
   "referenceShowcaseStyle": {
-    "reference": "assets/reference/component-library-v0.14.pptx",
+    "reference": "skills/blue-white-ppt/assets/reference/component-library-v0.14.pptx",
     "fixedSummaryBounds": [
       48,
       94,
@@ -268,5 +268,6 @@
     "completeContentFrames": true,
     "chapterNumbersSeparateFromPageNumbers": true,
     "scope": "Curated reference showcases; the general authoring API still permits content-driven layouts."
-  }
+  },
+  "skillDirectory": "skills/blue-white-ppt"
 }

@@ -2,8 +2,8 @@
 // The compact builder uses baseline.json by default and never reads its output.
 import fs from 'node:fs/promises';
 import crypto from 'node:crypto';
-import {readZip} from '../../../scripts/lib/zip.mjs';
-import {parseXml,all} from '../../../scripts/lib/xml.mjs';
+import {readZip} from '../../../skills/blue-white-ppt/scripts/lib/zip.mjs';
+import {parseXml,all} from '../../../skills/blue-white-ppt/scripts/lib/xml.mjs';
 
 export const FAMILIES=Object.freeze([
   ['zoom',2,3,'object','全局与局部'],

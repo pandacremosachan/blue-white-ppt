@@ -4,12 +4,12 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import {fileURLToPath} from 'node:url';
-import {createPresentation,addSlide,addText,addFooter,C} from '../../../scripts/api.mjs';
-import {exportPptx} from '../../../scripts/lib/native-pptx.mjs';
-import {readZip,writeZip} from '../../../scripts/lib/zip.mjs';
-import {parseXml,all,escapeXml} from '../../../scripts/lib/xml.mjs';
-import {validatePptx} from '../../../scripts/validate-pptx.mjs';
-import {isWithin} from '../../../scripts/lib/release-files.mjs';
+import {createPresentation,addSlide,addText,addFooter,C} from '../../../skills/blue-white-ppt/scripts/api.mjs';
+import {exportPptx} from '../../../skills/blue-white-ppt/scripts/lib/native-pptx.mjs';
+import {readZip,writeZip} from '../../../skills/blue-white-ppt/scripts/lib/zip.mjs';
+import {parseXml,all,escapeXml} from '../../../skills/blue-white-ppt/scripts/lib/xml.mjs';
+import {validatePptx} from '../../../skills/blue-white-ppt/scripts/validate-pptx.mjs';
+import {isWithin} from '../../../scripts/lib/files.mjs';
 import {makeMorphTransition} from '../trapezoid/morph.mjs';
 import {readSourceDeck,validateBaseline} from './source.mjs';
 

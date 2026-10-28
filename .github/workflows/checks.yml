@@ -18,12 +18,10 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - run: npm test
-      - run: node scripts/doctor.mjs
+      - run: node skills/blue-white-ppt/scripts/doctor.mjs
       - run: node scripts/self-test.mjs --output checks/all-variants
-      - run: node scripts/pack-skill.mjs --output "${{ runner.temp }}/blue-white-ppt-candidate.zip"
-      - run: node scripts/verify-release.mjs "${{ runner.temp }}/blue-white-ppt-candidate.zip"
       - run: node assets/examples/trapezoid/build-deck.mjs --output "${{ runner.temp }}/trapezoid-checks/trapezoid.pptx" --manifest "${{ runner.temp }}/trapezoid-checks/trapezoid.json"
-      - run: node scripts/validate-pptx.mjs "${{ runner.temp }}/trapezoid-checks/trapezoid.pptx"
+      - run: node skills/blue-white-ppt/scripts/validate-pptx.mjs "${{ runner.temp }}/trapezoid-checks/trapezoid.pptx"
 
   previews:
     runs-on: ubuntu-latest
@@ -37,19 +35,19 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libreoffice-impress poppler-utils
           mkdir -p ~/.local/share/fonts
-          cp assets/fonts/NotoSansSC-VF.ttf ~/.local/share/fonts/
+          cp skills/blue-white-ppt/assets/fonts/NotoSansSC-VF.ttf ~/.local/share/fonts/
           fc-cache -f
       - name: Generate and render composed examples
         run: |
-          node scripts/init-deck.mjs --output checks/example
-          node scripts/create-deck.mjs --input checks/example/plan.json --output checks/example/deck.pptx
-          node scripts/validate-pptx.mjs checks/example/deck.pptx
-          node scripts/render.mjs checks/example/deck.pptx --output checks/example/preview
+          node skills/blue-white-ppt/scripts/init-deck.mjs --output checks/example
+          node skills/blue-white-ppt/scripts/create-deck.mjs --input checks/example/plan.json --output checks/example/deck.pptx
+          node skills/blue-white-ppt/scripts/validate-pptx.mjs checks/example/deck.pptx
+          node skills/blue-white-ppt/scripts/render.mjs checks/example/deck.pptx --output checks/example/preview
           node checks/example/draw.mjs --output checks/example/direct.pptx
-          node scripts/validate-pptx.mjs checks/example/direct.pptx
-          node scripts/render.mjs checks/example/direct.pptx --output checks/example/direct-preview
+          node skills/blue-white-ppt/scripts/validate-pptx.mjs checks/example/direct.pptx
+          node skills/blue-white-ppt/scripts/render.mjs checks/example/direct.pptx --output checks/example/direct-preview
           node assets/examples/trapezoid/build-deck.mjs --output "${{ runner.temp }}/trapezoid.pptx"
-          node scripts/render.mjs "${{ runner.temp }}/trapezoid.pptx" --output checks/example/trapezoid-preview
+          node skills/blue-white-ppt/scripts/render.mjs "${{ runner.temp }}/trapezoid.pptx" --output checks/example/trapezoid-preview
       - uses: actions/upload-artifact@v4
         if: always()
         with:

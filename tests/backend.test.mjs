@@ -4,11 +4,11 @@ import fs from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {createPresentation,addText,addTable,addImage} from '../scripts/api.mjs';
-import {clonePresentation,exportPptx} from '../scripts/lib/native-pptx.mjs';
-import {readZip} from '../scripts/lib/zip.mjs';
-import {parseXml,all} from '../scripts/lib/xml.mjs';
-import {validatePptx} from '../scripts/validate-pptx.mjs';
+import {createPresentation,addText,addTable,addImage} from '../skills/blue-white-ppt/scripts/api.mjs';
+import {clonePresentation,exportPptx} from '../skills/blue-white-ppt/scripts/lib/native-pptx.mjs';
+import {readZip} from '../skills/blue-white-ppt/scripts/lib/zip.mjs';
+import {parseXml,all} from '../skills/blue-white-ppt/scripts/lib/xml.mjs';
+import {validatePptx} from '../skills/blue-white-ppt/scripts/validate-pptx.mjs';
 
 const temporary=await fs.mkdtemp(path.join(os.tmpdir(),'blue-white-ppt-backend-'));
 after(async()=>{
@@ -31,7 +31,7 @@ test('tables, text and pictures retain insertion order and support cross-type la
   const presentation=createPresentation(),slide=presentation.slides.add();
   const table=addTable(slide,{values:[['Table']],bounds:[100,200,200,100]});
   const text=addText(slide,'Text overlay',[100,200,200,100]);
-  const image=await addImage(slide,fileURLToPath(new URL('../assets/reference/slide-01.png',import.meta.url)),[100,200,200,100],{name:'picture-overlay'});
+  const image=await addImage(slide,fileURLToPath(new URL('../skills/blue-white-ppt/assets/reference/slide-01.png',import.meta.url)),[100,200,200,100],{name:'picture-overlay'});
   assert.deepEqual(layerNames((await document(presentation)).root),[table.name,text.name,image.name]);
 
   table.bringToFront();

@@ -3,9 +3,9 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import test from 'node:test';
 import {fileURLToPath} from 'node:url';
-import {readZip} from '../scripts/lib/zip.mjs';
-import {all,parseXml} from '../scripts/lib/xml.mjs';
-import {validatePptx} from '../scripts/validate-pptx.mjs';
+import {readZip} from '../skills/blue-white-ppt/scripts/lib/zip.mjs';
+import {all,parseXml} from '../skills/blue-white-ppt/scripts/lib/xml.mjs';
+import {validatePptx} from '../skills/blue-white-ppt/scripts/validate-pptx.mjs';
 import {assertBodyInFrames,assertBounds,assertReferenceSlideStyle,objectName,slideObjects} from './helpers/showcase-style.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url));

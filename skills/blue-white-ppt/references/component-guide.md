@@ -66,7 +66,7 @@ A custom text label changes content, not geometry. For structural variants, labe
 
 ## Reference navigation
 
-Pages are physical 1-based PPTX page numbers. Page 2 is the chapter directory; page 3 is the code index. Preview path: assets/reference/slide-NN.png. reference-page.mjs --page N prints the absolute path or copies the PNG.
+Pages are physical 1-based PPTX page numbers. Page 2 is the chapter directory; page 3 is the code index. The skill includes the reference PPTX and one visual-system preview, assets/reference/slide-01.png. Render the PPTX into the user project when additional page images are needed.
 
 | Section | Title | Physical page range |
 |---|---|---|
@@ -79,4 +79,4 @@ Pages are physical 1-based PPTX page numbers. Page 2 is the chapter directory; p
 | 7 | 单元格与圆点阵列 | 40–46 |
 | 8 | 连接补充与层间连接 | 47–53 |
 
-The complete current metadata is catalog.json. Component source is scripts/components/index.mjs and its imported modules. Refresh this table with update-guide.mjs after an intentional registry/catalog update.
+The complete current metadata is catalog.json. Component source is scripts/components/index.mjs and its imported modules.

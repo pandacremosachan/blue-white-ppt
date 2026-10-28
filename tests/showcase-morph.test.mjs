@@ -6,9 +6,9 @@ import test from 'node:test';
 import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {spawnSync} from 'node:child_process';
-import {readZip} from '../scripts/lib/zip.mjs';
-import {all,parseXml} from '../scripts/lib/xml.mjs';
-import {validatePptx} from '../scripts/validate-pptx.mjs';
+import {readZip} from '../skills/blue-white-ppt/scripts/lib/zip.mjs';
+import {all,parseXml} from '../skills/blue-white-ppt/scripts/lib/xml.mjs';
+import {validatePptx} from '../skills/blue-white-ppt/scripts/validate-pptx.mjs';
 import {assertBodyInFrames,assertBounds,assertCompleteFrame,assertContains,assertReferenceSlideStyle,objectName,slideObjects} from './helpers/showcase-style.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url));
@@ -57,9 +57,9 @@ test('the compact Morph example relocates without a showcase deck and preserves 
  await fs.mkdir(path.join(relocated,'assets','reference'),{recursive:true});
  await fs.mkdir(cwd,{recursive:true});
  await fs.cp(path.join(root,'scripts'),path.join(relocated,'scripts'),{recursive:true});
+ await fs.cp(path.join(root,'skills'),path.join(relocated,'skills'),{recursive:true});
  await fs.cp(path.join(root,'assets','examples','morph'),path.join(relocated,'assets','examples','morph'),{recursive:true});
  await fs.copyFile(path.join(root,'assets','examples','trapezoid','morph.mjs'),path.join(relocated,'assets','examples','trapezoid','morph.mjs'));
- await fs.copyFile(path.join(root,'assets','reference','component-library-v0.14.pptx'),path.join(relocated,'assets','reference','component-library-v0.14.pptx'));
  await assert.rejects(fs.access(path.join(relocated,'assets','showcases')),{code:'ENOENT'});
  const builder=path.join(relocated,'assets','examples','morph','build-compact.mjs'),before=await snapshot(relocated);
  const result=successful(run(cwd,builder,'--output',output,'--manifest',manifestPath));

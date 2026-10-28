@@ -1,12 +1,13 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import assert from 'node:assert/strict';
-import {fileURLToPath} from 'node:url';
-import {COMPONENTS,createPresentation,renderByCode,savePresentation,addTable,addImage} from './api.mjs';
-import {validatePptx} from './validate-pptx.mjs';
-import {argumentsOf,run} from './lib/cli.mjs';
+import {fileURLToPath,pathToFileURL} from 'node:url';
+import {argumentsOf,run} from '../skills/blue-white-ppt/scripts/lib/cli.mjs';
 await run(async()=>{
-  const a=argumentsOf();if(a.help){console.log('node self-test.mjs --output test-directory');return;}
+  const a=argumentsOf();if(a.help){console.log('node self-test.mjs --output test-directory [--skill /installed/blue-white-ppt]');return;}
+  const skillRoot=path.resolve(a.skill??fileURLToPath(new URL('../skills/blue-white-ppt/',import.meta.url)));
+  const {COMPONENTS,createPresentation,renderByCode,savePresentation,addTable,addImage}=await import(pathToFileURL(path.join(skillRoot,'scripts/api.mjs')).href);
+  const {validatePptx}=await import(pathToFileURL(path.join(skillRoot,'scripts/validate-pptx.mjs')).href);
   const output=path.resolve(a.output??'blue-white-ppt-self-test');await fs.mkdir(output,{recursive:true});
   const p=createPresentation(),ids=new Set(),codes=new Set();let variants=0;
   for(const item of COMPONENTS){
@@ -18,7 +19,7 @@ await run(async()=>{
     }
   }
   const extra=p.slides.add();addTable(extra,{values:[['编号','名称'],['C05','实体箭头']],bounds:[50,100,600,100],columnWidths:[120,480]});
-  await addImage(extra,fileURLToPath(new URL('../assets/reference/slide-01.png',import.meta.url)),[700,100,500,300]);
+  await addImage(extra,path.join(skillRoot,'assets/reference/slide-01.png'),[700,100,500,300]);
   const arrow=renderByCode(extra,'C05',[50,350,240,90],{rotation:90,label:'说明',outline:true},'test.rotation-label');assert.equal(arrow.result.position.rotation,90);assert.equal(arrow.result.text.value,'说明');
   const filename=path.join(output,'all-variants.pptx');await savePresentation(p,filename,{overwrite:Boolean(a.overwrite),footers:false});
   const validation=await validatePptx(filename);assert.deepEqual(validation.errors,[]);

@@ -6,9 +6,9 @@ import test from 'node:test';
 import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {spawnSync} from 'node:child_process';
-import {readZip} from '../scripts/lib/zip.mjs';
-import {all,parseXml} from '../scripts/lib/xml.mjs';
-import {validatePptx} from '../scripts/validate-pptx.mjs';
+import {readZip} from '../skills/blue-white-ppt/scripts/lib/zip.mjs';
+import {all,parseXml} from '../skills/blue-white-ppt/scripts/lib/xml.mjs';
+import {validatePptx} from '../skills/blue-white-ppt/scripts/validate-pptx.mjs';
 import {cases as originalCases} from '../assets/examples/trapezoid/deck-content.mjs';
 import {assertBodyInFrames,assertBounds,assertCompleteFrame,assertContains,assertReferenceSlideStyle,boundsOf,objectName,objectText,slideObjects} from './helpers/showcase-style.mjs';
 
@@ -63,8 +63,8 @@ test('the complete trapezoid example relocates, stays native, and never writes i
  // Copy only the published runtime dependency closure. In particular, there
  // is no design/ checkout or machine-specific runtime to fall back to.
  await fs.cp(path.join(root,'scripts'),path.join(relocated,'scripts'),{recursive:true});
+ await fs.cp(path.join(root,'skills'),path.join(relocated,'skills'),{recursive:true});
  await fs.cp(path.join(root,'assets','examples','trapezoid'),path.join(relocated,'assets','examples','trapezoid'),{recursive:true});
- await fs.copyFile(path.join(root,'assets','reference','component-library-v0.14.pptx'),path.join(relocated,'assets','reference','component-library-v0.14.pptx'));
  const builder=path.join(relocated,'assets','examples','trapezoid','build-deck.mjs');
  const before=await snapshot(relocated);
  const result=successful(run(cwd,builder,'--output',output,'--manifest',manifestPath));

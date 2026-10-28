@@ -1,4 +1,4 @@
-import {addText,C,FONT} from '../../../scripts/api.mjs';
+import {addText,C,FONT} from '../../../skills/blue-white-ppt/scripts/api.mjs';
 export {C,FONT};
 export const BLUES=['#0759BE','#357BD2','#74A5E1','#BDD5F1','#E5EFFA'];
 export function scene(slide,bounds=[60,215,740,380],prefix='scene'){

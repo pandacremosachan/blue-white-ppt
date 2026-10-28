@@ -1,15 +1,15 @@
 {
   "release": "1.1.0-rc.3",
-  "updatedOn": "2026-10-26",
-  "status": "local-candidate-preparation-complete",
+  "updatedOn": "2026-10-27",
+  "status": "standard-skill-layout",
   "checks": {
     "regressions": {
       "status": "pass",
-      "tests": 32,
-      "passed": 32,
+      "tests": 23,
+      "passed": 23,
       "failed": 0,
       "command": "npm test",
-      "includes": "Final XML template checks, native content, state identities, navigation, portable generation and distribution"
+      "includes": "Native API, XML, bounds, installed-skill relocation, all 244 variants, and three unchanged showcase references. Obsolete ZIP-specific tests were removed."
     },
     "styleUnifiedShowcases": {
       "status": "pass",
@@ -335,19 +335,6 @@
       "unchangedCoreReferenceAndFontFiles": 114,
       "comparedWith": "1.1.0-rc.2"
     },
-    "archiveAcceptance": {
-      "status": "pass",
-      "version": "1.1.0-rc.3",
-      "preflightFiles": 162,
-      "preflightManifestFiles": 161,
-      "cleanExtractionTests": {
-        "tests": 32,
-        "passed": 32,
-        "failed": 0
-      },
-      "sourcePayloadUnchangedByTests": true,
-      "scope": "The preflight package was verified and tested from clean extraction. The final archive receives a separate manifest verification and source-byte comparison after this metadata-only evidence update."
-    },
     "nativePlayback": {
       "status": "sampled",
       "renderer": "Microsoft PowerPoint 16.0",
@@ -374,6 +361,30 @@
         "internalLinks": 8
       },
       "scope": "Native video exports and sampled transitions were reviewed. Full live-click playback and formula/chart interaction are not asserted."
+    },
+    "skillLayout": {
+      "status": "pass",
+      "directory": "skills/blue-white-ppt",
+      "installedFiles": 53,
+      "entrypointLines": 43,
+      "installedRoots": [
+        "SKILL.md",
+        "agents",
+        "assets",
+        "references",
+        "scripts"
+      ],
+      "frontmatterValidation": "pass",
+      "installedCopyMatchesSource": true,
+      "jsonAndJavaScriptScaffolds": "pass",
+      "allVariantGeneration": {
+        "components": 39,
+        "variants": 244,
+        "slides": 245,
+        "status": "pass"
+      },
+      "runtimeDoesNotRequireRepository": true,
+      "githubSynchronization": "repository-main"
     }
   },
   "historicalAcceptance": {
@@ -620,16 +631,26 @@
       "node": "v24.15.0",
       "renderer": "Microsoft PowerPoint 16.0"
     },
-    "scope": "Preserved rc.2 acceptance. Its results do not validate the rc.3 reference-frame changes or the current archive."
+    "scope": "Preserved rc.2 acceptance. Its results do not validate the rc.3 reference-frame changes or the current archive.",
+    "completeBundleLayout": {
+      "regressions": {
+        "status": "pass",
+        "tests": 32,
+        "passed": 32,
+        "failed": 0,
+        "command": "npm test",
+        "includes": "Final XML template checks, native content, state identities, navigation, portable generation and distribution"
+      },
+      "archiveAcceptance": "Final archive hashes and verification receipts are stored beside the candidate ZIP to avoid a self-referential archive hash in this record.",
+      "note": "Historical checks for the former complete ZIP bundle; archives and their verifier are no longer part of the current skill layout."
+    }
   },
-  "archiveAcceptance": "Final archive hashes and verification receipts are stored beside the candidate ZIP to avoid a self-referential archive hash in this record.",
   "limits": [
-    "Cross-platform CI is configured but has not been executed for this local candidate.",
+    "Cross-platform CI is configured; consult the checks for the current GitHub commit for actual execution results.",
     "Native equation/chart/click-step compilers and the general Morph recipe API remain experimental; their reference decks do not establish public API support.",
     "Manual formula editing, chart data editing and complete live-click interaction remain unverified for the reference prototypes.",
     "Structural checks and native endpoint rendering do not prove all playback paths in all viewers.",
-    "Fonts are supplied under OFL but are not embedded in generated PPTX files.",
-    "The existing active skill and remote repository are not changed by preparing this candidate."
+    "Fonts are supplied under OFL but are not embedded in generated PPTX files."
   ],
   "environment": {
     "platform": "win32",

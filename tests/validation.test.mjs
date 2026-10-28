@@ -3,10 +3,10 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
-import {Presentation,exportPptx} from '../scripts/lib/native-pptx.mjs';
-import {createPresentation,addSlide,addText,savePresentation} from '../scripts/api.mjs';
-import {readZip,writeZip} from '../scripts/lib/zip.mjs';
-import {validatePptx} from '../scripts/validate-pptx.mjs';
+import {Presentation,exportPptx} from '../skills/blue-white-ppt/scripts/lib/native-pptx.mjs';
+import {createPresentation,addSlide,addText,savePresentation} from '../skills/blue-white-ppt/scripts/api.mjs';
+import {readZip,writeZip} from '../skills/blue-white-ppt/scripts/lib/zip.mjs';
+import {validatePptx} from '../skills/blue-white-ppt/scripts/validate-pptx.mjs';
 
 async function workspace(t){
   const directory=await fs.mkdtemp(path.join(os.tmpdir(),'blue-white-validation-'));

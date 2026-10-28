@@ -1,4 +1,4 @@
-import {C,FONT,header,lead,text,line} from './research-components.mjs';
+import {C,FONT,header,lead,text,line} from '../../skills/blue-white-ppt/scripts/components/research-components.mjs';
 
 function table(slide,values,x,y,width,columnWidths,rowHeight,fontSize){
   const t=slide.tables.add({rows:values.length,columns:values[0].length,left:x,top:y,width,height:values.length*rowHeight,columnWidths,values});

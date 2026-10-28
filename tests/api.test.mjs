@@ -3,10 +3,10 @@ import fs from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
-import {addFooter,addSlide,buildFromPlan,createPresentation,renderByCode,savePresentation} from '../scripts/api.mjs';
-import {readZip} from '../scripts/lib/zip.mjs';
-import {all,parseXml} from '../scripts/lib/xml.mjs';
-import {validatePptx} from '../scripts/validate-pptx.mjs';
+import {addFooter,addSlide,buildFromPlan,createPresentation,renderByCode,savePresentation} from '../skills/blue-white-ppt/scripts/api.mjs';
+import {readZip} from '../skills/blue-white-ppt/scripts/lib/zip.mjs';
+import {all,parseXml} from '../skills/blue-white-ppt/scripts/lib/xml.mjs';
+import {validatePptx} from '../skills/blue-white-ppt/scripts/validate-pptx.mjs';
 
 async function temporaryDirectory(t){
   const parent=path.resolve(os.tmpdir()),directory=await fs.mkdtemp(path.join(parent,'blue-white-ppt-api-test-'));

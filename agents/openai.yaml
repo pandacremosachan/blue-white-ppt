@@ -1,4 +1,0 @@
-interface:
-  display_name: "Blue White PPT Components"
-  short_description: "Portable editable PPTs using C01–C39 components"
-  default_prompt: "Use $blue-white-ppt to create an editable blue-and-white presentation using component codes."

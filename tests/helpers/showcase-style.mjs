@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {all} from '../../scripts/lib/xml.mjs';
+import {all} from '../../skills/blue-white-ppt/scripts/lib/xml.mjs';
 
 const EMU=9525,TOLERANCE=0.001;
 const near=(a,b)=>Math.abs(a-b)<TOLERANCE;

@@ -2,7 +2,7 @@
 
 ## Direct .mjs authoring
 
-Import `scripts/api.mjs` using the actual skill directory. The runnable `assets/examples/draw.mjs` accepts `--skill` or `BLUE_WHITE_PPT_SKILL`, and defaults to its bundled location. The scaffold copies it to the project and writes `skill-location.json`.
+Import `scripts/api.mjs` using the actual skill directory. The starter `assets/templates/draw.mjs` accepts `--skill` or `BLUE_WHITE_PPT_SKILL`, and defaults to its bundled location. The scaffold copies it to the project and writes `skill-location.json`.
 
 ```js
 import {createPresentation, addSlide, renderByCode, savePresentation}

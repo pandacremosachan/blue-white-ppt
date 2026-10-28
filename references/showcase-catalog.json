@@ -44,13 +44,13 @@
       ],
       "limits": [
         "六页紧凑参考保留七个原生Office Math对象、原生图表及嵌入工作簿、两页点击动画与八个内部跳转。推导和代码并排，图像放大与媒体示意合并。",
-        "未随包提供完整内容编译生成源，不代表scripts/api.mjs或JSON计划已经支持这些内容类型；公式由显式数学树构建，未实现LaTeX解析。",
+        "未随包提供完整内容编译生成源，不代表skills/blue-white-ppt/scripts/api.mjs或JSON计划已经支持这些内容类型；公式由显式数学树构建，未实现LaTeX解析。",
         "六页已在PowerPoint中打开并逐页渲染检查，动画对象引用与构建列表已核对；未完成人工逐次点击放映、公式交互编辑或图表交互编辑验收。",
         "媒体区仍为布局示意，未嵌入视频。图表和计算示例使用演示数据。",
         "样式统一：所有页面使用首稿固定摘要条、双箭头与灰蓝完整分区；页眉为章节编号，页脚单独显示实际页码。"
       ],
       "style": {
-        "reference": "assets/reference/component-library-v0.14.pptx",
+        "reference": "skills/blue-white-ppt/assets/reference/component-library-v0.14.pptx",
         "standardSummarySlides": 6,
         "summaryBounds": [
           48,
@@ -145,7 +145,7 @@
         }
       ],
       "style": {
-        "reference": "assets/reference/component-library-v0.14.pptx",
+        "reference": "skills/blue-white-ppt/assets/reference/component-library-v0.14.pptx",
         "standardSummarySlides": 14,
         "summaryBounds": [
           48,
@@ -331,7 +331,7 @@
         "样式统一：所有页面使用首稿固定摘要条、双箭头与灰蓝完整分区；页眉为章节编号，页脚单独显示实际页码。"
       ],
       "style": {
-        "reference": "assets/reference/component-library-v0.14.pptx",
+        "reference": "skills/blue-white-ppt/assets/reference/component-library-v0.14.pptx",
         "standardSummarySlides": 13,
         "summaryBounds": [
           48,

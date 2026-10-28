@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {escapeXml,parseXml,all} from '../scripts/lib/xml.mjs';
+import {escapeXml,parseXml,all} from '../skills/blue-white-ppt/scripts/lib/xml.mjs';
 
 test('XML text escapes round trip Unicode, whitespace and reserved characters',()=>{
   const text='中文 😀\t\n<&>"\'';

@@ -1,29 +1,21 @@
-# blue-white-ppt 1.1.0-rc.3 参考版式统一候选版说明
+# 1.1.0-rc.3 — standard skill directory
 
-本候选版依据首稿统一三份新增参考文稿的摘要条、正文分区与章节编号，页数继续保持梯形 13 页、Morph 14 页、内容与放映 6 页。核心生成仍使用 C01–C39 和 244 个变体，批准的 53 页组件参考及其预览保持原始字节。公式、数据图表、点击步骤及通用 Morph 配方继续按实验能力管理，候选版不把原型字段当作正式接口。
+The installable skill now lives in [`skills/blue-white-ppt/`](../skills/blue-white-ppt/), with [`SKILL.md`](../skills/blue-white-ppt/SKILL.md) as its entrypoint. Install that directory as a whole, or run `node scripts/install.mjs --harness codex` from the repository. See [installation and portability](portability.md) for other targets.
 
-## 本次进入候选包的内容
+The skill contains 53 files: authoring instructions, optional interface metadata, native generation code, focused references, two starter templates, the required 53-page reference deck, one preview, and the Noto Sans SC font with its OFL license. Tests, package configuration, maintenance commands, the full preview gallery and larger examples remain in the repository.
 
-三份参考采用固定位置的 C02 摘要条，坐标为 `(48,94,1184,78)`，左侧保留 C04 双箭头，摘要使用 23 设计像素的粗体文字。正文从 `y ≥ 190` 开始，同一比较项的标题、图解与图注置于完整细框内。摘要负责说明本页的比较问题，分区边框负责建立说明与对象之间的对应关系，使紧凑页面仍能沿清楚的阅读顺序展开。
+The previous root-level skill entrypoint, runtime copies, archive packaging and verification tools, release-file allowlist and ZIP-specific tests have been replaced by this directory structure. The repository no longer distributes versioned ZIP or checksum files. Git history retains the earlier layouts.
 
-页眉的章节编号与页脚的物理页码分别维护。梯形的八组比较使用 `2.1–2.8`，Morph 的四组对象状态使用 `2.1–2.4`，同一动画的起止状态共用章节号；内容参考中的公式与推导使用同一章下的 `2.1` 与 `2.2`。页脚继续按实际页面顺序计数，导航链接也继续指向物理幻灯片。完整映射见 [style-and-layout.md](style-and-layout.md)，生成清单通过 `chapterNumber` 记录逻辑章节。
+## Preserved content
 
-图鉴和参考案例默认每页安排 2–4 个同类示例，页面保留标题和关键差异，详细原理、说明与来源进入演讲者备注。动画需要展示的起止状态继续保留成对页面；正式演讲则根据论证、听众与讲述节奏安排信息密度。这一规范旨在减少机械的一例一页，同时维持比较所需的可读标签和清晰构图。
+The public library retains C01–C39 and all 244 variants. The approved 53-page reference and bundled font retain their original bytes. The compact examples remain available outside the skill: 32 trapezoid compositions in 13 pages, ten Morph effect families in 14 pages, and a six-page content/playback reference.
 
-梯形示例将 32 种构图放入八页四例比较，配合导览、一个 Morph 状态对和两页来源，共 13 页。复制网络中的五条关系继续使用原生附着连接器，便于继续移动节点。示例保留中文换行处理、来源链接和完整便携源码，生成清单记录每个案例的新页码与原页码关系。
+The earlier runtime corrections remain: exact component instance names, explicit groups, export snapshots with refreshed page totals, shared layer ordering for shapes/images/tables, strict XML validation, rotated bounds checks and C19 color/highlight options. The layout migration does not expand the public API; formula/chart compilation, click-step plans and general Morph recipes remain experimental.
 
-Morph 参考将八种对象效果组织为四组双栏起止状态，词语与字符效果各保留一组独立状态，连同导读和设置来源共 14 页，包含六次原生 Morph 转场。其便携构建器使用随包语义基线，默认生成无需读取已生成的参考文稿。内容与放映参考收为六页，并保留原生公式、图表、点击展开和内部导航所需结构。三份参考文稿和精选预览位于 `assets/showcases/`；研究资料、实验实现和临时构建记录不进入分发包。
+## Validation
 
-上一候选版的核心修复继续保留：组件实例使用精确命名与明确分组，导出时克隆创作模型并重新计算页码，形状、图片和表格共用图层顺序。XML 与旋转边界校验、C19 点阵参数修复，以及安装和打包共用发布清单的机制均不因本次页面调整而改变。
+All 23 current regression tests pass locally. They cover native API behavior, XML and geometry checks, self-contained installation, JSON and JavaScript starters, relocation, generation of all 244 variants on 245 pages, and the three compact references. GitHub Actions runs the suite on Windows, Linux and macOS with Node.js 20 and 24, plus a Linux preview job; consult the checks for the current commit for its actual result.
 
-## 验收与剩余准入工作
+Earlier PowerPoint rendering and sampled transition evidence remains recorded in [validation.json](validation.json). Those records describe the retained showcase bytes. Structural tests do not establish visual readability or complete interactive playback, and formula editing, chart-data editing and full live-click acceptance remain open.
 
-本地验收的实际结果记录在 [validation.json](validation.json)，其中保留 `1.1.0-rc.2` 的历史结果，并单独记录本次版式统一后的检查。历史文稿的渲染通过不能替代新页面的视觉检查；本次未执行的验证继续标为待完成。回归测试增加章节编号、摘要条几何与字形设置、正文起线和完整分区框的 XML 检查，同时保留内容、原生对象、动画身份和便携生成的既有检查。`verify-release.mjs` 用于检查候选包的文件集合、摘要、版本、参考案例和模块入口，能够发现损坏或不闭合的分发内容，但不证明视觉质量或交互行为。
-
-跨平台适用范围应由远端 Windows、Linux 和 macOS CI 的实际运行结果确认。将公式、图表或点击编译提升为正式能力之前，还需完成公式编辑、图表数据编辑及逐次点击的交互验收。现有字体按 OFL 随包提供，生成文稿引用字体而不嵌入字体。安装和发布动作与候选包准备分别执行，本次不会自动替换已有技能或推送仓库。
-
-## 原始资源与后续开发边界
-
-53 页批准参考和字体的原始摘要保持不变。`provenance.json` 保存 1.0.0 基线，当前候选包以自己的文件清单记录实际字节。组件源码保留既有视觉体系，C19 点阵有明确的参数修复，组件数量不随示范构图增长。
-
-下一阶段先将原生公式、数据图表和稳定对象键接入统一内容编译，再接入已验证的点击展开与对象 Morph。中文排版辅助目前位于梯形示例，尚不构成全库自动排版。媒体嵌入、复杂科学绘图和真实三维视角仍需独立实现与验收。
+[provenance.json](provenance.json) records the original reference, font and component baseline. [capabilities.json](capabilities.json) distinguishes the supported core from optional examples and experimental content.
