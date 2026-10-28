@@ -142,7 +142,8 @@ test('the compact Morph example relocates without a showcase deck and preserves 
  successful(run(cwd,builder,'--output',output,'--manifest',manifestPath,'--overwrite'));
  assert.equal(hash(await fs.readFile(output)),hash(bytes));
  const defaultResult=successful(run(cwd,builder));
- assert.equal(defaultResult.output,path.join(cwd,'morph-effects-compact.pptx'));assert.equal(defaultResult.manifest,null);
+ // macOS resolves /var temporary directories through /private/var in child cwd.
+ assert.equal(await fs.realpath(defaultResult.output),await fs.realpath(path.join(cwd,'morph-effects-compact.pptx')));assert.equal(defaultResult.manifest,null);
  assert.equal(hash(await fs.readFile(defaultResult.output)),hash(bytes));
  const recursive=run(cwd,builder,'--source',output,'--output',untouched);
  assert.notEqual(recursive.status,0);assert.match(recursive.stderr,/Expected the original 22-slide deck, found 14/);

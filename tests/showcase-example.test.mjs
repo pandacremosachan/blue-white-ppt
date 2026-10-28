@@ -170,7 +170,8 @@ test('the complete trapezoid example relocates, stays native, and never writes i
 
  // Omitting both paths creates only the default file in the external cwd.
  const defaultResult=successful(run(cwd,builder));
- assert.equal(defaultResult.output,path.join(cwd,'trapezoid-creativity.pptx'));assert.equal(defaultResult.manifest,null);
+ // macOS resolves /var temporary directories through /private/var in child cwd.
+ assert.equal(await fs.realpath(defaultResult.output),await fs.realpath(path.join(cwd,'trapezoid-creativity.pptx')));assert.equal(defaultResult.manifest,null);
  assert.equal(hash(await fs.readFile(defaultResult.output)),hash(bytes));
  const help=run(cwd,builder,'--help');assert.equal(help.status,0);assert.match(help.stdout,/--manifest FILE/);
  assert.notEqual(run(cwd,builder,'--output').status,0);
